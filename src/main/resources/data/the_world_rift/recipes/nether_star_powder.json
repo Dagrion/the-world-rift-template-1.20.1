@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "the_world_rift:nether_star_shard"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "item": "the_world_rift:nether_star_powder"
+  }
+}

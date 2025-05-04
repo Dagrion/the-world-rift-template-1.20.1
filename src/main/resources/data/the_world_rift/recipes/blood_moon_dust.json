@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "the_world_rift:moon_dust"
+    },
+    {
+      "item": "the_world_rift:moon_dust"
+    },
+    {
+      "item": "the_world_rift:moon_dust"
+    },
+    {
+      "item": "the_world_rift:blood_vial"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "item": "the_world_rift:blood_moon_dust"
+  }
+}

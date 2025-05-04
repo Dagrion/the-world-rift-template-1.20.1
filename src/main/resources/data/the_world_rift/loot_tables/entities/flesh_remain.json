@@ -1,0 +1,63 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 3,
+                "min": 1
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:rotten_flesh"
+        }
+      ],
+      "rolls": 1
+    },
+    {
+      "bonus_rolls": 0,
+      "functions": [],
+      "conditions": [],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "the_world_rift:broken_bloody_sword"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "the_world_rift:broken_bloody_scythe"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "the_world_rift:broken_bloody_hammer"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "the_world_rift:broken_bloody_dual_blade"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "the_world_rift:broken_bloody_glaive"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "the_world_rift:broken_bloody_trident"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "the_world_rift:broken_bloody_knife"
+        }
+      ],
+      "rolls": 1
+    }
+  ],
+  "random_sequence": "the_world_rift:entities/flesh_remain"
+}

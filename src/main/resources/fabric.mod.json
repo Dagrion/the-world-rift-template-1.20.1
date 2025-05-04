@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "the-world-rift",
+	"version": "${version}",
+	"name": "The World Rift",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Dagrion"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/the-world-rift/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dagrion.the_world_rift.TheWorldRift"
+		],
+		"client": [
+			"dagrion.the_world_rift.TheWorldRiftClient"
+		],
+		"fabric-datagen": [
+			"dagrion.the_world_rift.TheWorldRiftDataGenerator"
+		]
+	},
+	"mixins": [
+		"the-world-rift.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.12",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "minecraft:golden_carrot"
+    },
+    "$": {
+      "item": "minecraft:lapis_lazuli"
+    },
+    "£": {
+      "item": "minecraft:diamond"
+    },
+    "€": {
+      "item": "the_world_rift:nether_star_powder"
+    }
+  },
+  "pattern": [
+    " €$",
+    "€#€",
+    "£€ "
+  ],
+  "result": {
+    "count": 1,
+    "item": "the_world_rift:enchanted_carrot"
+  }
+}

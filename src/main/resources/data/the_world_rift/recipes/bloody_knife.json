@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "the_world_rift:nether_star_shard"
+    },
+    {
+      "item": "the_world_rift:blood_vial"
+    },
+    {
+      "item": "the_world_rift:broken_bloody_knife"
+    },
+    {
+      "item": "the_world_rift:bloody_ingot"
+    }
+  ],
+    "result": {
+      "item": "the_world_rift:bloody_knife"
+    }
+}

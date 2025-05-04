@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "the_world_rift:bloody_ingot"
+  },
+  "base": {
+    "item": "minecraft:diamond_boots"
+  },
+  "result": {
+    "item": "the_world_rift:bloody_boots"
+  },
+  "template": {
+    "item": "the_world_rift:blood_vial"
+  }
+}

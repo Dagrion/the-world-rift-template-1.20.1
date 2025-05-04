@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "W": {
+      "item": "the_world_rift:nether_star_shard"
+    },
+    "X": {
+      "item": "the_world_rift:blood_vial"
+    },
+    "Y": {
+      "item": "the_world_rift:broken_bloody_sword"
+    },
+    "Z": {
+      "item": "the_world_rift:bloody_ingot"
+    }
+  },
+    "pattern": [
+      " XZ",
+      "WZX",
+      "YW "
+    ],
+    "result": {
+      "item": "the_world_rift:true_bloody_sword"
+    }
+}

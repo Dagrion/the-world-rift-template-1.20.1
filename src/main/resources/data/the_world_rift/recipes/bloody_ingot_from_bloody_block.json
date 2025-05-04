@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "the_world_rift:bloody_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "the_world_rift:bloody_ingot"
+  }
+}

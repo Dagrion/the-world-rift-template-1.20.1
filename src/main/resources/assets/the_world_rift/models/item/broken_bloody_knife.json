@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "the_world_rift:item/broken_bloody_knife"
+  }
+}
