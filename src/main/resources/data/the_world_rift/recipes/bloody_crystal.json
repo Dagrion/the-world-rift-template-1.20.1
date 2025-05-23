@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "@": {
+      "item": "the_world_rift:blood_vial"
+    },
+    "€": {
+      "item": "the_world_rift:blood_crystal"
+    }
+  },
+  "pattern": [
+    "#@#",
+    "#€#",
+    "###"
+  ],
+  "result": {
+    "count": 2,
+    "item": "the_world_rift:blood_crystal"
+  }
+}

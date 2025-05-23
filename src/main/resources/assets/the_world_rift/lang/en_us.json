@@ -5,14 +5,18 @@
   "item.the_world_rift.netherite_nugget": "Netherite Nugget",
   "item.the_world_rift.moon_dust": "Moon Dust",
   "item.the_world_rift.blood_moon_dust": "Blood Moon Dust",
-
+  "item.the_world_rift.blood_moon": "Blood Moon",
   "item.the_world_rift.empty_vial": "Empty Vial",
   "item.the_world_rift.blood_vial": "Blood Vial",
+  "item.the_world_rift.blood_crystal": "Blood Crystal",
   "item.the_world_rift.bloody_ingot": "Bloodstained Ingot",
+  "block.the_world_rift.bloody_block": "Bloodstained Block",
+  "item.the_world_rift.stinger": "Stinger",
+
+  "item.the_world_rift.flesh_pile": "Flesh Pile",
 
   "item.the_world_rift.enchanted_carrot": "Enchanted Carrot",
 
-  "item.the_world_rift.stinger": "Stinger",
   "item.the_world_rift.border_breaker": "Border Breaker",
   "item.the_world_rift.bloody_sword": "Bloodstained Sword",
   "item.the_world_rift.broken_bloody_sword": "Broken Bloodstained Sword",
@@ -22,7 +26,6 @@
   "item.the_world_rift.broken_bloody_glaive": "Broken Bloodstained Glaive",
   "item.the_world_rift.broken_bloody_trident": "Broken Bloodstained Trident",
   "item.the_world_rift.broken_bloody_knife": "Broken Bloodstained Knife",
-
   "item.the_world_rift.true_bloody_sword": "True Bloodstained Sword",
   "item.the_world_rift.bloody_scythe": "Bloodstained Scythe",
   "item.the_world_rift.bloody_hammer": "Bloodstained Hammer",
@@ -30,26 +33,35 @@
   "item.the_world_rift.bloody_glaive": "Bloodstained Glaive",
   "item.the_world_rift.bloody_trident": "Bloodstained Trident",
   "item.the_world_rift.bloody_knife": "Bloodstained Knife",
-
-  "item.the_world_rift.half_moon": "Half Moon",
-
   "item.the_world_rift.bloody_helmet": "Bloodstained Helmet",
   "item.the_world_rift.bloody_chestplate": "Bloodstained Chestplate",
   "item.the_world_rift.bloody_leggings": "Bloodstained Leggings",
   "item.the_world_rift.bloody_boots": "Bloodstained Boots",
-
-  "item.the_world_rift.blood_moon": "Blood Moon",
-
-  "block.the_world_rift.bloody_block": "Bloodstained Block",
+  "item.the_world_rift.half_moon": "Half Moon",
 
   "effect.the_world_rift.bloodlust": "Bloodlust",
   "effect.the_world_rift.bloodloss": "Bloodloss",
 
-  "item.the_world_rift.flesh_pile": "Flesh Pile",
-
   "entity.the_world_rift.flesh_remain": "Flesh Remain",
 
-  "itemgroup.the_world_rift.the_blood_moon_items": "The Blood Moon",
+      "itemgroup.the_world_rift.the_blood_moon_items": "The Blood Moon",
+
+
+
+
+  "item.the_world_rift.bloodsteel_ingot": "Bloodsteel",
+  "item.the_world_rift.hardened_blood_crystal": "Hardened Blood Crystal",
+
+  "item.the_world_rift.bloodsteel_helmet": "Bloodsteel Helmet",
+  "item.the_world_rift.bloodsteel_chestplate": "Bloodsteel Chestplate",
+  "item.the_world_rift.bloodsteel_leggings": "Bloodsteel Leggings",
+  "item.the_world_rift.bloodsteel_boots": "Bloodsteel Boots",
+
+  "item.the_world_rift.bloodsteel_sword": "Bloodsteel Sword",
+
+  "item.the_world_rift.frontier_breaker": "Frontier Breaker",
+
+      "itemgroup.the_world_rift.the_ruins_items": "The Ruins",
 
 
 
@@ -57,11 +69,8 @@
   "item.the_world_rift.blood_of_the_immortal": "Blood Of The Immortal",
   "item.the_world_rift.dragon_heart": "Dragon Heart",
   "item.the_world_rift.dark_cloth": "Dark Cloth",
-  "item.the_world_rift.bloodsteel_ingot": "Bloodsteel",
 
-  "item.the_world_rift.frontier_breaker": "Frontier Breaker",
-
-  "itemgroup.the_world_rift.the_seven_calamity_items": "The Seven Calamity",
+      "itemgroup.the_world_rift.the_seven_calamity_items": "The Seven Calamity",
 
 
 
@@ -69,6 +78,6 @@
 
   "item.the_world_rift.glitched_blood": "Glitched Blood",
 
-  "itemgroup.the_world_rift.the_glitched_items": "The Glitched"
+      "itemgroup.the_world_rift.the_glitched_items": "The Glitched"
 
 }

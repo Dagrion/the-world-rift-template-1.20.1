@@ -32,8 +32,7 @@ public class TrueBloodySwordItem extends SwordItem {
         ItemStack itemStack = user.getStackInHand(hand);
         if (user.getMainHandStack().getItem() == ModItems.TRUE_BLOODY_SWORD) {
             user.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 300, 1, false, false, true));
-            user.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 300, 0, false, false, true));
-            user.getItemCooldownManager().set(user.getMainHandStack().getItem(), 900);
+            user.getItemCooldownManager().set(user.getMainHandStack().getItem(), 1200);
         }
         return TypedActionResult.success(itemStack);
     }

@@ -19,9 +19,10 @@ public class ModItems {
     public static final Item BLOODY_INGOT = registerItem("bloody_ingot", new Item(new FabricItemSettings().fireproof()));
     public static final Item MOON_DUST = registerItem("moon_dust", new Item(new FabricItemSettings().rarity(Rarity.RARE)));
     public static final Item BLOOD_MOON_DUST = registerItem("blood_moon_dust", new Item(new FabricItemSettings().rarity(Rarity.RARE)));
-
+    public static final Item BLOOD_MOON = registerItem("blood_moon", new Item(new FabricItemSettings().maxCount(1).rarity(Rarity.EPIC)));
     public static final Item EMPTY_VIAL = registerItem("empty_vial", new StingerItem((new FabricItemSettings().maxCount(16))));
     public static final Item BLOOD_VIAL = registerItem("blood_vial", new Item(new FabricItemSettings().maxCount(1)));
+    public static final Item BLOOD_CRYSTAL = registerItem("blood_crystal", new Item(new FabricItemSettings()));
 
     public static final Item STINGER = registerItem("stinger",
             new StingerItem((new Item.Settings()).fireproof()));
@@ -32,37 +33,36 @@ public class ModItems {
             new BorderBreakerItem(3,-2.8F, ModToolMaterials.BLOODY, new FabricItemSettings()));;
 
     public static final Item BLOODY_SWORD = registerItem("bloody_sword",
-            new BloodySword(ModToolMaterials.BLOODY, 4, -2.4F, (new Item.Settings()).fireproof()));
+            new BloodySword(ModToolMaterials.BLOODY, 3, -2.4F, (new Item.Settings()).fireproof()));
     public static final Item BROKEN_BLOODY_SWORD = registerItem("broken_bloody_sword",
-            new Item(new Item.Settings().fireproof().maxCount(1).rarity(Rarity.RARE)));
+            new Item(new Item.Settings().fireproof().maxCount(1).rarity(Rarity.UNCOMMON)));
     public static final Item BROKEN_BLOODY_SCYTHE = registerItem("broken_bloody_scythe",
-            new Item(new Item.Settings().fireproof().maxCount(1).rarity(Rarity.RARE)));
+            new Item(new Item.Settings().fireproof().maxCount(1).rarity(Rarity.UNCOMMON)));
     public static final Item BROKEN_BLOODY_HAMMER = registerItem("broken_bloody_hammer",
-            new Item(new Item.Settings().fireproof().maxCount(1).rarity(Rarity.RARE)));
+            new Item(new Item.Settings().fireproof().maxCount(1).rarity(Rarity.UNCOMMON)));
     public static final Item BROKEN_BLOODY_DUAL_BLADE = registerItem("broken_bloody_dual_blade",
-            new Item(new Item.Settings().fireproof().maxCount(1).rarity(Rarity.RARE)));
+            new Item(new Item.Settings().fireproof().maxCount(1).rarity(Rarity.UNCOMMON)));
     public static final Item BROKEN_BLOODY_GLAIVE = registerItem("broken_bloody_glaive",
-            new Item(new Item.Settings().fireproof().maxCount(1).rarity(Rarity.RARE)));
+            new Item(new Item.Settings().fireproof().maxCount(1).rarity(Rarity.UNCOMMON)));
     public static final Item BROKEN_BLOODY_TRIDENT = registerItem("broken_bloody_trident",
-            new Item(new Item.Settings().fireproof().maxCount(1).rarity(Rarity.RARE)));
+            new Item(new Item.Settings().fireproof().maxCount(1).rarity(Rarity.UNCOMMON)));
     public static final Item BROKEN_BLOODY_KNIFE = registerItem("broken_bloody_knife",
-            new Item(new Item.Settings().fireproof().maxCount(1).rarity(Rarity.RARE)));
+            new Item(new Item.Settings().fireproof().maxCount(1).rarity(Rarity.UNCOMMON)));
 
     public static final Item TRUE_BLOODY_SWORD = registerItem("true_bloody_sword",
-            new TrueBloodySwordItem(ModToolMaterials.BLOODY, 4, -2.5F, (new Item.Settings()).fireproof().rarity(Rarity.EPIC)));
+            new TrueBloodySwordItem(ModToolMaterials.BLOODY, 3, -2.5F, (new Item.Settings()).fireproof().rarity(Rarity.RARE)));
     public static final Item BLOODY_SCYTHE = registerItem("bloody_scythe",
-            new BloodyScythe(ModToolMaterials.BLOODY, 6, -2.9F, (new Item.Settings().fireproof().rarity(Rarity.EPIC))));
+            new BloodyScythe(ModToolMaterials.BLOODY, 5, -2.9F, (new Item.Settings().fireproof().rarity(Rarity.RARE))));
     public static final Item BLOODY_HAMMER = registerItem("bloody_hammer",
-            new BloodyHammer(ModToolMaterials.BLOODY, 3, -3.1F, (new Item.Settings().fireproof().rarity(Rarity.EPIC))));
+            new BloodyHammer(ModToolMaterials.BLOODY, 2, -3.1F, (new Item.Settings().fireproof().rarity(Rarity.RARE))));
     public static final Item BLOODY_DUAL_BLADE = registerItem("bloody_dual_blade",
-            new BloodyDualBlade(ModToolMaterials.BLOODY, 0, -2.0F, (new Item.Settings().fireproof().rarity(Rarity.EPIC))));
+            new BloodyDualBlade(ModToolMaterials.BLOODY, -1, -2.0F, (new Item.Settings().fireproof().rarity(Rarity.RARE))));
     public static final Item BLOODY_GLAIVE = registerItem("bloody_glaive",
-            new BloodyGlaive(ModToolMaterials.BLOODY, 5, -2.9F, (new Item.Settings().fireproof().rarity(Rarity.EPIC))));
+            new BloodyGlaive(ModToolMaterials.BLOODY, 4, -2.9F, (new Item.Settings().fireproof().rarity(Rarity.RARE))));
     public static final Item BLOODY_TRIDENT = registerItem("bloody_trident",
-            new BloodyTrident((new Item.Settings().maxDamage(2500).fireproof().rarity(Rarity.EPIC))));
+            new BloodyTrident((new Item.Settings().maxDamage(2500).fireproof().rarity(Rarity.RARE))));
     public static final Item BLOODY_KNIFE = registerItem("bloody_knife",
-            new BloodyKnife(ModToolMaterials.BLOODY, 1, -2.0F, (new Item.Settings().fireproof().rarity(Rarity.EPIC))));
-
+            new BloodyKnife(ModToolMaterials.BLOODY, 0, -2.0F, (new Item.Settings().fireproof().rarity(Rarity.RARE))));
     public static final Item HALF_MOON = registerItem("half_moon",
             new SwordItem(ModToolMaterials.MANAN, 32766, 32763, (new Item.Settings()).fireproof().rarity(Rarity.EPIC)));
 
@@ -75,18 +75,32 @@ public class ModItems {
     public static final Item BLOODY_BOOTS = registerItem("bloody_boots",
             new BloodyArmorItem(ModArmorMaterials.BLOODY, ArmorItem.Type.BOOTS, new Item.Settings().fireproof()));
 
-    public static final Item BLOOD_MOON = registerItem("blood_moon", new Item(new FabricItemSettings().maxCount(1).rarity(Rarity.EPIC)));
-
     public static final Item FLESH_PILE = registerItem("flesh_pile",
             new SpawnEggItem(EntityType.ZOMBIE,0xcbc6a5 ,0xff2400,new FabricItemSettings()));
 
 
 
 
-    public static final Item BLOOD_OF_THE_IMMORTAL = registerItem("blood_of_the_immortal", new Item(new FabricItemSettings().maxCount(1).rarity(Rarity.RARE)));
-    public static final Item DRAGON_HEART = registerItem("dragon_heart", new StingerItem((new FabricItemSettings().maxCount(1).rarity(Rarity.RARE))));
+    public static final Item BLOODSTEEL_INGOT = registerItem("bloodsteel_ingot", new Item(new FabricItemSettings().fireproof()));
+    public static final Item HARDENED_BLOOD_CRYSTAL = registerItem("hardened_blood_crystal", new Item(new FabricItemSettings()));
+
+    public static final Item BLOODSTEEL_HELMET = registerItem("bloodsteel_helmet",
+            new BloodyArmorItem(ModArmorMaterials.BLOODSTEEL, ArmorItem.Type.HELMET, new Item.Settings().fireproof()));
+    public static final Item BLOODSTEEL_CHESTPLATE = registerItem("bloodsteel_chestplate",
+            new BloodyArmorItem(ModArmorMaterials.BLOODSTEEL, ArmorItem.Type.CHESTPLATE, new Item.Settings().fireproof()));
+    public static final Item BLOODSTEEL_LEGGINGS = registerItem("bloodsteel_leggings",
+            new BloodyArmorItem(ModArmorMaterials.BLOODSTEEL, ArmorItem.Type.LEGGINGS, new Item.Settings().fireproof()));
+    public static final Item BLOODSTEEL_BOOTS = registerItem("bloodsteel_boots",
+            new BloodyArmorItem(ModArmorMaterials.BLOODSTEEL, ArmorItem.Type.BOOTS, new Item.Settings().fireproof()));
+    public static final Item BLOODSTEEL_SWORD = registerItem("bloodsteel_sword",
+            new BloodySword(ModToolMaterials.BLOODSTEEL, 3, -2.4F, (new Item.Settings()).fireproof()));
+
+
+
+
+    public static final Item BLOOD_OF_THE_IMMORTAL = registerItem("blood_of_the_immortal", new Item(new FabricItemSettings().maxCount(1).rarity(Rarity.UNCOMMON)));
+    public static final Item DRAGON_HEART = registerItem("dragon_heart", new StingerItem((new FabricItemSettings().maxCount(1).rarity(Rarity.UNCOMMON))));
     public static final Item DARK_CLOTH = registerItem("dark_cloth", new StingerItem((new FabricItemSettings())));
-    public static final Item BLOODSTEEL_INGOT = registerItem("bloodsteel_ingot", new StingerItem((new FabricItemSettings()).rarity(Rarity.UNCOMMON)));
 
 
 

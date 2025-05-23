@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "the_world_rift:bloodsteel_ingot"
+  },
+  "base": {
+    "item": "the_world_rift:bloody_chestplate"
+  },
+  "result": {
+    "item": "the_world_rift:bloodsteel_chestplate"
+  },
+  "template": {
+    "item": "the_world_rift:hardened_blood_crystal"
+  }
+}

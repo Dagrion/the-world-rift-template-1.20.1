@@ -30,6 +30,7 @@ public class ModItemGroups {
                         entries.add(ModItems.BLOOD_MOON);
                         entries.add(ModItems.EMPTY_VIAL);
                         entries.add(ModItems.BLOOD_VIAL);
+                        entries.add(ModItems.BLOOD_CRYSTAL);
                         entries.add(ModItems.BLOODY_INGOT);
 
                         entries.add(ModBlocks.BLOODY_BLOCK);
@@ -60,6 +61,25 @@ public class ModItemGroups {
 
                     }).build());
 
+    public static final ItemGroup THE_RUINS_ITEMS = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(TheWorldRift.MOD_ID, "Bloodstel_ingot"),
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.BLOODSTEEL_INGOT))
+                    .displayName(Text.translatable("itemgroup.the_world_rift.the_ruins_items"))
+                    .entries((displayContext, entries) -> {
+
+                        entries.add(ModItems.BLOODSTEEL_INGOT);
+                        entries.add(ModItems.HARDENED_BLOOD_CRYSTAL);
+
+                        entries.add(ModItems.BLOODSTEEL_HELMET);
+                        entries.add(ModItems.BLOODSTEEL_CHESTPLATE);
+                        entries.add(ModItems.BLOODSTEEL_LEGGINGS);
+                        entries.add(ModItems.BLOODSTEEL_BOOTS);
+
+                        entries.add(ModItems.BLOODSTEEL_SWORD);
+
+
+                    }).build());
+
     public static final ItemGroup THE_SEVEN_CALAMITY_ITEMS = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(TheWorldRift.MOD_ID, "dragon_heart"),
             FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.DRAGON_HEART))
@@ -67,7 +87,6 @@ public class ModItemGroups {
                     .entries((displayContext, entries) -> {
 
                         entries.add(ModItems.BLOOD_OF_THE_IMMORTAL);
-                        entries.add(ModItems.BLOODSTEEL_INGOT);
                         entries.add(ModItems.DRAGON_HEART);
                         entries.add(ModItems.DARK_CLOTH);
 
