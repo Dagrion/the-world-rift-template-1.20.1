@@ -90,6 +90,11 @@ public class ModItemGroups {
                         entries.add(ModItems.DRAGON_HEART);
                         entries.add(ModItems.DARK_CLOTH);
 
+                        entries.add(ModItems.DAGRION_HOOD);
+                        entries.add(ModItems.DAGRION_VAMBRACES);
+                        entries.add(ModItems.DAGRION_COAT);
+                        entries.add(ModItems.DAGRION_GREAVES);
+
                     }).build());
 
     public static final ItemGroup THE_GLICH_ITEMS = Registry.register(Registries.ITEM_GROUP,

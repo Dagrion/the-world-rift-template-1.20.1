@@ -101,7 +101,14 @@ public class ModItems {
     public static final Item BLOOD_OF_THE_IMMORTAL = registerItem("blood_of_the_immortal", new Item(new FabricItemSettings().maxCount(1).rarity(Rarity.UNCOMMON)));
     public static final Item DRAGON_HEART = registerItem("dragon_heart", new StingerItem((new FabricItemSettings().maxCount(1).rarity(Rarity.UNCOMMON))));
     public static final Item DARK_CLOTH = registerItem("dark_cloth", new StingerItem((new FabricItemSettings())));
-
+    public static final Item DAGRION_HOOD = registerItem("dagrion_hood",
+            new BloodyArmorItem(ModArmorMaterials.DAGRION, ArmorItem.Type.HELMET, new Item.Settings().fireproof()));
+    public static final Item DAGRION_VAMBRACES = registerItem("dagrion_vambraces",
+            new BloodyArmorItem(ModArmorMaterials.DAGRION, ArmorItem.Type.CHESTPLATE, new Item.Settings().fireproof()));
+    public static final Item DAGRION_COAT = registerItem("dagrion_coat",
+            new BloodyArmorItem(ModArmorMaterials.DAGRION, ArmorItem.Type.LEGGINGS, new Item.Settings().fireproof()));
+    public static final Item DAGRION_GREAVES = registerItem("dagrion_greaves",
+            new BloodyArmorItem(ModArmorMaterials.DAGRION, ArmorItem.Type.BOOTS, new Item.Settings().fireproof()));
 
 
 
