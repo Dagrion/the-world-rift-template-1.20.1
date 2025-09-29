@@ -3,7 +3,10 @@
 	"package": "dagrion.the_world_rift.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"ExampleMixin"
+		"ExampleMixin",
+		"BlackstoneMixin",
+		"EnchanteddiamondoreMixin",
+		"EnchantedcarrotMixin"
 	],
 	"client": [
 		"ItemRendererAccessor",

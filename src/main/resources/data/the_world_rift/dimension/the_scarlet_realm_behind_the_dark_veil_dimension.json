@@ -1,0 +1,93 @@
+{
+  "type": "the_world_rift:the_scarlet_realm_behind_the_dark_veil_dimension_type",
+  "generator": {
+    "type": "minecraft:noise",
+    "settings": "the_world_rift:the_scarlet_realm_behind_the_dark_veil_dimension_noise",
+    "biome_source": {
+      "type": "minecraft:multi_noise",
+      "biomes": [
+        {
+          "biome": "the_world_rift:petrified_meadow",
+          "parameters": {
+            "temperature": [
+              -0.505,
+              -0.155
+            ],
+            "humidity": -0.5,
+            "continentalness": 0.1025,
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "the_world_rift:barren_wasteland",
+          "parameters": {
+            "temperature": [
+              -0.155,
+              0.125
+            ],
+            "humidity": -0.5,
+            "continentalness": 0.075,
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0.2
+          }
+        },
+        {
+          "biome": "the_world_rift:tarnished_grove",
+          "parameters": {
+            "temperature": [
+              0.225,
+              0.355
+            ],
+            "humidity": -0.5,
+            "continentalness": 0,
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0.35
+          }
+        },
+        {
+          "biome": "the_world_rift:elder_woods",
+          "parameters": {
+            "temperature": [
+              0.355,
+              0.485
+            ],
+            "humidity": -0.5,
+            "continentalness": 0,
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0.45
+          }
+        },
+        {
+          "biome": "minecraft:bamboo_jungle",
+          "parameters": {
+            "temperature": [
+              0.485,
+              0.555
+            ],
+            "humidity": -0.5,
+            "continentalness": 0,
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0.5
+          }
+        }
+      ]
+    },
+    "layers": [
+      {
+        "block": "minecraft:bedrock",
+        "height": -64
+      }
+    ]
+  }
+}

@@ -9,7 +9,7 @@ import net.minecraft.util.Lazy;
 import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial {
-    BLOODY(5, 2000, 10.0F, 4.0F, 22, () -> Ingredient.ofItems(new ItemConvertible[]{ModItems.BLOODY_INGOT})),
+    BLOODSTAINED(5, 2000, 10.0F, 4.0F, 22, () -> Ingredient.ofItems(new ItemConvertible[]{ModItems.BLOODSTAINED_INGOT})),
     BLOODSTEEL(5, 2500, 10.0F, 5.0F, 22, () -> Ingredient.ofItems(new ItemConvertible[]{ModItems.BLOODSTEEL_INGOT})),
     MANAN(0, 1, 0.0F, 0.0F, 0, () ->Ingredient.ofItems(new ItemConvertible[]{Items.NETHER_STAR}));
 
@@ -53,4 +53,3 @@ public enum ModToolMaterials implements ToolMaterial {
         return (Ingredient)this.repairIngredient.get();
     }
 }
-

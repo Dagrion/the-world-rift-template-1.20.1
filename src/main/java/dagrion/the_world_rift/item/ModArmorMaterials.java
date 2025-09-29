@@ -11,7 +11,7 @@ import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
     BLOODY("bloody", 20, new int[] { 3, 8, 6, 3 }, 22,
-            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3f, 0.0f, () -> Ingredient.ofItems(ModItems.BLOODY_INGOT)),
+            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3f, 0.0f, () -> Ingredient.ofItems(ModItems.BLOODSTAINED_INGOT)),
     BLOODSTEEL("bloodsteel", 25, new int[] { 5, 10, 8, 5 }, 22,
     SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3f, 0.1f, () -> Ingredient.ofItems(ModItems.BLOODSTEEL_INGOT)),
     DAGRION("dagrion", 35, new int[] { 0, 0, 0, 0 }, 22,

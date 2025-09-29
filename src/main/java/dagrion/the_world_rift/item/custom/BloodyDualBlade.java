@@ -29,6 +29,7 @@ public class BloodyDualBlade extends SwordItem {
             boolean isMainHand = player.getMainHandStack() == stack;
 
             if (isMainHand) {
+
                 StatusEffectInstance effect = new StatusEffectInstance(StatusEffects.SPEED, 40, 1, true, false, true);
                 player.addStatusEffect(effect);
             }

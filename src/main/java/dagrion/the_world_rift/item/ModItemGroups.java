@@ -12,54 +12,74 @@ import net.minecraft.util.Identifier;
 
 
 public class ModItemGroups {
-    public static final ItemGroup THE_SCARLET_REALM_BEHIND_THE_DARK_VEIL_ITEMS = Registry.register(Registries.ITEM_GROUP,
+    public static final ItemGroup THE_BLOOD_MOON_ITEMS = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(TheWorldRift.MOD_ID, "blood_moon"),
             FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.BLOOD_MOON))
                     .displayName(Text.translatable("itemgroup.the_world_rift.the_blood_moon_items"))
                     .entries((displayContext, entries) -> {
 
-                        entries.add(ModItems.ENCHANTED_CARROT);
-
                         entries.add(ModItems.NETHERITE_NUGGET);
                         entries.add(ModItems.STINGER);
-                        entries.add(ModItems.END_STONE_DUST);
                         entries.add(ModItems.NETHER_STAR_SHARD);
                         entries.add(ModItems.NETHER_STAR_POWDER);
-                        entries.add(ModItems.MOON_DUST);
-                        entries.add(ModItems.BLOOD_MOON_DUST);
-                        entries.add(ModItems.BLOOD_MOON);
                         entries.add(ModItems.EMPTY_VIAL);
                         entries.add(ModItems.BLOOD_VIAL);
                         entries.add(ModItems.BLOOD_CRYSTAL);
-                        entries.add(ModItems.BLOODY_INGOT);
 
-                        entries.add(ModBlocks.BLOODY_BLOCK);
-                        entries.add(ModItems.BLOODY_HELMET);
-                        entries.add(ModItems.BLOODY_CHESTPLATE);
-                        entries.add(ModItems.BLOODY_LEGGINGS);
-                        entries.add(ModItems.BLOODY_BOOTS);
+                        entries.add(ModItems.ENCHANTED_CARROT);
+
+                        entries.add(ModItems.BLOODSTAINED_INGOT);
+                        entries.add(ModBlocks.BLOODSTAINED_BLOCK);
+
+                        entries.add(ModItems.BLOODSTAINED_HELMET);
+                        entries.add(ModItems.BLOODSTAINED_CHESTPLATE);
+                        entries.add(ModItems.BLOODSTAINED_LEGGINGS);
+                        entries.add(ModItems.BLOODSTAINED_BOOTS);
+
+                        entries.add(ModItems.BLOODSTAINED_SWORD);
+                        entries.add(ModItems.BROKEN_BLOODSTAINED_SWORD);
+                        entries.add(ModItems.TRUE_BLOODSTAINED_SWORD);
+                        entries.add(ModItems.BROKEN_BLOODSTAINED_SCYTHE);
+                        entries.add(ModItems.BLOODSTAINED_SCYTHE);
+                        entries.add(ModItems.BROKEN_BLOODSTAINED_HAMMER);
+                        entries.add(ModItems.BLOODSTAINED_HAMMER);
+                        entries.add(ModItems.BROKEN_BLOODSTAINED_DUAL_BLADE);
+                        entries.add(ModItems.BLOODSTAINED_DUAL_BLADE);
+                        entries.add(ModItems.BROKEN_BLOODSTAINED_HALBERD);
+                        entries.add(ModItems.BLOODSTAINED_HALBERD);
+                        entries.add(ModItems.BROKEN_BLOODSTAINED_KNIFE);
+                        entries.add(ModItems.BLOODSTAINED_KNIFE);
                         entries.add(ModItems.BORDER_BREAKER);
-                        entries.add(ModItems.BLOODY_SWORD);
 
-                        entries.add(ModItems.BROKEN_BLOODY_SWORD);
-                        entries.add(ModItems.BROKEN_BLOODY_SCYTHE);
-                        entries.add(ModItems.BROKEN_BLOODY_HAMMER);
-                        entries.add(ModItems.BROKEN_BLOODY_DUAL_BLADE);
-                        entries.add(ModItems.BROKEN_BLOODY_GLAIVE);
-                        entries.add(ModItems.BROKEN_BLOODY_TRIDENT);
-                        entries.add(ModItems.BROKEN_BLOODY_KNIFE);
-
-                        entries.add(ModItems.TRUE_BLOODY_SWORD);
-                        entries.add(ModItems.BLOODY_SCYTHE);
-                        entries.add(ModItems.BLOODY_HAMMER);
-                        entries.add(ModItems.BLOODY_DUAL_BLADE);
-                        entries.add(ModItems.BLOODY_GLAIVE);
-                        entries.add(ModItems.BLOODY_TRIDENT);
-                        entries.add(ModItems.BLOODY_KNIFE);
-
-                        entries.add(ModItems.FLESH_PILE);
 
                     }).build());
+
+    public static final ItemGroup THE_WORLD_RIFT_DECORATION = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(TheWorldRift.MOD_ID, "dungeon_bricks"),
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModBlocks.DUNGEON_BRICKS))
+                    .displayName(Text.translatable("itemgroup.the_world_rift.the_world_rift_decoration"))
+                    .entries((displayContext, entries) -> {
+
+                        entries.add(ModBlocks.ANCIENT_LIBRARY);
+
+                        entries.add(ModBlocks.DUNGEON_BRICKS);
+                        entries.add(ModBlocks.PORTAL_BLOCK);
+
+                        entries.add(ModBlocks.BLACKSTONE_LETTER_A); entries.add(ModBlocks.BLACKSTONE_LETTER_B); entries.add(ModBlocks.BLACKSTONE_LETTER_C);
+                        entries.add(ModBlocks.BLACKSTONE_LETTER_D); entries.add(ModBlocks.BLACKSTONE_LETTER_E); entries.add(ModBlocks.BLACKSTONE_LETTER_F);
+                        entries.add(ModBlocks.BLACKSTONE_LETTER_G); entries.add(ModBlocks.BLACKSTONE_LETTER_H); entries.add(ModBlocks.BLACKSTONE_LETTER_I);
+                        entries.add(ModBlocks.BLACKSTONE_LETTER_J); entries.add(ModBlocks.BLACKSTONE_LETTER_K); entries.add(ModBlocks.BLACKSTONE_LETTER_L);
+                        entries.add(ModBlocks.BLACKSTONE_LETTER_M); entries.add(ModBlocks.BLACKSTONE_LETTER_N); entries.add(ModBlocks.BLACKSTONE_LETTER_O);
+                        entries.add(ModBlocks.BLACKSTONE_LETTER_P); entries.add(ModBlocks.BLACKSTONE_LETTER_Q); entries.add(ModBlocks.BLACKSTONE_LETTER_R);
+                        entries.add(ModBlocks.BLACKSTONE_LETTER_S); entries.add(ModBlocks.BLACKSTONE_LETTER_T); entries.add(ModBlocks.BLACKSTONE_LETTER_U);
+                        entries.add(ModBlocks.BLACKSTONE_LETTER_V); entries.add(ModBlocks.BLACKSTONE_LETTER_W); entries.add(ModBlocks.BLACKSTONE_LETTER_X);
+                        entries.add(ModBlocks.BLACKSTONE_LETTER_Y); entries.add(ModBlocks.BLACKSTONE_LETTER_Z);
+
+                    }).build());
+
+
+
+
 
     public static final ItemGroup THE_RUINS_ITEMS = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(TheWorldRift.MOD_ID, "Bloodstel_ingot"),

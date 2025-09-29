@@ -10,12 +10,12 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModEffect {
-    public static final StatusEffect BLOODLOSS = registerStatusEffect("bloodloss",
+    public static final StatusEffect BLOODLOSS = registerStatusEffect("blood_loss",
             new BloodlossEffect(StatusEffectCategory.HARMFUL,0xa91101)
                     .addAttributeModifier(EntityAttributes.GENERIC_ATTACK_DAMAGE,
                             "22653B89-116E-49DC-9B6B-9971489B5BE5",-2.0F, EntityAttributeModifier.Operation.ADDITION));
 
-    public static final StatusEffect BLOODLUST = registerStatusEffect("bloodlust",
+    public static final StatusEffect BLOODLUST = registerStatusEffect("blood_lust",
             new BloodlustEffect(StatusEffectCategory.BENEFICIAL,0xa91101)
                     .addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED,
                             "91AEAA56-376B-4498-935B-2F7F68070635", 0.5F, EntityAttributeModifier.Operation.MULTIPLY_TOTAL)

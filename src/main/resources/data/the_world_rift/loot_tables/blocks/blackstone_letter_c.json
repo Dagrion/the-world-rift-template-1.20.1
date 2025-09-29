@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "the_world_rift:blackstone_letter_c"
+        }
+      ],
+      "rolls": 1
+    }
+  ],
+  "random_sequence": "the_world_rift:block/blackstone_letter_c"
+}

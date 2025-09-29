@@ -26,12 +26,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "the_world_rift:broken_bloody_glaive",
-          "weight": 1
-        },
-        {
-          "type": "minecraft:item",
-          "name": "the_world_rift:broken_bloody_trident",
+          "name": "the_world_rift:broken_bloody_halberd",
           "weight": 1
         },
         {
@@ -48,7 +43,7 @@
               "count": {
                 "type": "minecraft:uniform",
                 "min": 0,
-                "max": 2
+                "max": 1
               },
               "add": false
             }

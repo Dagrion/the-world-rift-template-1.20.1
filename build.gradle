@@ -16,9 +16,13 @@ repositories {
 	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
+
+	maven { url = "https://maven.jamieswhiteshirt.com/libs-release" }
+	maven { url = "https://maven.kyrptonaught.dev" }
+	maven { url = "https://maven.blamejared.com" }
 }
 
-fabricApi {
+	fabricApi {
 	configureDataGeneration {
 		client = true
 	}
@@ -32,7 +36,11 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-	
+
+	include modImplementation ("com.jamieswhiteshirt:reach-entity-attributes:${project.reach_version}")
+	include modImplementation ("net.kyrptonaught:customportalapi:${project.portal_version}")
+	include modImplementation ("vazkii.patchouli:Patchouli:${project.patchouli_version}")
+
 }
 
 processResources {

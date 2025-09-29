@@ -50,4 +50,5 @@ public class BorderBreakerItem extends MiningToolItem {
 
         return positions;
     }
+
 }

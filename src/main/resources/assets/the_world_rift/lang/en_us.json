@@ -1,20 +1,14 @@
 {
   "item.the_world_rift.nether_star_shard": "Nether Star Shard",
   "item.the_world_rift.nether_star_powder": "Nether Star Powder",
-  "item.the_world_rift.end_stone_dust": "End Stone Dust",
   "item.the_world_rift.netherite_nugget": "Netherite Nugget",
-  "item.the_world_rift.moon_dust": "Moon Dust",
-  "item.the_world_rift.blood_moon_dust": "Blood Moon Dust",
-  "item.the_world_rift.blood_moon": "Blood Moon",
   "item.the_world_rift.empty_vial": "Empty Vial",
   "item.the_world_rift.blood_vial": "Blood Vial",
   "item.the_world_rift.blood_crystal": "Blood Crystal",
   "item.the_world_rift.bloody_ingot": "Bloodstained Ingot",
-  "block.the_world_rift.bloody_block": "Bloodstained Block",
   "item.the_world_rift.stinger": "Stinger",
 
-  "item.the_world_rift.flesh_pile": "Flesh Pile",
-
+  "item.the_world_rift.ancient_tablet": "§4Ancient Tablet",
   "item.the_world_rift.enchanted_carrot": "Enchanted Carrot",
 
   "item.the_world_rift.border_breaker": "Border Breaker",
@@ -23,28 +17,63 @@
   "item.the_world_rift.broken_bloody_scythe": "Broken Bloodstained Scythe",
   "item.the_world_rift.broken_bloody_hammer": "Broken Bloodstained Hammer",
   "item.the_world_rift.broken_bloody_dual_blade": "Broken Bloodstained Dual Blade",
-  "item.the_world_rift.broken_bloody_glaive": "Broken Bloodstained Glaive",
+  "item.the_world_rift.broken_bloody_halberd": "Broken Bloodstained Halberd",
   "item.the_world_rift.broken_bloody_trident": "Broken Bloodstained Trident",
   "item.the_world_rift.broken_bloody_knife": "Broken Bloodstained Knife",
   "item.the_world_rift.true_bloody_sword": "True Bloodstained Sword",
   "item.the_world_rift.bloody_scythe": "Bloodstained Scythe",
   "item.the_world_rift.bloody_hammer": "Bloodstained Hammer",
   "item.the_world_rift.bloody_dual_blade": "Bloodstained Dual Blade",
-  "item.the_world_rift.bloody_glaive": "Bloodstained Glaive",
+  "item.the_world_rift.bloody_halberd": "Bloodstained Halberd",
   "item.the_world_rift.bloody_trident": "Bloodstained Trident",
   "item.the_world_rift.bloody_knife": "Bloodstained Knife",
   "item.the_world_rift.bloody_helmet": "Bloodstained Helmet",
   "item.the_world_rift.bloody_chestplate": "Bloodstained Chestplate",
   "item.the_world_rift.bloody_leggings": "Bloodstained Leggings",
   "item.the_world_rift.bloody_boots": "Bloodstained Boots",
+
+  "item.the_world_rift.scarlet_realm_behind_the_dark_veil": "§0Creative Dimension Swapper",
+  "item.the_world_rift.blood_moon": "Blood Moon",
   "item.the_world_rift.half_moon": "Half Moon",
+  "item.the_world_rift.hypernova": "Hypernova",
 
-  "effect.the_world_rift.bloodlust": "Bloodlust",
-  "effect.the_world_rift.bloodloss": "Bloodloss",
+  "block.the_world_rift.enchanted_diamond_ore": "Diamond Ore",
+  "block.the_world_rift.bloody_block": "Bloodstained Block",
+  "block.the_world_rift.dungeon_bricks": "Dungeon Bricks",
+  "block.the_world_rift.portal_block": "Portal Block",
 
-  "entity.the_world_rift.flesh_remain": "Flesh Remain",
+  "effect.the_world_rift.blood_lust": "Bloodlust",
+  "effect.the_world_rift.blood_loss": "Bloodloss",
+
+  "death.attack.bleeding": "%1$s bleed out!",
 
       "itemgroup.the_world_rift.the_blood_moon_items": "The Blood Moon",
+
+
+  "block.the_world_rift.blackstone_letter_a": "Runed Blackstone A", "block.the_world_rift.blackstone_letter_b": "Runed Blackstone B",
+  "block.the_world_rift.blackstone_letter_c": "Runed Blackstone C", "block.the_world_rift.blackstone_letter_d": "Runed Blackstone D",
+  "block.the_world_rift.blackstone_letter_e": "Runed Blackstone E", "block.the_world_rift.blackstone_letter_f": "Runed Blackstone F",
+  "block.the_world_rift.blackstone_letter_g": "Runed Blackstone G", "block.the_world_rift.blackstone_letter_h": "Runed Blackstone H",
+  "block.the_world_rift.blackstone_letter_i": "Runed Blackstone I", "block.the_world_rift.blackstone_letter_j": "Runed Blackstone J",
+  "block.the_world_rift.blackstone_letter_k": "Runed Blackstone K", "block.the_world_rift.blackstone_letter_l": "Runed Blackstone L",
+  "block.the_world_rift.blackstone_letter_m": "Runed Blackstone M", "block.the_world_rift.blackstone_letter_n": "Runed Blackstone N",
+  "block.the_world_rift.blackstone_letter_o": "Runed Blackstone O", "block.the_world_rift.blackstone_letter_p": "Runed Blackstone P",
+  "block.the_world_rift.blackstone_letter_q": "Runed Blackstone Q", "block.the_world_rift.blackstone_letter_r": "Runed Blackstone R",
+  "block.the_world_rift.blackstone_letter_s": "Runed Blackstone S", "block.the_world_rift.blackstone_letter_t": "Runed Blackstone T",
+  "block.the_world_rift.blackstone_letter_u": "Runed Blackstone U", "block.the_world_rift.blackstone_letter_v": "Runed Blackstone V",
+  "block.the_world_rift.blackstone_letter_w": "Runed Blackstone W", "block.the_world_rift.blackstone_letter_x": "Runed Blackstone X",
+  "block.the_world_rift.blackstone_letter_y": "Runed Blackstone Y", "block.the_world_rift.blackstone_letter_z": "Runed Blackstone Z",
+
+      "itemgroup.the_world_rift.the_world_rift_decoration": "Decoration",
+
+
+
+
+
+
+
+
+
 
 
 
@@ -61,7 +90,7 @@
 
   "item.the_world_rift.frontier_breaker": "Frontier Breaker",
 
-      "itemgroup.the_world_rift.the_ruins_items": "The Ruins",
+      "itemgroup.the_world_rift.the_ruins_items": "The Ruins (IN PAUSE)",
 
 
 
@@ -69,15 +98,18 @@
   "item.the_world_rift.blood_of_the_immortal": "Blood Of The Immortal",
   "item.the_world_rift.dragon_heart": "Dragon Heart",
   "item.the_world_rift.dark_cloth": "Dark Cloth",
+  "item.the_world_rift.dagrion_hood": "Dagrion Hood",
+  "item.the_world_rift.dagrion_vambraces": "Dagrion Vambraces",
+  "item.the_world_rift.dagrion_coat": "Dagrion Coat",
+  "item.the_world_rift.dagrion_greaves": "Dagrion Greaves",
 
-      "itemgroup.the_world_rift.the_seven_calamity_items": "The Seven Calamity",
-
+      "itemgroup.the_world_rift.the_seven_calamity_items": "The Seven Calamity (IN PAUSE)",
 
 
 
 
   "item.the_world_rift.glitched_blood": "Glitched Blood",
 
-      "itemgroup.the_world_rift.the_glitched_items": "The Glitched"
+      "itemgroup.the_world_rift.the_glitched_items": "The Glitched (IN PAUSE)"
 
 }

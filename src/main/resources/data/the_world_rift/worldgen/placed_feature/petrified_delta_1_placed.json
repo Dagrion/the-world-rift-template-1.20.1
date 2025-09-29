@@ -1,0 +1,12 @@
+{
+  "feature": "the_world_rift:petrified_delta_1",
+  "placement": [
+    {
+      "type": "minecraft:count_on_every_layer",
+      "count": 40
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

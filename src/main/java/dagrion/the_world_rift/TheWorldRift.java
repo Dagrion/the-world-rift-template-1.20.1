@@ -9,6 +9,9 @@ import dagrion.the_world_rift.util.ModLootTableModifiers;
 import com.mojang.logging.LogUtils;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
+import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
+import net.minecraft.block.Blocks;
+import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,8 +28,15 @@ public class TheWorldRift implements ModInitializer {
 
 		ModEffect.registerEffects();
 
-		ModLootTableModifiers.modifyLootTables();
-
 		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
+
+		CustomPortalBuilder.beginPortal()
+				.frameBlock(ModBlocks.PORTAL_BLOCK)
+				.lightWithItem(ModItems.BLOOD_VIAL)
+				.setPortalSearchYRange(-64,320)
+				.setReturnPortalSearchYRange(-64,320)
+				.destDimID(new Identifier(TheWorldRift.MOD_ID, "the_scarlet_realm_behind_the_dark_veil_dimension"))
+				.tintColor(0x000000)
+				.registerPortal();
 	}
 }

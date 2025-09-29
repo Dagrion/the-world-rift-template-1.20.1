@@ -1,10 +1,15 @@
 package dagrion.the_world_rift.item.custom;
 
+import com.google.common.collect.ImmutableMultimap;
+import com.google.common.collect.Multimap;
 import dagrion.the_world_rift.item.ModItems;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.attribute.EntityAttribute;
+import net.minecraft.entity.attribute.EntityAttributeModifier;
+import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
@@ -21,9 +26,19 @@ import net.minecraft.world.World;
 public class BloodyHammer extends SwordItem {
     public static final float KNOCKBACK_RANGE = 3.5F;
     private static final float KNOCKBACK_POWER = 0.7F;
+    private final Multimap<EntityAttribute, EntityAttributeModifier> attributeModifiers;
 
     public BloodyHammer(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
         super(toolMaterial, attackDamage, attackSpeed, settings);
+        ImmutableMultimap.Builder<EntityAttribute, EntityAttributeModifier> builder = ImmutableMultimap.builder();
+        builder.put(EntityAttributes.GENERIC_ATTACK_DAMAGE, new EntityAttributeModifier(ATTACK_DAMAGE_MODIFIER_ID, "Weapon modifier", toolMaterial.getAttackDamage() + attackDamage + 0, EntityAttributeModifier.Operation.ADDITION));
+        builder.put(EntityAttributes.GENERIC_ATTACK_SPEED, new EntityAttributeModifier(ATTACK_SPEED_MODIFIER_ID, "Weapon modifier", attackSpeed, EntityAttributeModifier.Operation.ADDITION));
+        this.attributeModifiers = builder.build();
+    }
+
+    @Override
+    public Multimap<EntityAttribute, EntityAttributeModifier> getAttributeModifiers(EquipmentSlot slot) {
+        return slot == EquipmentSlot.MAINHAND ? this.attributeModifiers : super.getAttributeModifiers(slot);
     }
 
     @Override
@@ -86,7 +101,7 @@ public class BloodyHammer extends SwordItem {
     }
 
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        if (user.getMainHandStack().getItem() == ModItems.BLOODY_HAMMER) {
+        if (user.getMainHandStack().getItem() == ModItems.BLOODSTAINED_HAMMER) {
             user.setVelocity (0, 1.25, 0);
             user.getItemCooldownManager().set(user.getMainHandStack().getItem(), 300);
         }
