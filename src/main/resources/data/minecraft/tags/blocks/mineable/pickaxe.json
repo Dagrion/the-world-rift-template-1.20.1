@@ -1,14 +1,16 @@
 {
   "replace": false,
   "values": [
-    "the_world_rift:bloody_block",
+    "the_world_rift:bloodstained_block",
     "the_world_rift:enchanted_diamond_ore",
-    "the_world_rift:blackstone_letter_a", "the_world_rift:blackstone_letter_b", "the_world_rift:blackstone_letter_c", "the_world_rift:blackstone_letter_d",
-    "the_world_rift:blackstone_letter_e", "the_world_rift:blackstone_letter_f", "the_world_rift:blackstone_letter_g", "the_world_rift:blackstone_letter_h",
-    "the_world_rift:blackstone_letter_i", "the_world_rift:blackstone_letter_j", "the_world_rift:blackstone_letter_k", "the_world_rift:blackstone_letter_l",
-    "the_world_rift:blackstone_letter_m", "the_world_rift:blackstone_letter_n", "the_world_rift:blackstone_letter_o", "the_world_rift:blackstone_letter_p",
-    "the_world_rift:blackstone_letter_q", "the_world_rift:blackstone_letter_r", "the_world_rift:blackstone_letter_s", "the_world_rift:blackstone_letter_t",
-    "the_world_rift:blackstone_letter_u", "the_world_rift:blackstone_letter_v", "the_world_rift:blackstone_letter_w", "the_world_rift:blackstone_letter_x",
-    "the_world_rift:blackstone_letter_y", "the_world_rift:blackstone_letter_z"
+    "the_world_rift:cracked_dungeon_bricks",
+
+    "the_world_rift:runed_blackstone_26", "the_world_rift:runed_blackstone_25", "the_world_rift:runed_blackstone_24", "the_world_rift:runed_blackstone_23",
+    "the_world_rift:runed_blackstone_22", "the_world_rift:runed_blackstone_21", "the_world_rift:runed_blackstone_20", "the_world_rift:runed_blackstone_19",
+    "the_world_rift:runed_blackstone_18", "the_world_rift:runed_blackstone_17", "the_world_rift:runed_blackstone_16", "the_world_rift:runed_blackstone_15",
+    "the_world_rift:runed_blackstone_14", "the_world_rift:runed_blackstone_13", "the_world_rift:runed_blackstone_12", "the_world_rift:runed_blackstone_11",
+    "the_world_rift:runed_blackstone_10", "the_world_rift:runed_blackstone_9", "the_world_rift:runed_blackstone_8", "the_world_rift:runed_blackstone_7",
+    "the_world_rift:runed_blackstone_6", "the_world_rift:runed_blackstone_5", "the_world_rift:runed_blackstone_4", "the_world_rift:runed_blackstone_3",
+    "the_world_rift:runed_blackstone_2", "the_world_rift:runed_blackstone_1"
   ]
 }

@@ -4,7 +4,7 @@
     "item": "the_world_rift:bloodsteel_ingot"
   },
   "base": {
-    "item": "the_world_rift:bloody_boots"
+    "item": "the_world_rift:bloodstained_boots"
   },
   "result": {
     "item": "the_world_rift:bloodsteel_boots"

@@ -28,14 +28,6 @@ public class EnchantedCarrotItem extends Item {
     }
 
     @Override
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        {
-            user.getItemCooldownManager().set(user.getMainHandStack().getItem(), 12000);
-        }
-        return super.use(world, user, hand);
-    }
-
-    @Override
     public boolean hasGlint(ItemStack stack) {
         return true;
     }

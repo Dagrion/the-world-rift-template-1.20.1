@@ -10,7 +10,7 @@ import net.minecraft.sound.SoundEvents;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
-    BLOODY("bloody", 20, new int[] { 3, 8, 6, 3 }, 22,
+    BLOODSTAINED("bloody", 20, new int[] { 3, 8, 6, 3 }, 22,
             SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3f, 0.0f, () -> Ingredient.ofItems(ModItems.BLOODSTAINED_INGOT)),
     BLOODSTEEL("bloodsteel", 25, new int[] { 5, 10, 8, 5 }, 22,
     SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3f, 0.1f, () -> Ingredient.ofItems(ModItems.BLOODSTEEL_INGOT)),

@@ -18,36 +18,30 @@ public class ModItemGroups {
                     .displayName(Text.translatable("itemgroup.the_world_rift.the_blood_moon_items"))
                     .entries((displayContext, entries) -> {
 
-                        entries.add(ModItems.NETHERITE_NUGGET);
-                        entries.add(ModItems.STINGER);
-                        entries.add(ModItems.NETHER_STAR_SHARD);
-                        entries.add(ModItems.NETHER_STAR_POWDER);
-                        entries.add(ModItems.EMPTY_VIAL);
-                        entries.add(ModItems.BLOOD_VIAL);
+                        entries.add(ModItems.NETHERITE_NUGGET); entries.add(ModItems.STINGER);
+                        entries.add(ModItems.NETHER_STAR_SHARD); entries.add(ModItems.NETHER_STAR_POWDER);
+                        entries.add(ModItems.EMPTY_VIAL); entries.add(ModItems.BLOOD_VIAL);
                         entries.add(ModItems.BLOOD_CRYSTAL);
 
                         entries.add(ModItems.ENCHANTED_CARROT);
 
-                        entries.add(ModItems.BLOODSTAINED_INGOT);
-                        entries.add(ModBlocks.BLOODSTAINED_BLOCK);
+                        entries.add(ModItems.BLOODSTAINED_INGOT); entries.add(ModBlocks.BLOODSTAINED_BLOCK);
 
-                        entries.add(ModItems.BLOODSTAINED_HELMET);
-                        entries.add(ModItems.BLOODSTAINED_CHESTPLATE);
-                        entries.add(ModItems.BLOODSTAINED_LEGGINGS);
-                        entries.add(ModItems.BLOODSTAINED_BOOTS);
+                        entries.add(ModItems.BLOODSTAINED_HELMET); entries.add(ModItems.BLOODSTAINED_CHESTPLATE);
+                        entries.add(ModItems.BLOODSTAINED_LEGGINGS); entries.add(ModItems.BLOODSTAINED_BOOTS);
 
                         entries.add(ModItems.BLOODSTAINED_SWORD);
-                        entries.add(ModItems.BROKEN_BLOODSTAINED_SWORD);
+                        entries.add(ModItems.RUINED_BLOODSTAINED_SWORD);
                         entries.add(ModItems.TRUE_BLOODSTAINED_SWORD);
-                        entries.add(ModItems.BROKEN_BLOODSTAINED_SCYTHE);
+                        entries.add(ModItems.RUINED_BLOODSTAINED_SCYTHE);
                         entries.add(ModItems.BLOODSTAINED_SCYTHE);
-                        entries.add(ModItems.BROKEN_BLOODSTAINED_HAMMER);
+                        entries.add(ModItems.RUINED_BLOODSTAINED_HAMMER);
                         entries.add(ModItems.BLOODSTAINED_HAMMER);
-                        entries.add(ModItems.BROKEN_BLOODSTAINED_DUAL_BLADE);
+                        entries.add(ModItems.RUINED_BLOODSTAINED_DUAL_BLADE);
                         entries.add(ModItems.BLOODSTAINED_DUAL_BLADE);
-                        entries.add(ModItems.BROKEN_BLOODSTAINED_HALBERD);
+                        entries.add(ModItems.RUINED_BLOODSTAINED_HALBERD);
                         entries.add(ModItems.BLOODSTAINED_HALBERD);
-                        entries.add(ModItems.BROKEN_BLOODSTAINED_KNIFE);
+                        entries.add(ModItems.RUINED_BLOODSTAINED_KNIFE);
                         entries.add(ModItems.BLOODSTAINED_KNIFE);
                         entries.add(ModItems.BORDER_BREAKER);
 
@@ -62,18 +56,18 @@ public class ModItemGroups {
 
                         entries.add(ModBlocks.ANCIENT_LIBRARY);
 
-                        entries.add(ModBlocks.DUNGEON_BRICKS);
+                        entries.add(ModBlocks.DUNGEON_BRICKS); entries.add(ModBlocks.CRACKED_DUNGEON_BRICKS); entries.add(ModBlocks.DUNGEON_CORE);
                         entries.add(ModBlocks.PORTAL_BLOCK);
 
-                        entries.add(ModBlocks.BLACKSTONE_LETTER_A); entries.add(ModBlocks.BLACKSTONE_LETTER_B); entries.add(ModBlocks.BLACKSTONE_LETTER_C);
-                        entries.add(ModBlocks.BLACKSTONE_LETTER_D); entries.add(ModBlocks.BLACKSTONE_LETTER_E); entries.add(ModBlocks.BLACKSTONE_LETTER_F);
-                        entries.add(ModBlocks.BLACKSTONE_LETTER_G); entries.add(ModBlocks.BLACKSTONE_LETTER_H); entries.add(ModBlocks.BLACKSTONE_LETTER_I);
-                        entries.add(ModBlocks.BLACKSTONE_LETTER_J); entries.add(ModBlocks.BLACKSTONE_LETTER_K); entries.add(ModBlocks.BLACKSTONE_LETTER_L);
-                        entries.add(ModBlocks.BLACKSTONE_LETTER_M); entries.add(ModBlocks.BLACKSTONE_LETTER_N); entries.add(ModBlocks.BLACKSTONE_LETTER_O);
-                        entries.add(ModBlocks.BLACKSTONE_LETTER_P); entries.add(ModBlocks.BLACKSTONE_LETTER_Q); entries.add(ModBlocks.BLACKSTONE_LETTER_R);
-                        entries.add(ModBlocks.BLACKSTONE_LETTER_S); entries.add(ModBlocks.BLACKSTONE_LETTER_T); entries.add(ModBlocks.BLACKSTONE_LETTER_U);
-                        entries.add(ModBlocks.BLACKSTONE_LETTER_V); entries.add(ModBlocks.BLACKSTONE_LETTER_W); entries.add(ModBlocks.BLACKSTONE_LETTER_X);
-                        entries.add(ModBlocks.BLACKSTONE_LETTER_Y); entries.add(ModBlocks.BLACKSTONE_LETTER_Z);
+                        entries.add(ModBlocks.RUNED_BLACKSTONE_A); entries.add(ModBlocks.RUNED_BLACKSTONE_B); entries.add(ModBlocks.RUNED_BLACKSTONE_C);
+                        entries.add(ModBlocks.RUNED_BLACKSTONE_D); entries.add(ModBlocks.RUNED_BLACKSTONE_E); entries.add(ModBlocks.RUNED_BLACKSTONE_F);
+                        entries.add(ModBlocks.RUNED_BLACKSTONE_G); entries.add(ModBlocks.RUNED_BLACKSTONE_H); entries.add(ModBlocks.RUNED_BLACKSTONE_I);
+                        entries.add(ModBlocks.RUNED_BLACKSTONE_J); entries.add(ModBlocks.RUNED_BLACKSTONE_K); entries.add(ModBlocks.RUNED_BLACKSTONE_L);
+                        entries.add(ModBlocks.RUNED_BLACKSTONE_M); entries.add(ModBlocks.RUNED_BLACKSTONE_N); entries.add(ModBlocks.RUNED_BLACKSTONE_O);
+                        entries.add(ModBlocks.RUNED_BLACKSTONE_P); entries.add(ModBlocks.RUNED_BLACKSTONE_Q); entries.add(ModBlocks.RUNED_BLACKSTONE_R);
+                        entries.add(ModBlocks.RUNED_BLACKSTONE_S); entries.add(ModBlocks.RUNED_BLACKSTONE_T); entries.add(ModBlocks.RUNED_BLACKSTONE_U);
+                        entries.add(ModBlocks.RUNED_BLACKSTONE_V); entries.add(ModBlocks.RUNED_BLACKSTONE_W); entries.add(ModBlocks.RUNED_BLACKSTONE_X);
+                        entries.add(ModBlocks.RUNED_BLACKSTONE_Y); entries.add(ModBlocks.RUNED_BLACKSTONE_Z);
 
                     }).build());
 

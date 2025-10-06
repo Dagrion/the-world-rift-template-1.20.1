@@ -6,32 +6,32 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "the_world_rift:broken_bloody_sword",
+          "name": "the_world_rift:ruined_bloodstained_sword",
           "weight": 1
         },
         {
           "type": "minecraft:item",
-          "name": "the_world_rift:broken_bloody_scythe",
+          "name": "the_world_rift:ruined_bloodstained_scythe",
           "weight": 1
         },
         {
           "type": "minecraft:item",
-          "name": "the_world_rift:broken_bloody_hammer",
+          "name": "the_world_rift:ruined_bloodstained_hammer",
           "weight": 1
         },
         {
           "type": "minecraft:item",
-          "name": "the_world_rift:broken_bloody_dual_blade",
+          "name": "the_world_rift:ruined_bloodstained_dual_blade",
           "weight": 1
         },
         {
           "type": "minecraft:item",
-          "name": "the_world_rift:broken_bloody_halberd",
+          "name": "the_world_rift:ruined_bloodstained_halberd",
           "weight": 1
         },
         {
           "type": "minecraft:item",
-          "name": "the_world_rift:broken_bloody_knife",
+          "name": "the_world_rift:ruined_bloodstained_knife",
           "weight": 1
         },
         {

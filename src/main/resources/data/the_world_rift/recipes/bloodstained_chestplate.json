@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "the_world_rift:bloodstained_ingot"
+  },
+  "base": {
+    "item": "minecraft:diamond_chestplate"
+  },
+  "result": {
+    "item": "the_world_rift:bloodstained_chestplate"
+  },
+  "template": {
+    "item": "the_world_rift:blood_crystal"
+  }
+}

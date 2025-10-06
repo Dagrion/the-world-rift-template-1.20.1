@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "the_world_rift:bloody_block"
+    "the_world_rift:bloodstained_block",
+    "the_world_rift:cracked_dungeon_bricks"
   ]
 }

@@ -14,7 +14,7 @@ public class ModItems {
     public static final Item NETHER_STAR_SHARD = registerItem("nether_star_shard", new NetherStarItem(new FabricItemSettings().rarity(Rarity.UNCOMMON)));
     public static final Item NETHER_STAR_POWDER = registerItem("nether_star_powder", new NetherStarItem(new FabricItemSettings().rarity(Rarity.UNCOMMON)));
     public static final Item NETHERITE_NUGGET = registerItem("netherite_nugget", new Item(new FabricItemSettings().fireproof()));
-    public static final Item BLOODSTAINED_INGOT = registerItem("bloody_ingot", new Item(new FabricItemSettings().fireproof()));
+    public static final Item BLOODSTAINED_INGOT = registerItem("bloodstained_ingot", new Item(new FabricItemSettings().fireproof()));
     public static final Item BLOOD_MOON = registerItem("blood_moon", new Item(new FabricItemSettings().maxCount(1).rarity(Rarity.EPIC)));
     public static final Item EMPTY_VIAL = registerItem("empty_vial", new StingerItem((new FabricItemSettings().maxCount(16))));
     public static final Item BLOOD_VIAL = registerItem("blood_vial", new Item(new FabricItemSettings().maxCount(1)));
@@ -32,48 +32,48 @@ public class ModItems {
     public static final Item BORDER_BREAKER = registerItem("border_breaker",
             new BorderBreakerItem( 3,-2.8F, ModToolMaterials.BLOODSTAINED, new FabricItemSettings()));
 
-    public static final Item BLOODSTAINED_SWORD = registerItem("bloody_sword",
+    public static final Item BLOODSTAINED_SWORD = registerItem("bloodstained_sword",
             new BloodySword(ModToolMaterials.BLOODSTAINED, 3, -2.4F, (new Item.Settings()).fireproof()));
-    public static final Item BROKEN_BLOODSTAINED_SWORD = registerItem("broken_bloody_sword",
+    public static final Item RUINED_BLOODSTAINED_SWORD = registerItem("ruined_bloodstained_sword",
             new Item(new Item.Settings().fireproof().maxCount(1).rarity(Rarity.UNCOMMON)));
-    public static final Item BROKEN_BLOODSTAINED_SCYTHE = registerItem("broken_bloody_scythe",
+    public static final Item RUINED_BLOODSTAINED_SCYTHE = registerItem("ruined_bloodstained_scythe",
             new Item(new Item.Settings().fireproof().maxCount(1).rarity(Rarity.UNCOMMON)));
-    public static final Item BROKEN_BLOODSTAINED_HAMMER = registerItem("broken_bloody_hammer",
+    public static final Item RUINED_BLOODSTAINED_HAMMER = registerItem("ruined_bloodstained_hammer",
             new Item(new Item.Settings().fireproof().maxCount(1).rarity(Rarity.UNCOMMON)));
-    public static final Item BROKEN_BLOODSTAINED_DUAL_BLADE = registerItem("broken_bloody_dual_blade",
+    public static final Item RUINED_BLOODSTAINED_DUAL_BLADE = registerItem("ruined_bloodstained_dual_blade",
             new Item(new Item.Settings().fireproof().maxCount(1).rarity(Rarity.UNCOMMON)));
-    public static final Item BROKEN_BLOODSTAINED_HALBERD = registerItem("broken_bloody_halberd",
+    public static final Item RUINED_BLOODSTAINED_HALBERD = registerItem("ruined_bloodstained_halberd",
             new Item(new Item.Settings().fireproof().maxCount(1).rarity(Rarity.UNCOMMON)));
-    public static final Item BROKEN_BLOODSTAINED_KNIFE = registerItem("broken_bloody_knife",
+    public static final Item RUINED_BLOODSTAINED_KNIFE = registerItem("ruined_bloodstained_knife",
             new Item(new Item.Settings().fireproof().maxCount(1).rarity(Rarity.UNCOMMON)));
 
-    public static final Item TRUE_BLOODSTAINED_SWORD = registerItem("true_bloody_sword",
+    public static final Item TRUE_BLOODSTAINED_SWORD = registerItem("true_bloodstained_sword",
             new TrueBloodySwordItem(ModToolMaterials.BLOODSTAINED, 3, -2.5F, (new Item.Settings()).fireproof().rarity(Rarity.RARE)));
-    public static final Item BLOODSTAINED_SCYTHE = registerItem("bloody_scythe",
+    public static final Item BLOODSTAINED_SCYTHE = registerItem("bloodstained_scythe",
             new BloodyScythe(ModToolMaterials.BLOODSTAINED, 5, -2.9F, (new Item.Settings().fireproof().rarity(Rarity.RARE))));
-    public static final Item BLOODSTAINED_HAMMER = registerItem("bloody_hammer",
+    public static final Item BLOODSTAINED_HAMMER = registerItem("bloodstained_hammer",
             new BloodyHammer(ModToolMaterials.BLOODSTAINED, 3, -3.1F, (new Item.Settings().fireproof().rarity(Rarity.RARE))));
-    public static final Item BLOODSTAINED_DUAL_BLADE = registerItem("bloody_dual_blade",
+    public static final Item BLOODSTAINED_DUAL_BLADE = registerItem("bloodstained_dual_blade",
             new BloodyDualBlade(ModToolMaterials.BLOODSTAINED, -1, -2.0F, (new Item.Settings().fireproof().rarity(Rarity.RARE))));
-    public static final Item BLOODSTAINED_HALBERD = registerItem("bloody_halberd",
+    public static final Item BLOODSTAINED_HALBERD = registerItem("bloodstained_halberd",
             new BloodyHalberd(ModToolMaterials.BLOODSTAINED, 4, -3.0F, (new Item.Settings().fireproof().rarity(Rarity.RARE))));
-    public static final Item BLOODSTAINED_KNIFE = registerItem("bloody_knife",
+    public static final Item BLOODSTAINED_KNIFE = registerItem("bloodstained_knife",
             new BloodyKnife(ModToolMaterials.BLOODSTAINED, 3, -2.0F, (new Item.Settings().fireproof().rarity(Rarity.RARE))));
 
     public static final Item HALF_MOON = registerItem("half_moon",
             new SwordItem(ModToolMaterials.MANAN, 32766, 32763, (new Item.Settings()).fireproof().rarity(Rarity.EPIC)));
     public static final Item HYPERNOVA = registerItem("hypernova",
-            new Item(new FabricItemSettings().maxCount(1).fireproof().rarity(Rarity.EPIC)));
+            new HypernovaItem(new FabricItemSettings().maxCount(1).fireproof().rarity(Rarity.EPIC)));
 
 
-    public static final Item BLOODSTAINED_HELMET = registerItem("bloody_helmet",
-            new BloodyArmorItem(ModArmorMaterials.BLOODY, ArmorItem.Type.HELMET, new Item.Settings().fireproof()));
-    public static final Item BLOODSTAINED_CHESTPLATE = registerItem("bloody_chestplate",
-            new BloodyArmorItem(ModArmorMaterials.BLOODY, ArmorItem.Type.CHESTPLATE, new Item.Settings().fireproof()));
-    public static final Item BLOODSTAINED_LEGGINGS = registerItem("bloody_leggings",
-            new BloodyArmorItem(ModArmorMaterials.BLOODY, ArmorItem.Type.LEGGINGS, new Item.Settings().fireproof()));
-    public static final Item BLOODSTAINED_BOOTS = registerItem("bloody_boots",
-            new BloodyArmorItem(ModArmorMaterials.BLOODY, ArmorItem.Type.BOOTS, new Item.Settings().fireproof()));
+    public static final Item BLOODSTAINED_HELMET = registerItem("bloodstained_helmet",
+            new BloodyArmorItem(ModArmorMaterials.BLOODSTAINED, ArmorItem.Type.HELMET, new Item.Settings().fireproof()));
+    public static final Item BLOODSTAINED_CHESTPLATE = registerItem("bloodstained_chestplate",
+            new BloodyArmorItem(ModArmorMaterials.BLOODSTAINED, ArmorItem.Type.CHESTPLATE, new Item.Settings().fireproof()));
+    public static final Item BLOODSTAINED_LEGGINGS = registerItem("bloodstained_leggings",
+            new BloodyArmorItem(ModArmorMaterials.BLOODSTAINED, ArmorItem.Type.LEGGINGS, new Item.Settings().fireproof()));
+    public static final Item BLOODSTAINED_BOOTS = registerItem("bloodstained_boots",
+            new BloodyArmorItem(ModArmorMaterials.BLOODSTAINED, ArmorItem.Type.BOOTS, new Item.Settings().fireproof()));
 
 
 
@@ -110,13 +110,13 @@ public class ModItems {
     public static final Item DRAGON_HEART = registerItem("dragon_heart", new StingerItem((new FabricItemSettings().maxCount(1).rarity(Rarity.UNCOMMON))));
     public static final Item DARK_CLOTH = registerItem("dark_cloth", new StingerItem((new FabricItemSettings())));
     public static final Item DAGRION_HOOD = registerItem("dagrion_hood",
-            new BloodyArmorItem(ModArmorMaterials.DAGRION, ArmorItem.Type.HELMET, new Item.Settings().fireproof()));
+            new DagrionArmorItem(ModArmorMaterials.DAGRION, ArmorItem.Type.HELMET, new Item.Settings().fireproof()));
     public static final Item DAGRION_VAMBRACES = registerItem("dagrion_vambraces",
-            new BloodyArmorItem(ModArmorMaterials.DAGRION, ArmorItem.Type.CHESTPLATE, new Item.Settings().fireproof()));
+            new DagrionArmorItem(ModArmorMaterials.DAGRION, ArmorItem.Type.CHESTPLATE, new Item.Settings().fireproof()));
     public static final Item DAGRION_COAT = registerItem("dagrion_coat",
-            new BloodyArmorItem(ModArmorMaterials.DAGRION, ArmorItem.Type.LEGGINGS, new Item.Settings().fireproof()));
+            new DagrionArmorItem(ModArmorMaterials.DAGRION, ArmorItem.Type.LEGGINGS, new Item.Settings().fireproof()));
     public static final Item DAGRION_GREAVES = registerItem("dagrion_greaves",
-            new BloodyArmorItem(ModArmorMaterials.DAGRION, ArmorItem.Type.BOOTS, new Item.Settings().fireproof()));
+            new DagrionArmorItem(ModArmorMaterials.DAGRION, ArmorItem.Type.BOOTS, new Item.Settings().fireproof()));
 
 
 
@@ -136,12 +136,12 @@ public class ModItems {
             fabricItemGroupEntries.add(HALF_MOON);
             fabricItemGroupEntries.add(HYPERNOVA);
             fabricItemGroupEntries.add(SRBDV);
+            fabricItemGroupEntries.add(ANCIENT_TABLET);
 
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(fabricItemGroupEntries -> {
 
-            fabricItemGroupEntries.add(ANCIENT_TABLET);
 
         });
     }

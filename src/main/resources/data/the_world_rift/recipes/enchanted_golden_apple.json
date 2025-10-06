@@ -10,12 +10,12 @@
     }
   },
   "pattern": [
-    "@#@",
-    "# #",
-    "@#@"
+    "###",
+    "#@#",
+    "###"
   ],
   "result": {
-    "count": 4,
+    "count": 8,
     "item": "minecraft:enchanted_golden_apple"
   }
 }

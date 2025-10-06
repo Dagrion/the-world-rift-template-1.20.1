@@ -1,25 +1,27 @@
 package dagrion.the_world_rift.block;
 
 import dagrion.the_world_rift.TheWorldRift;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.MapColor;
-import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
 public class ModBlocks {
-    public static final Block BLOODSTAINED_BLOCK = registerBlock("bloody_block",
-            new Block(AbstractBlock.Settings.create().mapColor(MapColor.DARK_RED).strength(60.0F).requiresTool().sounds(BlockSoundGroup.NETHERITE)));
+    public static final Block BLOODSTAINED_BLOCK = registerBlock("bloodstained_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK)
+                    .mapColor(MapColor.DARK_RED)
+            )
+    );
     public static final Block ENCHANTED_DIAMOND_ORE = registerBlock("enchanted_diamond_ore",
-            new Block(AbstractBlock.Settings.create().mapColor(MapColor.LIGHT_BLUE).strength(5.0F).requiresTool().sounds(BlockSoundGroup.STONE)));
-
-
+            new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE)
+                    .mapColor(MapColor.LIGHT_BLUE)
+            )
+    );
 
 
 
@@ -27,95 +29,69 @@ public class ModBlocks {
 
 
     public static final Block ANCIENT_LIBRARY = registerBlock("ancient_library",
-            new Block(FabricBlockSettings.create()
+            new Block(FabricBlockSettings.copyOf(Blocks.BOOKSHELF)
                     .mapColor(MapColor.SPRUCE_BROWN)
-                    .strength(10000.0F)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.NETHER_WOOD)
-                    .pistonBehavior(PistonBehavior.DESTROY)
-                    .nonOpaque()
             )
     );
 
-    public static final Block DUNGEON_BRICKS = registerBlock("dungeon_bricks",
-            new Block(AbstractBlock.Settings.create()
+    public static final Block CRACKED_DUNGEON_BRICKS = registerBlock("cracked_dungeon_bricks",
+            new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN)
                     .mapColor(MapColor.DEEPSLATE_GRAY)
-                    .strength(-1.0F, 3600000.0F)
-                    .requiresTool()
-                    .sounds(BlockSoundGroup.STONE)
-                    .pistonBehavior(PistonBehavior.BLOCK)
+            )
+    );
+    public static final Block DUNGEON_BRICKS = registerBlock("dungeon_bricks",
+            new Block(FabricBlockSettings.copyOf(Blocks.BEDROCK)
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+            )
+    );
+    public static final Block DUNGEON_CORE = registerBlock("dungeon_core",
+            new Block(FabricBlockSettings.copyOf(Blocks.BEDROCK)
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
             )
     );
     public static final Block PORTAL_BLOCK = registerBlock("portal_block",
-            new Block(AbstractBlock.Settings.create()
+            new Block(FabricBlockSettings.copyOf(Blocks.BEDROCK)
                     .mapColor(MapColor.DEEPSLATE_GRAY)
-                    .strength(-1.0F, 3600000.0F)
-                    .sounds(BlockSoundGroup.STONE)
-                    .requiresTool().pistonBehavior(PistonBehavior.BLOCK)
             )
     );
 
-    public static final Block BLACKSTONE_LETTER_A = registerBlock("blackstone_letter_a",
-            new Block(AbstractBlock.Settings.create().mapColor(MapColor.BLACK).strength(1.5F, 6.0F).requiresTool().sounds(BlockSoundGroup.STONE)));
-    public static final Block BLACKSTONE_LETTER_B = registerBlock("blackstone_letter_b",
-            new Block(AbstractBlock.Settings.create().strength(1.5F, 6.0F).requiresTool().sounds(BlockSoundGroup.STONE)));
-    public static final Block BLACKSTONE_LETTER_C = registerBlock("blackstone_letter_c",
-            new Block(AbstractBlock.Settings.create().mapColor(MapColor.BLACK).strength(1.5F, 6.0F).requiresTool().sounds(BlockSoundGroup.STONE)));
-    public static final Block BLACKSTONE_LETTER_D = registerBlock("blackstone_letter_d",
-            new Block(AbstractBlock.Settings.create().mapColor(MapColor.BLACK).strength(1.5F, 6.0F).requiresTool().sounds(BlockSoundGroup.STONE)));
-    public static final Block BLACKSTONE_LETTER_E = registerBlock("blackstone_letter_e",
-            new Block(AbstractBlock.Settings.create().mapColor(MapColor.BLACK).strength(1.5F, 6.0F).requiresTool().sounds(BlockSoundGroup.STONE)));
-    public static final Block BLACKSTONE_LETTER_F = registerBlock("blackstone_letter_f",
-            new Block(AbstractBlock.Settings.create().mapColor(MapColor.BLACK).strength(1.5F, 6.0F).requiresTool().sounds(BlockSoundGroup.STONE)));
-    public static final Block BLACKSTONE_LETTER_G = registerBlock("blackstone_letter_g",
-            new Block(AbstractBlock.Settings.create().mapColor(MapColor.BLACK).strength(1.5F, 6.0F).requiresTool().sounds(BlockSoundGroup.STONE)));
-    public static final Block BLACKSTONE_LETTER_H = registerBlock("blackstone_letter_h",
-            new Block(AbstractBlock.Settings.create().mapColor(MapColor.BLACK).strength(1.5F, 6.0F).requiresTool().sounds(BlockSoundGroup.STONE)));
-    public static final Block BLACKSTONE_LETTER_I = registerBlock("blackstone_letter_i",
-            new Block(AbstractBlock.Settings.create().mapColor(MapColor.BLACK).strength(1.5F, 6.0F).requiresTool().sounds(BlockSoundGroup.STONE)));
-    public static final Block BLACKSTONE_LETTER_J = registerBlock("blackstone_letter_j",
-            new Block(AbstractBlock.Settings.create().mapColor(MapColor.BLACK).strength(1.5F, 6.0F).requiresTool().sounds(BlockSoundGroup.STONE)));
-    public static final Block BLACKSTONE_LETTER_K = registerBlock("blackstone_letter_k",
-            new Block(AbstractBlock.Settings.create().mapColor(MapColor.BLACK).strength(1.5F, 6.0F).requiresTool().sounds(BlockSoundGroup.STONE)));
-    public static final Block BLACKSTONE_LETTER_L = registerBlock("blackstone_letter_l",
-            new Block(AbstractBlock.Settings.create().mapColor(MapColor.BLACK).strength(1.5F, 6.0F).requiresTool().sounds(BlockSoundGroup.STONE)));
-    public static final Block BLACKSTONE_LETTER_M = registerBlock("blackstone_letter_m",
-            new Block(AbstractBlock.Settings.create().mapColor(MapColor.BLACK).strength(1.5F, 6.0F).requiresTool().sounds(BlockSoundGroup.STONE)));
-    public static final Block BLACKSTONE_LETTER_N = registerBlock("blackstone_letter_n",
-            new Block(AbstractBlock.Settings.create().mapColor(MapColor.BLACK).strength(1.5F, 6.0F).requiresTool().sounds(BlockSoundGroup.STONE)));
-    public static final Block BLACKSTONE_LETTER_O = registerBlock("blackstone_letter_o",
-            new Block(AbstractBlock.Settings.create().mapColor(MapColor.BLACK).strength(1.5F, 6.0F).requiresTool().sounds(BlockSoundGroup.STONE)));
-    public static final Block BLACKSTONE_LETTER_P = registerBlock("blackstone_letter_p",
-            new Block(AbstractBlock.Settings.create().mapColor(MapColor.BLACK).strength(1.5F, 6.0F).requiresTool().sounds(BlockSoundGroup.STONE)));
-    public static final Block BLACKSTONE_LETTER_Q = registerBlock("blackstone_letter_q",
-            new Block(AbstractBlock.Settings.create().mapColor(MapColor.BLACK).strength(1.5F, 6.0F).requiresTool().sounds(BlockSoundGroup.STONE)));
-    public static final Block BLACKSTONE_LETTER_R = registerBlock("blackstone_letter_r",
-            new Block(AbstractBlock.Settings.create().mapColor(MapColor.BLACK).strength(1.5F, 6.0F).requiresTool().sounds(BlockSoundGroup.STONE)));
-    public static final Block BLACKSTONE_LETTER_S = registerBlock("blackstone_letter_s",
-            new Block(AbstractBlock.Settings.create().mapColor(MapColor.BLACK).strength(1.5F, 6.0F).requiresTool().sounds(BlockSoundGroup.STONE)));
-    public static final Block BLACKSTONE_LETTER_T = registerBlock("blackstone_letter_t",
-            new Block(AbstractBlock.Settings.create().mapColor(MapColor.BLACK).strength(1.5F, 6.0F).requiresTool().sounds(BlockSoundGroup.STONE)));
-    public static final Block BLACKSTONE_LETTER_U = registerBlock("blackstone_letter_u",
-            new Block(AbstractBlock.Settings.create().mapColor(MapColor.BLACK).strength(1.5F, 6.0F).requiresTool().sounds(BlockSoundGroup.STONE)));
-    public static final Block BLACKSTONE_LETTER_V = registerBlock("blackstone_letter_v",
-            new Block(AbstractBlock.Settings.create().mapColor(MapColor.BLACK).strength(1.5F, 6.0F).requiresTool().sounds(BlockSoundGroup.STONE)));
-    public static final Block BLACKSTONE_LETTER_W = registerBlock("blackstone_letter_w",
-            new Block(AbstractBlock.Settings.create().mapColor(MapColor.BLACK).strength(1.5F, 6.0F).requiresTool().sounds(BlockSoundGroup.STONE)));
-    public static final Block BLACKSTONE_LETTER_X = registerBlock("blackstone_letter_x",
-            new Block(AbstractBlock.Settings.create().mapColor(MapColor.BLACK).strength(1.5F, 6.0F).requiresTool().sounds(BlockSoundGroup.STONE)));
-    public static final Block BLACKSTONE_LETTER_Y = registerBlock("blackstone_letter_y",
-            new Block(AbstractBlock.Settings.create().mapColor(MapColor.BLACK).strength(1.5F, 6.0F).requiresTool().sounds(BlockSoundGroup.STONE)));
-    public static final Block BLACKSTONE_LETTER_Z = registerBlock("blackstone_letter_z",
-            new Block(AbstractBlock.Settings.create().mapColor(MapColor.BLACK).strength(1.5F, 6.0F).requiresTool().sounds(BlockSoundGroup.STONE)));
+    public static final Block RUNED_BLACKSTONE_A = registerBlock("runed_blackstone_26", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
+    public static final Block RUNED_BLACKSTONE_B = registerBlock("runed_blackstone_25", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
+    public static final Block RUNED_BLACKSTONE_C = registerBlock("runed_blackstone_24", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
+    public static final Block RUNED_BLACKSTONE_D = registerBlock("runed_blackstone_23", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
+    public static final Block RUNED_BLACKSTONE_E = registerBlock("runed_blackstone_22", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
+    public static final Block RUNED_BLACKSTONE_F = registerBlock("runed_blackstone_21", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
+    public static final Block RUNED_BLACKSTONE_G = registerBlock("runed_blackstone_20", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
+    public static final Block RUNED_BLACKSTONE_H = registerBlock("runed_blackstone_19", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
+    public static final Block RUNED_BLACKSTONE_I = registerBlock("runed_blackstone_18", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
+    public static final Block RUNED_BLACKSTONE_J = registerBlock("runed_blackstone_17", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
+    public static final Block RUNED_BLACKSTONE_K = registerBlock("runed_blackstone_16", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
+    public static final Block RUNED_BLACKSTONE_L = registerBlock("runed_blackstone_15", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
+    public static final Block RUNED_BLACKSTONE_M = registerBlock("runed_blackstone_14", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
+    public static final Block RUNED_BLACKSTONE_N = registerBlock("runed_blackstone_13", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
+    public static final Block RUNED_BLACKSTONE_O = registerBlock("runed_blackstone_12", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
+    public static final Block RUNED_BLACKSTONE_P = registerBlock("runed_blackstone_11", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
+    public static final Block RUNED_BLACKSTONE_Q = registerBlock("runed_blackstone_10", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
+    public static final Block RUNED_BLACKSTONE_R = registerBlock("runed_blackstone_9", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
+    public static final Block RUNED_BLACKSTONE_S = registerBlock("runed_blackstone_8", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
+    public static final Block RUNED_BLACKSTONE_T = registerBlock("runed_blackstone_7", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
+    public static final Block RUNED_BLACKSTONE_U = registerBlock("runed_blackstone_6", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
+    public static final Block RUNED_BLACKSTONE_V = registerBlock("runed_blackstone_5", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
+    public static final Block RUNED_BLACKSTONE_W = registerBlock("runed_blackstone_4", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
+    public static final Block RUNED_BLACKSTONE_X = registerBlock("runed_blackstone_3", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
+    public static final Block RUNED_BLACKSTONE_Y = registerBlock("runed_blackstone_2", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
+    public static final Block RUNED_BLACKSTONE_Z = registerBlock("runed_blackstone_1", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
+
+
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
-        return Registry.register(Registries.BLOCK, Identifier.of(TheWorldRift.MOD_ID, name), block);
+        return Registry.register(Registries.BLOCK, new Identifier(TheWorldRift.MOD_ID, name), block);
     }
 
-    private static void registerBlockItem(String name, Block block) {
-        Registry.register(Registries.ITEM, Identifier.of(TheWorldRift.MOD_ID, name),
-                new BlockItem(block, new Item.Settings().fireproof()));
+    private static BlockItem registerBlockItem(String name, Block block) {
+        return Registry.register(Registries.ITEM, new Identifier(TheWorldRift.MOD_ID, name),
+                new BlockItem(block, new FabricItemSettings()));
     }
 
     public static void registerModBlocks(){

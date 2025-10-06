@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "W": {
+      "item": "the_world_rift:nether_star_shard"
+    },
+    "X": {
+      "item": "the_world_rift:blood_vial"
+    },
+    "Y": {
+      "item": "the_world_rift:ruined_bloodstained_scythe"
+    },
+    "Z": {
+      "item": "the_world_rift:bloodstained_ingot"
+    }
+  },
+    "pattern": [
+      "YZW",
+      "ZXX",
+      "W  "
+    ],
+    "result": {
+      "item": "the_world_rift:bloodstained_scythe"
+    }
+}

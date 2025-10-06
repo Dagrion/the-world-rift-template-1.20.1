@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/trident_throwing",
-  "textures": {
-    "particle": "the_world_rift:item/bloody_trident"
-  }
-}
