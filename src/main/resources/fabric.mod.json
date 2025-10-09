@@ -1,6 +1,6 @@
 {
 	"schemaVersion": 1,
-	"id": "the-world-rift",
+	"id": "the_world_rift",
 	"version": "${version}",
 	"name": "The World Rift",
 	"description": "This is an example description! Tell everyone what your mod is about!",

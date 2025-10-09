@@ -2,17 +2,23 @@
   "item.the_world_rift.nether_star_shard": "Nether Star Shard",
   "item.the_world_rift.nether_star_powder": "Nether Star Powder",
   "item.the_world_rift.netherite_nugget": "Netherite Nugget",
+  "item.the_world_rift.stinger": "Stinger",
   "item.the_world_rift.empty_vial": "Empty Vial",
   "item.the_world_rift.blood_vial": "Blood Vial",
   "item.the_world_rift.blood_crystal": "Blood Crystal",
+  "item.the_world_rift.hardened_blood_crystal": "Hardened Blood Crystal",
   "item.the_world_rift.bloodstained_ingot": "Bloodstained Ingot",
-  "item.the_world_rift.stinger": "Stinger",
+  "item.the_world_rift.bloodsteel_ingot": "Bloodsteel",
 
-  "item.the_world_rift.ancient_tablet": "§4Ancient Tablet",
   "item.the_world_rift.enchanted_carrot": "Enchanted Carrot",
 
+
+
   "item.the_world_rift.border_breaker": "Border Breaker",
+  "item.the_world_rift.frontier_breaker": "Frontier Breaker",
+
   "item.the_world_rift.bloodstained_sword": "Bloodstained Sword",
+  "item.the_world_rift.bloodsteel_sword": "Bloodsteel Sword",
   "item.the_world_rift.ruined_bloodstained_sword": "Ruined Bloodstained Sword",
   "item.the_world_rift.ruined_bloodstained_scythe": "Ruined Bloodstained Scythe",
   "item.the_world_rift.ruined_bloodstained_hammer": "Ruined Bloodstained Hammer",
@@ -27,30 +33,38 @@
   "item.the_world_rift.bloodstained_halberd": "Bloodstained Halberd",
   "item.the_world_rift.bloodstained_trident": "Bloodstained Trident",
   "item.the_world_rift.bloodstained_knife": "Bloodstained Knife",
+
   "item.the_world_rift.bloodstained_helmet": "Bloodstained Helmet",
   "item.the_world_rift.bloodstained_chestplate": "Bloodstained Chestplate",
   "item.the_world_rift.bloodstained_leggings": "Bloodstained Leggings",
   "item.the_world_rift.bloodstained_boots": "Bloodstained Boots",
+  "item.the_world_rift.bloodsteel_helmet": "Bloodsteel Helmet",
+  "item.the_world_rift.bloodsteel_chestplate": "Bloodsteel Chestplate",
+  "item.the_world_rift.bloodsteel_leggings": "Bloodsteel Leggings",
+  "item.the_world_rift.bloodsteel_boots": "Bloodsteel Boots",
 
   "item.the_world_rift.scarlet_realm_behind_the_dark_veil": "§8Creative Dimension Swapper",
   "item.the_world_rift.blood_moon": "Blood Moon",
   "item.the_world_rift.half_moon": "Half Moon",
   "item.the_world_rift.hypernova": "Hypernova",
+  "item.the_world_rift.ancient_tablet": "§4Ancient Tablet",
 
   "block.the_world_rift.enchanted_diamond_ore": "Diamond Ore",
   "block.the_world_rift.bloodstained_block": "Bloodstained Block",
-  "block.the_world_rift.cracked_dungeon_bricks": "Cracked Dungeon Bricks",
-  "block.the_world_rift.dungeon_bricks": "Dungeon Bricks",
-  "block.the_world_rift.dungeon_core": "Dungeon Core",
-  "block.the_world_rift.portal_block": "Portal Block",
+  "block.the_world_rift.bloodsteel_block": "Bloodsteel Block",
 
   "effect.the_world_rift.blood_lust": "Bloodlust",
   "effect.the_world_rift.blood_loss": "Bloodloss",
 
   "death.attack.bleeding": "%1$s bleed out!",
 
-      "itemgroup.the_world_rift.the_blood_moon_items": "The Blood Moon",
+      "itemgroup.the_world_rift.the_blood_alchemist_items": "The Blood Alchemist",
 
+
+  "block.the_world_rift.cracked_dungeon_bricks": "Cracked Dungeon Bricks",
+  "block.the_world_rift.dungeon_bricks": "Dungeon Bricks",
+  "block.the_world_rift.dungeon_core": "Dungeon Core",
+  "block.the_world_rift.portal_block": "Portal Block",
 
   "block.the_world_rift.runed_blackstone_26": "Runed Blackstone", "block.the_world_rift.runed_blackstone_13": "Runed Blackstone",
   "block.the_world_rift.runed_blackstone_25": "Runed Blackstone", "block.the_world_rift.runed_blackstone_12": "Runed Blackstone",
@@ -74,23 +88,6 @@
 
 
 
-
-
-
-
-
-
-  "item.the_world_rift.bloodsteel_ingot": "Bloodsteel",
-  "item.the_world_rift.hardened_blood_crystal": "Hardened Blood Crystal",
-
-  "item.the_world_rift.bloodsteel_helmet": "Bloodsteel Helmet",
-  "item.the_world_rift.bloodsteel_chestplate": "Bloodsteel Chestplate",
-  "item.the_world_rift.bloodsteel_leggings": "Bloodsteel Leggings",
-  "item.the_world_rift.bloodsteel_boots": "Bloodsteel Boots",
-
-  "item.the_world_rift.bloodsteel_sword": "Bloodsteel Sword",
-
-  "item.the_world_rift.frontier_breaker": "Frontier Breaker",
 
       "itemgroup.the_world_rift.the_ruins_items": "The Ruins (IN PAUSE)",
 

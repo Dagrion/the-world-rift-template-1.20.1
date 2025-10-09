@@ -9,10 +9,16 @@ import net.minecraft.block.MapColor;
 import net.minecraft.item.BlockItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
 public class ModBlocks {
     public static final Block BLOODSTAINED_BLOCK = registerBlock("bloodstained_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK)
+                    .mapColor(MapColor.DARK_RED)
+            )
+    );
+    public static final Block BLOODSTEEL_BLOCK = registerBlock("bloodsteel_block",
             new Block(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK)
                     .mapColor(MapColor.DARK_RED)
             )
@@ -35,8 +41,10 @@ public class ModBlocks {
     );
 
     public static final Block CRACKED_DUNGEON_BRICKS = registerBlock("cracked_dungeon_bricks",
-            new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN)
+            new Block(FabricBlockSettings.create()
+                    .strength(-1.0F,6.0F)
                     .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .sounds(BlockSoundGroup.STONE)
             )
     );
     public static final Block DUNGEON_BRICKS = registerBlock("dungeon_bricks",
@@ -82,6 +90,12 @@ public class ModBlocks {
     public static final Block RUNED_BLACKSTONE_Y = registerBlock("runed_blackstone_2", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
     public static final Block RUNED_BLACKSTONE_Z = registerBlock("runed_blackstone_1", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
 
+
+    public static final Block WARNING_BLOCK = registerBlock("warning_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)
+                    .sounds(BlockSoundGroup.NETHERITE)
+            )
+    );
 
 
     private static Block registerBlock(String name, Block block) {

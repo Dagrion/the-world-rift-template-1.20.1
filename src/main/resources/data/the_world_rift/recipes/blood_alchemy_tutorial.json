@@ -1,0 +1,16 @@
+{
+  "type": "patchouli:shapeless_book_recipe",
+  "ingredients": [
+    {
+      "item": "minecraft:book"
+    },
+    {
+      "item": "minecraft:feather"
+    },
+    {
+      "item": "the_world_rift:blood_vial"
+    }
+  ],
+    "book": "the_world_rift:blood_alchemy_tutorial"
+}
+

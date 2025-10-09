@@ -3,15 +3,16 @@
   "category": "building",
   "key": {
     "#": {
-      "item": "the_world_rift:end_stone_dust"
+      "item": "the_world_rift:bloodsteel_ingot"
     }
   },
   "pattern": [
-    "##",
-    "##"
+    "###",
+    "###",
+    "###"
   ],
   "result": {
     "count": 1,
-    "item": "minecraft:end_stone"
+    "item": "the_world_rift:bloodsteel_block"
   }
 }

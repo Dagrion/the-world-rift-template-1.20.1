@@ -1,11 +1,17 @@
 {
-  "name": "§4Blood alchemy tutorial",
-  "landing_text": "TEST",
-
+  "name": "Blood alchemy tutorial",
   "version": 1,
+  "nameplate_color": "ff2400",
+
+  "landing_text": "TEST",
+  "text_color": "333333",
+
   "use_resource_pack": true,
   "creative_tab": "minecraft:tools_and_utilities",
 
-  "model": "the_world_rift:blood_alchemy_tutorial.png",
+  "model": "the_world_rift:blood_alchemy_tutorial",
   "book_texture": "patchouli:textures/gui/book_red.png"
+
+
+
 }

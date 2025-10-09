@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "the_world_rift:nether_star_powder"
+    },
+    {
+      "item": "the_world_rift:blood_vial"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "the_world_rift:bloodstained_ingot"
+    }
+  ],
+    "result": {
+      "item": "the_world_rift:bloodsteel_ingot"
+    }
+}

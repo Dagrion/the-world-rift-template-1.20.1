@@ -12,38 +12,38 @@ import net.minecraft.util.Identifier;
 
 
 public class ModItemGroups {
-    public static final ItemGroup THE_BLOOD_MOON_ITEMS = Registry.register(Registries.ITEM_GROUP,
+    public static final ItemGroup THE_BLOOD_ALCHEMIST = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(TheWorldRift.MOD_ID, "blood_moon"),
-            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.BLOOD_MOON))
-                    .displayName(Text.translatable("itemgroup.the_world_rift.the_blood_moon_items"))
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.BLOOD_VIAL))
+                    .displayName(Text.translatable("itemgroup.the_world_rift.the_blood_alchemist_items"))
                     .entries((displayContext, entries) -> {
 
                         entries.add(ModItems.NETHERITE_NUGGET); entries.add(ModItems.STINGER);
                         entries.add(ModItems.NETHER_STAR_SHARD); entries.add(ModItems.NETHER_STAR_POWDER);
                         entries.add(ModItems.EMPTY_VIAL); entries.add(ModItems.BLOOD_VIAL);
-                        entries.add(ModItems.BLOOD_CRYSTAL);
+                        entries.add(ModItems.BLOOD_CRYSTAL); entries.add(ModItems.HARDENED_BLOOD_CRYSTAL);
 
                         entries.add(ModItems.ENCHANTED_CARROT);
 
                         entries.add(ModItems.BLOODSTAINED_INGOT); entries.add(ModBlocks.BLOODSTAINED_BLOCK);
+                        entries.add(ModItems.BLOODSTEEL_INGOT); entries.add(ModBlocks.BLOODSTEEL_BLOCK);
 
                         entries.add(ModItems.BLOODSTAINED_HELMET); entries.add(ModItems.BLOODSTAINED_CHESTPLATE);
                         entries.add(ModItems.BLOODSTAINED_LEGGINGS); entries.add(ModItems.BLOODSTAINED_BOOTS);
+                        entries.add(ModItems.BLOODSTEEL_HELMET); entries.add(ModItems.BLOODSTEEL_CHESTPLATE);
+                        entries.add(ModItems.BLOODSTEEL_LEGGINGS); entries.add(ModItems.BLOODSTEEL_BOOTS);
 
-                        entries.add(ModItems.BLOODSTAINED_SWORD);
-                        entries.add(ModItems.RUINED_BLOODSTAINED_SWORD);
-                        entries.add(ModItems.TRUE_BLOODSTAINED_SWORD);
-                        entries.add(ModItems.RUINED_BLOODSTAINED_SCYTHE);
-                        entries.add(ModItems.BLOODSTAINED_SCYTHE);
-                        entries.add(ModItems.RUINED_BLOODSTAINED_HAMMER);
-                        entries.add(ModItems.BLOODSTAINED_HAMMER);
-                        entries.add(ModItems.RUINED_BLOODSTAINED_DUAL_BLADE);
-                        entries.add(ModItems.BLOODSTAINED_DUAL_BLADE);
-                        entries.add(ModItems.RUINED_BLOODSTAINED_HALBERD);
-                        entries.add(ModItems.BLOODSTAINED_HALBERD);
-                        entries.add(ModItems.RUINED_BLOODSTAINED_KNIFE);
-                        entries.add(ModItems.BLOODSTAINED_KNIFE);
+                        entries.add(ModItems.BLOODSTAINED_SWORD); entries.add(ModItems.BLOODSTEEL_SWORD);
+                        entries.add(ModItems.RUINED_BLOODSTAINED_SWORD); entries.add(ModItems.TRUE_BLOODSTAINED_SWORD);
+                        entries.add(ModItems.RUINED_BLOODSTAINED_SCYTHE); entries.add(ModItems.BLOODSTAINED_SCYTHE);
+                        entries.add(ModItems.RUINED_BLOODSTAINED_HAMMER); entries.add(ModItems.BLOODSTAINED_HAMMER);
+                        entries.add(ModItems.RUINED_BLOODSTAINED_DUAL_BLADE); entries.add(ModItems.BLOODSTAINED_DUAL_BLADE);
+                        entries.add(ModItems.RUINED_BLOODSTAINED_HALBERD); entries.add(ModItems.BLOODSTAINED_HALBERD);
+                        entries.add(ModItems.RUINED_BLOODSTAINED_KNIFE); entries.add(ModItems.BLOODSTAINED_KNIFE);
                         entries.add(ModItems.BORDER_BREAKER);
+
+
+
 
 
                     }).build());
@@ -69,6 +69,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.RUNED_BLACKSTONE_V); entries.add(ModBlocks.RUNED_BLACKSTONE_W); entries.add(ModBlocks.RUNED_BLACKSTONE_X);
                         entries.add(ModBlocks.RUNED_BLACKSTONE_Y); entries.add(ModBlocks.RUNED_BLACKSTONE_Z);
 
+                        entries.add(ModBlocks.WARNING_BLOCK);
+
                     }).build());
 
 
@@ -81,15 +83,7 @@ public class ModItemGroups {
                     .displayName(Text.translatable("itemgroup.the_world_rift.the_ruins_items"))
                     .entries((displayContext, entries) -> {
 
-                        entries.add(ModItems.BLOODSTEEL_INGOT);
-                        entries.add(ModItems.HARDENED_BLOOD_CRYSTAL);
 
-                        entries.add(ModItems.BLOODSTEEL_HELMET);
-                        entries.add(ModItems.BLOODSTEEL_CHESTPLATE);
-                        entries.add(ModItems.BLOODSTEEL_LEGGINGS);
-                        entries.add(ModItems.BLOODSTEEL_BOOTS);
-
-                        entries.add(ModItems.BLOODSTEEL_SWORD);
 
 
                     }).build());
