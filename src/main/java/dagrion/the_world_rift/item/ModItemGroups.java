@@ -69,7 +69,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.RUNED_BLACKSTONE_V); entries.add(ModBlocks.RUNED_BLACKSTONE_W); entries.add(ModBlocks.RUNED_BLACKSTONE_X);
                         entries.add(ModBlocks.RUNED_BLACKSTONE_Y); entries.add(ModBlocks.RUNED_BLACKSTONE_Z);
 
-                        entries.add(ModBlocks.WARNING_BLOCK);
+                        entries.add(ModBlocks.STEEL_BLOCK); entries.add(ModBlocks.HAZARD_BLOCK);
 
                     }).build());
 

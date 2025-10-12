@@ -11,6 +11,8 @@
     "the_world_rift:runed_blackstone_14", "the_world_rift:runed_blackstone_13", "the_world_rift:runed_blackstone_12", "the_world_rift:runed_blackstone_11",
     "the_world_rift:runed_blackstone_10", "the_world_rift:runed_blackstone_9", "the_world_rift:runed_blackstone_8", "the_world_rift:runed_blackstone_7",
     "the_world_rift:runed_blackstone_6", "the_world_rift:runed_blackstone_5", "the_world_rift:runed_blackstone_4", "the_world_rift:runed_blackstone_3",
-    "the_world_rift:runed_blackstone_2", "the_world_rift:runed_blackstone_1"
+    "the_world_rift:runed_blackstone_2", "the_world_rift:runed_blackstone_1",
+
+    "the_world_rift:steel_block", "the_world_rift:hazard_block"
   ]
 }

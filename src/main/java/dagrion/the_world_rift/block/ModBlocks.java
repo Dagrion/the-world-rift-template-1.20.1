@@ -91,8 +91,15 @@ public class ModBlocks {
     public static final Block RUNED_BLACKSTONE_Z = registerBlock("runed_blackstone_1", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
 
 
-    public static final Block WARNING_BLOCK = registerBlock("warning_block",
+    public static final Block HAZARD_BLOCK = registerBlock("hazard_block",
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)
+                    .strength(5.0F,12000.0F)
+                    .sounds(BlockSoundGroup.NETHERITE)
+            )
+    );
+    public static final Block STEEL_BLOCK = registerBlock("steel_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)
+                    .strength(5.0F,12000.0F)
                     .sounds(BlockSoundGroup.NETHERITE)
             )
     );

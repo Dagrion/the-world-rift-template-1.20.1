@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:yellow_dye"
+    },
+    "@": {
+      "item": "minecraft:black_dye"
+    },
+    "€": {
+      "item": "the_world_rift:steel_block"
+    }
+  },
+  "pattern": [
+    "€#€",
+    "#€@",
+    "€@€"
+  ],
+  "result": {
+    "count": 5,
+    "item": "the_world_rift:hazard_block"
+  }
+}
