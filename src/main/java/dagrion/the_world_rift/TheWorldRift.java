@@ -20,9 +20,9 @@ public class TheWorldRift implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		ModItemGroups.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModItems.registerModItems();
+		ModItemGroups.registerItemGroups();
 
 		ModEffect.registerEffects();
 
