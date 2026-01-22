@@ -9,8 +9,8 @@ import net.minecraft.util.Lazy;
 import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial {
-    BLOODSTAINED(5, 2000, 10.0F, 4.0F, 22, () -> Ingredient.ofItems(new ItemConvertible[]{ModItems.BLOODSTAINED_INGOT})),
-    BLOODSTEEL(5, 2500, 10.0F, 5.0F, 22, () -> Ingredient.ofItems(new ItemConvertible[]{ModItems.BLOODSTEEL_INGOT})),
+    BLOODSTAINED(4, 2000, 9.0F, 4.0F, 20, () -> Ingredient.ofItems(new ItemConvertible[]{ModItems.BLOOD_CRYSTAL})),
+    BLOODSTEEL(5, 2500, 10.0F, 4.5F, 25, () -> Ingredient.ofItems(new ItemConvertible[]{ModItems.HARDENED_BLOOD_CRYSTAL})),
     MANAN(0, 1, 0.0F, 0.0F, 0, () ->Ingredient.ofItems(new ItemConvertible[]{Items.NETHER_STAR}));
 
     private final int miningLevel;

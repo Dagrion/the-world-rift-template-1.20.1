@@ -7,8 +7,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
 
-public class BloodySword extends SwordItem {
-    public BloodySword(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
+public class BloodstainedSword extends SwordItem {
+    public BloodstainedSword(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
         super(toolMaterial, attackDamage, attackSpeed, settings);
     }
 

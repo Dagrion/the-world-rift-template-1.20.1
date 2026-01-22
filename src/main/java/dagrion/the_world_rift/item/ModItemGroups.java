@@ -13,7 +13,7 @@ import net.minecraft.util.Identifier;
 
 public class ModItemGroups {
     public static final ItemGroup THE_BLOOD_ALCHEMIST = Registry.register(Registries.ITEM_GROUP,
-            Identifier.of(TheWorldRift.MOD_ID, "blood_moon"),
+            Identifier.of(TheWorldRift.MOD_ID, "blood_vial"),
             FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.BLOOD_VIAL))
                     .displayName(Text.translatable("itemgroup.the_world_rift.the_blood_alchemist_items"))
                     .entries((displayContext, entries) -> {
@@ -26,14 +26,11 @@ public class ModItemGroups {
                         entries.add(ModItems.ENCHANTED_CARROT);
 
                         entries.add(ModItems.BLOODSTAINED_INGOT); entries.add(ModBlocks.BLOODSTAINED_BLOCK);
-                        entries.add(ModItems.BLOODSTEEL_INGOT); entries.add(ModBlocks.BLOODSTEEL_BLOCK);
-
                         entries.add(ModItems.BLOODSTAINED_HELMET); entries.add(ModItems.BLOODSTAINED_CHESTPLATE);
                         entries.add(ModItems.BLOODSTAINED_LEGGINGS); entries.add(ModItems.BLOODSTAINED_BOOTS);
-                        entries.add(ModItems.BLOODSTEEL_HELMET); entries.add(ModItems.BLOODSTEEL_CHESTPLATE);
-                        entries.add(ModItems.BLOODSTEEL_LEGGINGS); entries.add(ModItems.BLOODSTEEL_BOOTS);
-
-                        entries.add(ModItems.BLOODSTAINED_SWORD); entries.add(ModItems.BLOODSTEEL_SWORD);
+                        entries.add(ModItems.BLOODSTAINED_SWORD); entries.add(ModItems.BLOODSTAINED_PICKAXE);
+                        entries.add(ModItems.BLOODSTAINED_AXE); entries.add(ModItems.BLOODSTAINED_SHOVEL);
+                        entries.add(ModItems.BLOODSTAINED_HOE);
                         entries.add(ModItems.RUINED_BLOODSTAINED_SWORD); entries.add(ModItems.TRUE_BLOODSTAINED_SWORD);
                         entries.add(ModItems.RUINED_BLOODSTAINED_SCYTHE); entries.add(ModItems.BLOODSTAINED_SCYTHE);
                         entries.add(ModItems.RUINED_BLOODSTAINED_HAMMER); entries.add(ModItems.BLOODSTAINED_HAMMER);
@@ -42,9 +39,13 @@ public class ModItemGroups {
                         entries.add(ModItems.RUINED_BLOODSTAINED_KNIFE); entries.add(ModItems.BLOODSTAINED_KNIFE);
                         entries.add(ModItems.BORDER_BREAKER);
 
-
-
-
+                        entries.add(ModItems.BLOODSTEEL_INGOT); entries.add(ModBlocks.BLOODSTEEL_BLOCK);
+                        entries.add(ModItems.BLOODSTEEL_HELMET); entries.add(ModItems.BLOODSTEEL_CHESTPLATE);
+                        entries.add(ModItems.BLOODSTEEL_LEGGINGS); entries.add(ModItems.BLOODSTEEL_BOOTS);
+                        entries.add(ModItems.BLOODSTEEL_SWORD); entries.add(ModItems.BLOODSTEEL_PICKAXE);
+                        entries.add(ModItems.BLOODSTEEL_AXE); entries.add(ModItems.BLOODSTEEL_SHOVEL);
+                        entries.add(ModItems.BLOODSTEEL_HOE);
+                        entries.add(ModItems.FRONTIER_BREAKER);
 
                     }).build());
 
@@ -69,20 +70,17 @@ public class ModItemGroups {
                         entries.add(ModBlocks.RUNED_BLACKSTONE_V); entries.add(ModBlocks.RUNED_BLACKSTONE_W); entries.add(ModBlocks.RUNED_BLACKSTONE_X);
                         entries.add(ModBlocks.RUNED_BLACKSTONE_Y); entries.add(ModBlocks.RUNED_BLACKSTONE_Z);
 
-                        entries.add(ModBlocks.STEEL_BLOCK); entries.add(ModBlocks.HAZARD_BLOCK);
-
                     }).build());
 
-
-
-
-
     public static final ItemGroup THE_RUINS_ITEMS = Registry.register(Registries.ITEM_GROUP,
-            Identifier.of(TheWorldRift.MOD_ID, "Bloodstel_ingot"),
-            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.BLOODSTEEL_INGOT))
+            Identifier.of(TheWorldRift.MOD_ID, "steel_block"),
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModBlocks.STEEL_BLOCK))
                     .displayName(Text.translatable("itemgroup.the_world_rift.the_ruins_items"))
                     .entries((displayContext, entries) -> {
 
+                        entries.add(ModItems.STEEL_PLATE);
+                        entries.add(ModBlocks.STEEL_BLOCK); entries.add(ModBlocks.HAZARD_BLOCK);
+                        entries.add(ModBlocks.PLATE_BLOCK);
 
 
 
@@ -102,16 +100,6 @@ public class ModItemGroups {
                         entries.add(ModItems.DAGRION_VAMBRACES);
                         entries.add(ModItems.DAGRION_COAT);
                         entries.add(ModItems.DAGRION_GREAVES);
-
-                    }).build());
-
-    public static final ItemGroup THE_GLICH_ITEMS = Registry.register(Registries.ITEM_GROUP,
-            Identifier.of(TheWorldRift.MOD_ID, "glitched_blood"),
-            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.GLITCHED_BLOOD))
-                    .displayName(Text.translatable("itemgroup.the_world_rift.the_glitched_items"))
-                    .entries((displayContext, entries) -> {
-
-                        entries.add(ModItems.GLITCHED_BLOOD);
 
                     }).build());
 

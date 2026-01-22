@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.MapColor;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -20,12 +21,11 @@ public class ModBlocks {
     );
     public static final Block BLOODSTEEL_BLOCK = registerBlock("bloodsteel_block",
             new Block(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK)
-                    .mapColor(MapColor.DARK_RED)
+                    .mapColor(MapColor.GRAY)
             )
     );
     public static final Block ENCHANTED_DIAMOND_ORE = registerBlock("enchanted_diamond_ore",
             new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE)
-                    .mapColor(MapColor.LIGHT_BLUE)
             )
     );
 
@@ -95,11 +95,19 @@ public class ModBlocks {
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)
                     .strength(5.0F,12000.0F)
                     .sounds(BlockSoundGroup.NETHERITE)
+                    .mapColor(MapColor.YELLOW)
             )
     );
     public static final Block STEEL_BLOCK = registerBlock("steel_block",
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)
                     .strength(5.0F,12000.0F)
+                    .sounds(BlockSoundGroup.NETHERITE)
+            )
+    );
+    public static final Block PLATE_BLOCK = registerBlock("plate_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)
+                    .strength(5.0F,12000.0F)
+                    .pistonBehavior(PistonBehavior.BLOCK)
                     .sounds(BlockSoundGroup.NETHERITE)
             )
     );

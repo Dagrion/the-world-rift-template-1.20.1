@@ -23,12 +23,12 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
-public class BloodyHammer extends SwordItem {
+public class BloodstainedHammer extends SwordItem {
     public static final float KNOCKBACK_RANGE = 3.5F;
     private static final float KNOCKBACK_POWER = 0.7F;
     private final Multimap<EntityAttribute, EntityAttributeModifier> attributeModifiers;
 
-    public BloodyHammer(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
+    public BloodstainedHammer(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
         super(toolMaterial, attackDamage, attackSpeed, settings);
         ImmutableMultimap.Builder<EntityAttribute, EntityAttributeModifier> builder = ImmutableMultimap.builder();
         builder.put(EntityAttributes.GENERIC_ATTACK_DAMAGE, new EntityAttributeModifier(ATTACK_DAMAGE_MODIFIER_ID, "Weapon modifier", toolMaterial.getAttackDamage() + attackDamage + 0, EntityAttributeModifier.Operation.ADDITION));

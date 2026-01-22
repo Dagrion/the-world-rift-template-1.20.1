@@ -16,18 +16,20 @@ import net.minecraft.item.ToolMaterial;
 
 import java.util.UUID;
 
-public class BloodyKnife extends SwordItem {
+
+public class TrueBloodstainedSwordItem extends SwordItem {
+
     protected static final UUID ATTACK_REACH_MODIFIER_ID = UUID.fromString("66dbd500-02d6-46a9-b510-699af6ac0936");
     protected static final UUID REACH_MODIFIER_ID = UUID.fromString("e7509cce-5ee6-4bb2-97e7-39a01aa58913");
     private final Multimap<EntityAttribute, EntityAttributeModifier> attributeModifiers;
 
-    public BloodyKnife(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
+    public TrueBloodstainedSwordItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
         super(toolMaterial, attackDamage, attackSpeed, settings);
         ImmutableMultimap.Builder<EntityAttribute, EntityAttributeModifier> builder = ImmutableMultimap.builder();
         builder.put(EntityAttributes.GENERIC_ATTACK_DAMAGE, new EntityAttributeModifier(ATTACK_DAMAGE_MODIFIER_ID, "Weapon modifier", toolMaterial.getAttackDamage() + attackDamage + 0, EntityAttributeModifier.Operation.ADDITION));
         builder.put(EntityAttributes.GENERIC_ATTACK_SPEED, new EntityAttributeModifier(ATTACK_SPEED_MODIFIER_ID, "Weapon modifier", attackSpeed, EntityAttributeModifier.Operation.ADDITION));
-        builder.put(ReachEntityAttributes.ATTACK_RANGE, new EntityAttributeModifier(ATTACK_REACH_MODIFIER_ID, "Weapon modifier", -2.0, EntityAttributeModifier.Operation.ADDITION));
-        builder.put(ReachEntityAttributes.REACH, new EntityAttributeModifier(REACH_MODIFIER_ID, "Weapon modifier", -1.5, EntityAttributeModifier.Operation.ADDITION));
+        builder.put(ReachEntityAttributes.ATTACK_RANGE, new EntityAttributeModifier(ATTACK_REACH_MODIFIER_ID, "Weapon modifier", 0.75, EntityAttributeModifier.Operation.ADDITION));
+        builder.put(ReachEntityAttributes.REACH, new EntityAttributeModifier(REACH_MODIFIER_ID, "Weapon modifier", 1.5, EntityAttributeModifier.Operation.ADDITION));
         this.attributeModifiers = builder.build();
     }
 
@@ -39,7 +41,7 @@ public class BloodyKnife extends SwordItem {
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         if (Math.random() < 0.15) {
-            target.addStatusEffect(new StatusEffectInstance(ModEffect.BLOODLOSS, 175, 0));
+            target.addStatusEffect(new StatusEffectInstance(ModEffect.BLOODLOSS, 100, 0));
         }
         return true;
     }

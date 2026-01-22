@@ -1,7 +1,6 @@
 package dagrion.the_world_rift.item.custom;
 
 import dagrion.the_world_rift.effect.ModEffect;
-import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
@@ -10,8 +9,8 @@ import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-public class BloodyArmorItem extends ArmorItem {
-    public BloodyArmorItem(ArmorMaterial material, Type type, Settings settings) {
+public class BloodstainedArmorItem extends ArmorItem {
+    public BloodstainedArmorItem(ArmorMaterial material, Type type, Settings settings) {
         super(material, type, settings);
     }
 

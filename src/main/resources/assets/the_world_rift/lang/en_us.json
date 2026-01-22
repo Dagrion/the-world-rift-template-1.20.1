@@ -12,13 +12,16 @@
 
   "item.the_world_rift.enchanted_carrot": "Enchanted Carrot",
 
-
-
-  "item.the_world_rift.border_breaker": "Border Breaker",
-  "item.the_world_rift.frontier_breaker": "Frontier Breaker",
+  "item.the_world_rift.bloodstained_helmet": "Bloodstained Helmet",
+  "item.the_world_rift.bloodstained_chestplate": "Bloodstained Chestplate",
+  "item.the_world_rift.bloodstained_leggings": "Bloodstained Leggings",
+  "item.the_world_rift.bloodstained_boots": "Bloodstained Boots",
 
   "item.the_world_rift.bloodstained_sword": "Bloodstained Sword",
-  "item.the_world_rift.bloodsteel_sword": "Bloodsteel Sword",
+  "item.the_world_rift.bloodstained_pickaxe": "Bloodstained Pickaxe",
+  "item.the_world_rift.bloodstained_axe": "Bloodstained Axe",
+  "item.the_world_rift.bloodstained_shovel": "Bloodstained Shovel",
+  "item.the_world_rift.bloodstained_hoe": "Bloodstained Hoe",
   "item.the_world_rift.ruined_bloodstained_sword": "Ruined Bloodstained Sword",
   "item.the_world_rift.ruined_bloodstained_scythe": "Ruined Bloodstained Scythe",
   "item.the_world_rift.ruined_bloodstained_hammer": "Ruined Bloodstained Hammer",
@@ -33,15 +36,19 @@
   "item.the_world_rift.bloodstained_halberd": "Bloodstained Halberd",
   "item.the_world_rift.bloodstained_trident": "Bloodstained Trident",
   "item.the_world_rift.bloodstained_knife": "Bloodstained Knife",
+  "item.the_world_rift.border_breaker": "Border Breaker",
 
-  "item.the_world_rift.bloodstained_helmet": "Bloodstained Helmet",
-  "item.the_world_rift.bloodstained_chestplate": "Bloodstained Chestplate",
-  "item.the_world_rift.bloodstained_leggings": "Bloodstained Leggings",
-  "item.the_world_rift.bloodstained_boots": "Bloodstained Boots",
   "item.the_world_rift.bloodsteel_helmet": "Bloodsteel Helmet",
   "item.the_world_rift.bloodsteel_chestplate": "Bloodsteel Chestplate",
   "item.the_world_rift.bloodsteel_leggings": "Bloodsteel Leggings",
   "item.the_world_rift.bloodsteel_boots": "Bloodsteel Boots",
+
+  "item.the_world_rift.bloodsteel_sword": "Bloodsteel Sword",
+  "item.the_world_rift.bloodsteel_pickaxe": "Bloodsteel Pickaxe",
+  "item.the_world_rift.bloodsteel_axe": "Bloodsteel Axe",
+  "item.the_world_rift.bloodsteel_shovel": "Bloodsteel Shovel",
+  "item.the_world_rift.bloodsteel_hoe": "Bloodsteel Hoe",
+  "item.the_world_rift.frontier_breaker": "Frontier Breaker",
 
   "item.the_world_rift.scarlet_realm_behind_the_dark_veil": "§8Creative Dimension Swapper",
   "item.the_world_rift.blood_moon": "Blood Moon",
@@ -59,6 +66,7 @@
   "death.attack.bleeding": "%1$s bleed out!",
 
       "itemgroup.the_world_rift.the_blood_alchemist_items": "The Blood Alchemist",
+
 
 
   "block.the_world_rift.cracked_dungeon_bricks": "Cracked Dungeon Bricks",
@@ -80,18 +88,18 @@
   "block.the_world_rift.runed_blackstone_15": "Runed Blackstone", "block.the_world_rift.runed_blackstone_2": "Runed Blackstone",
   "block.the_world_rift.runed_blackstone_14": "Runed Blackstone", "block.the_world_rift.runed_blackstone_1": "Runed Blackstone",
 
-  "block.the_world_rift.steel_block": "Steel Block", "block.the_world_rift.hazard_block": "Hazard Block",
-
       "itemgroup.the_world_rift.the_world_rift_decoration": "Decoration",
 
 
 
+  "item.the_world_rift.steel_plate": "Steel Plates",
 
-
-
-
+  "block.the_world_rift.steel_block": "Steel Block", "block.the_world_rift.hazard_block": "Hazard Block",
+  "block.the_world_rift.plate_block": "Plate Block",
 
       "itemgroup.the_world_rift.the_ruins_items": "The Ruins (IN PAUSE)",
+
+
 
 
 

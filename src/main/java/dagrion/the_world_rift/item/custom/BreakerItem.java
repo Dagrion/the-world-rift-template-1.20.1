@@ -12,8 +12,8 @@ import net.minecraft.util.math.Direction;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BorderBreakerItem extends MiningToolItem {
-    public BorderBreakerItem(float attackDamage, float attackSpeed, ToolMaterial material, Settings settings) {
+public class BreakerItem extends MiningToolItem {
+    public BreakerItem(float attackDamage, float attackSpeed, ToolMaterial material, Settings settings) {
         super(attackDamage, attackSpeed, material, BlockTags.PICKAXE_MINEABLE, settings);
     }
 

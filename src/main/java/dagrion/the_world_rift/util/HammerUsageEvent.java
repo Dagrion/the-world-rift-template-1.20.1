@@ -1,6 +1,6 @@
 package dagrion.the_world_rift.util;
 
-import dagrion.the_world_rift.item.custom.BorderBreakerItem;
+import dagrion.the_world_rift.item.custom.BreakerItem;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
@@ -22,12 +22,12 @@ public class HammerUsageEvent implements PlayerBlockBreakEvents.Before{
                                     BlockState state, @Nullable BlockEntity blockEntity) {
         ItemStack mainHandItem = player.getMainHandStack();
 
-        if(mainHandItem.getItem() instanceof BorderBreakerItem hammer && player instanceof ServerPlayerEntity serverPlayer) {
+        if(mainHandItem.getItem() instanceof BreakerItem hammer && player instanceof ServerPlayerEntity serverPlayer) {
             if(HARVESTED_BLOCKS.contains(pos)) {
                 return true;
             }
 
-            for(BlockPos position : BorderBreakerItem.getBlocksToBeDestroyed(1, pos, serverPlayer)) {
+            for(BlockPos position : BreakerItem.getBlocksToBeDestroyed(1, pos, serverPlayer)) {
                 if(pos == position || !hammer.isSuitableFor(mainHandItem, world.getBlockState(position))) {
                     continue;
                 }

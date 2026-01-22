@@ -4,14 +4,18 @@
   "key": {
     "#": {
       "item": "the_world_rift:steel_plate"
+    },
+    "@": {
+      "item": "minecraft:obsidian"
     }
   },
   "pattern": [
-    "##",
-    "##"
+    " # ",
+    "#@#",
+    " # "
   ],
   "result": {
     "count": 1,
-    "item": "the_world_rift:steel_block"
+    "item": "the_world_rift:plate_block"
   }
 }
