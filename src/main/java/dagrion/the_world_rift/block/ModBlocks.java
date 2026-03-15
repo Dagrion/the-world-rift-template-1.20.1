@@ -106,7 +106,7 @@ public class ModBlocks {
     );
     public static final Block PLATE_BLOCK = registerBlock("plate_block",
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)
-                    .strength(5.0F,12000.0F)
+                    .strength(50.0F,12000.0F)
                     .pistonBehavior(PistonBehavior.BLOCK)
                     .sounds(BlockSoundGroup.NETHERITE)
             )

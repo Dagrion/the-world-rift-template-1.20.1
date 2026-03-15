@@ -1,0 +1,87 @@
+{
+  "type": "the_world_rift:the_dark_amalgam_dimension_type",
+  "generator": {
+    "type": "minecraft:noise",
+    "settings": "the_world_rift:the_dark_amalgam_dimension_noise",
+    "biome_source": {
+      "type": "minecraft:multi_noise",
+      "biomes": [
+        {
+          "biome": "the_world_rift:petrified_meadow",
+          "parameters": {
+            "temperature": -0.75,
+            "humidity": 0.15,
+            "continentalness": 0,
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "the_world_rift:barren_wasteland",
+          "parameters": {
+            "temperature": -0.5,
+            "humidity": 0.15,
+            "continentalness": 0,
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0.25
+          }
+        },
+        {
+          "biome": "the_world_rift:tarnished_grove",
+          "parameters": {
+            "temperature": [
+              -0.75,
+              -0.25
+            ],
+            "humidity": 0.35,
+            "continentalness": 0,
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0.35
+          }
+        },
+        {
+          "biome": "the_world_rift:elder_woods",
+          "parameters": {
+            "temperature": [
+              -0.25,
+              0.25
+            ],
+            "humidity": 0.45,
+            "continentalness": 0,
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0.45
+          }
+        },
+        {
+          "biome": "the_world_rift:ancient_forest",
+          "parameters": {
+            "temperature": [
+              0.25,
+              0.75
+            ],
+            "humidity": 0.45,
+            "continentalness": 0,
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0.5
+          }
+        }
+      ]
+    },
+    "layers": [
+      {
+        "block": "minecraft:bedrock",
+        "height": -64
+      }
+    ]
+  }
+}

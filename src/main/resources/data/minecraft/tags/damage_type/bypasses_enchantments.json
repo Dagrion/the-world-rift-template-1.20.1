@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "the_world_rift:bleeding"
+    "the_world_rift:bleeding",
+    "the_world_rift:manan"
   ]
 }

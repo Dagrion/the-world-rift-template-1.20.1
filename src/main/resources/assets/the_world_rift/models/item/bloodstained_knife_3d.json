@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "the_world_rift:item/bloodstained_knife_3d",
-		"particle": "the_world_rift:item/bloodstained_knife_3d"
+		"0": "the_world_rift:item/bloodstained_knife",
+		"particle": "the_world_rift:item/bloodstained_knife"
 	},
 	"elements": [
 		{

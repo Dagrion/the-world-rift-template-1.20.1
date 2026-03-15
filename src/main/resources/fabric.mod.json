@@ -23,6 +23,12 @@
 		],
 		"fabric-datagen": [
 			"dagrion.the_world_rift.TheWorldRiftDataGenerator"
+		],
+		"cardinal-components-entity": [
+			"dagrion.the_world_rift.component.ModComponents"
+		],
+		"terrablender": [
+			"dagrion.the_world_rift.world.biome.ModTerrablenderAPI"
 		]
 	},
 	"mixins": [
@@ -36,5 +42,10 @@
 	},
 	"suggests": {
 		"another-mod": "*"
+	},
+	"custom": {
+		"cardinal-components": [
+			"the_world_rift:charge"
+		]
 	}
 }

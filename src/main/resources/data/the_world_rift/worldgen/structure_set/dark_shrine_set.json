@@ -1,14 +1,15 @@
+
 {
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 232625,
+    "separation": 35,
+    "spacing": 50
+  },
   "structures": [
     {
       "structure": "the_world_rift:dark_shrine_structure",
       "weight": 1
     }
-  ],
-  "placement": {
-    "type": "minecraft:random_spread",
-    "spacing": 20,
-    "separation": 15,
-    "salt": 202427
-  }
+  ]
 }

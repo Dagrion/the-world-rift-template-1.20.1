@@ -11,7 +11,7 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
-import static dagrion.the_world_rift.world.dimension.ModDimensions.SRBDV_LEVEL_KEY;
+import static dagrion.the_world_rift.world.dimension.ModDimensions.THE_DARK_AMALGAM_LEVEL_KEY;
 
 public class SRBDVItem extends Item {
 
@@ -27,8 +27,8 @@ public class SRBDVItem extends Item {
 
             // Toggle between Overworld and The-Scarlet-Realm-Behind-the-Dark-Veil
             if (currentWorld.getRegistryKey() == World.OVERWORLD) {
-                destinationKey = SRBDV_LEVEL_KEY;
-            } else if (currentWorld.getRegistryKey() == SRBDV_LEVEL_KEY) {
+                destinationKey = THE_DARK_AMALGAM_LEVEL_KEY;
+            } else if (currentWorld.getRegistryKey() == THE_DARK_AMALGAM_LEVEL_KEY) {
                 destinationKey = World.OVERWORLD;
             } else {
                 return TypedActionResult.fail(serverPlayer.getStackInHand(hand));

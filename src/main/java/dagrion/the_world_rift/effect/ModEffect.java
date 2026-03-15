@@ -24,6 +24,14 @@ public class ModEffect {
                     .addAttributeModifier(EntityAttributes.GENERIC_ARMOR_TOUGHNESS,
                             "648D7064-6A60-4F59-8ABE-C2C23A6DD7A9", 1.0F, EntityAttributeModifier.Operation.ADDITION));
 
+    public static final StatusEffect INVISIBILITY_KNIFE = registerStatusEffect("invisibility_knife",
+            new InvisibilityKnifeEffect(StatusEffectCategory.BENEFICIAL,0xFFFFFF)
+                    .addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED,
+                            "91AEAA56-376B-4498-935B-2F7F68070635", 1.0F, EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
+                    .addAttributeModifier(EntityAttributes.GENERIC_ATTACK_DAMAGE,
+                            "648D7064-6A60-4F59-8ABE-C2C23A6DD7A9", 2.0F, EntityAttributeModifier.Operation.ADDITION));
+
+
 
     private static StatusEffect registerStatusEffect(String name, StatusEffect statusEffect) {
         return Registry.register(Registries.STATUS_EFFECT, new Identifier(TheWorldRift.MOD_ID, name), statusEffect);

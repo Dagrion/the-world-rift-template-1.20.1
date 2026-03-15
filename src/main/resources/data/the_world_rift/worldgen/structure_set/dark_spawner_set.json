@@ -1,14 +1,14 @@
 {
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 232626,
+    "separation": 10,
+    "spacing": 15
+  },
   "structures": [
     {
       "structure": "the_world_rift:dark_spawner_structure",
       "weight": 1
     }
-  ],
-  "placement": {
-    "type": "minecraft:random_spread",
-    "spacing": 15,
-    "separation": 10,
-    "salt": 272420
-  }
+  ]
 }

@@ -6,7 +6,8 @@
 		"ExampleMixin",
 		"BlackstoneMixin",
 		"EnchanteddiamondoreMixin",
-		"EnchantedcarrotMixin"
+		"EnchantedcarrotMixin",
+		"TrunkPlacerTypeInvoker"
 	],
 	"client": [
 		"ItemRendererAccessor",

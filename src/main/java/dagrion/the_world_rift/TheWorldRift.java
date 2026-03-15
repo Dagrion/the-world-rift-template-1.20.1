@@ -4,11 +4,17 @@ import dagrion.the_world_rift.block.ModBlocks;
 import dagrion.the_world_rift.effect.ModEffect;
 import dagrion.the_world_rift.item.ModItemGroups;
 import dagrion.the_world_rift.item.ModItems;
+import dagrion.the_world_rift.item.custom.HalfMoon;
+import dagrion.the_world_rift.item.custom.Hypernova;
+import dagrion.the_world_rift.item.custom.TemporaryBlockBreaker;
 import dagrion.the_world_rift.util.HammerUsageEvent;
-import com.mojang.logging.LogUtils;
+import dagrion.the_world_rift.world.vegetation.tree.ModTrunkPlacer;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
+import net.minecraft.item.ItemStack;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,17 +22,17 @@ import org.slf4j.LoggerFactory;
 public class TheWorldRift implements ModInitializer {
 	public static final String MOD_ID = "the_world_rift";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
-	public static final Logger clientLogger = LogUtils.getLogger();
 
 	@Override
 	public void onInitialize() {
-		ModItemGroups.registerModItems();
+		ModItemGroups.registerItemGroups();
 		ModBlocks.registerModBlocks();
-		ModItems.registerModItems();
-
 		ModEffect.registerEffects();
+		ModTrunkPlacer.register();
 
 		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
+
+		TemporaryBlockBreaker.registerTickEvent();
 
 		CustomPortalBuilder.beginPortal()
 				.frameBlock(ModBlocks.PORTAL_BLOCK)
@@ -36,5 +42,24 @@ public class TheWorldRift implements ModInitializer {
 				.destDimID(new Identifier(TheWorldRift.MOD_ID, "the_scarlet_realm_behind_the_dark_veil_dimension"))
 				.tintColor(0x000000)
 				.registerPortal();
+
+
+		ServerLivingEntityEvents.AFTER_DEATH.register((entity, source) -> {
+			if (!(entity instanceof ServerPlayerEntity player)) return;
+			// Loop through inventory
+			for (int i = 0; i < player.getInventory().size(); i++) {
+				ItemStack stack = player.getInventory().getStack(i);
+				if (stack.getItem() instanceof HalfMoon || stack.getItem() instanceof Hypernova) {
+					// Drop item manually
+					player.dropItem(stack.copy(), true, false);
+					// Remove from inventory
+					player.getInventory().setStack(i, ItemStack.EMPTY);
+				}
+			}
+		});
+
+
 	}
+
+
 }

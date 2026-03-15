@@ -3,7 +3,6 @@ package dagrion.the_world_rift.item;
 import dagrion.the_world_rift.TheWorldRift;
 import dagrion.the_world_rift.item.custom.*;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -11,11 +10,24 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 
 public class ModItems {
+        // -----------------------
+        // CREATIVE ITEMS
+        // -----------------------
+        // MANAN ITEMS
     public static final Item HALF_MOON = registerItem("half_moon",
-            new HalfMoon(ModToolMaterials.MANAN, 32766, 32763, (new Item.Settings()).fireproof().rarity(Rarity.EPIC)));
+            new HalfMoon(ModToolMaterials.MANAN, 2147483647 , 2147483647, (new Item.Settings()).fireproof().rarity(Rarity.EPIC)));
     public static final Item HYPERNOVA = registerItem("hypernova",
-            new HypernovaItem(new FabricItemSettings().maxCount(1).fireproof().rarity(Rarity.EPIC)));
-
+            new Hypernova(new FabricItemSettings().maxCount(1).fireproof().rarity(Rarity.EPIC)));
+        // DEBUG & FUNNY ITEMS
+    public static final Item ANCIENT_TABLET = registerItem("ancient_tablet", new Item(new FabricItemSettings().maxCount(1)));
+    public static final Item SRBDV = registerItem("scarlet_realm_behind_the_dark_veil", new SRBDVItem(new FabricItemSettings().maxCount(1)));
+    public static final Item CHARGER = registerItem("charger", new ChargerItem(new FabricItemSettings().maxCount(1)));
+    public static final Item YEET = registerItem("yeet", new YeetItem(new FabricItemSettings().maxCount(1)));
+        // -----------------------
+        // BASIC ITEMS
+        // -----------------------
+    public static final Item DRAGON_HEART = registerItem("dragon_heart", new StingerItem((new FabricItemSettings().maxCount(1).rarity(Rarity.UNCOMMON))));
+    public static final Item DARK_CLOTH = registerItem("dark_cloth", new StingerItem((new FabricItemSettings())));
     public static final Item NETHER_STAR_SHARD = registerItem("nether_star_shard", new NetherStarItem(new FabricItemSettings().rarity(Rarity.UNCOMMON)));
     public static final Item NETHER_STAR_POWDER = registerItem("nether_star_powder", new NetherStarItem(new FabricItemSettings().rarity(Rarity.UNCOMMON)));
     public static final Item NETHERITE_NUGGET = registerItem("netherite_nugget", new Item(new FabricItemSettings().fireproof()));
@@ -25,26 +37,34 @@ public class ModItems {
     public static final Item BLOOD_VIAL = registerItem("blood_vial", new Item(new FabricItemSettings().maxCount(1)));
     public static final Item BLOOD_CRYSTAL = registerItem("blood_crystal", new Item(new FabricItemSettings()));
     public static final Item HARDENED_BLOOD_CRYSTAL = registerItem("hardened_blood_crystal", new Item(new FabricItemSettings()));
-
-    public static final Item ANCIENT_TABLET = registerItem("ancient_tablet", new Item(new FabricItemSettings().maxCount(1)));
-    public static final Item SRBDV = registerItem("scarlet_realm_behind_the_dark_veil", new SRBDVItem(new FabricItemSettings().maxCount(1)));
-
+    public static final Item STEEL_PLATE = registerItem("steel_plate", new Item(new FabricItemSettings().fireproof()));
+        // TOOLS
     public static final Item STINGER = registerItem("stinger",
-            new StingerItem((new Item.Settings()).fireproof().maxCount(1)));
-
+            new StingerItem(new Item.Settings().fireproof().maxCount(1)));
+    public static final Item TEMPORARY_BLOCK_BREAKER = registerItem("temporary_block_breaker",
+            new TemporaryBlockBreaker(new Item.Settings().fireproof().maxCount(1)));
+        // FOODS
     public static final Item ENCHANTED_CARROT = registerItem("enchanted_carrot",
             new EnchantedCarrotItem(new Item.Settings().food(ModFoodComponents.ENCHANTED_CARROT).maxCount(1).rarity(Rarity.RARE)));
-
-
-    public static final Item BLOODSTAINED_HELMET = registerItem("bloodstained_helmet",
-            new BloodstainedArmorItem(ModArmorMaterials.BLOODSTAINED, ArmorItem.Type.HELMET, new Item.Settings().fireproof()));
-    public static final Item BLOODSTAINED_CHESTPLATE = registerItem("bloodstained_chestplate",
-            new BloodstainedArmorItem(ModArmorMaterials.BLOODSTAINED, ArmorItem.Type.CHESTPLATE, new Item.Settings().fireproof()));
-    public static final Item BLOODSTAINED_LEGGINGS = registerItem("bloodstained_leggings",
-            new BloodstainedArmorItem(ModArmorMaterials.BLOODSTAINED, ArmorItem.Type.LEGGINGS, new Item.Settings().fireproof()));
-    public static final Item BLOODSTAINED_BOOTS = registerItem("bloodstained_boots",
-            new BloodstainedArmorItem(ModArmorMaterials.BLOODSTAINED, ArmorItem.Type.BOOTS, new Item.Settings().fireproof()));
-
+        // WEAPONS
+    public static final Item CLAYMORE = registerItem("claymore",
+            new ClaymoreItem(ToolMaterials.NETHERITE, 3, -2.7F, (new Item.Settings()).fireproof()));
+    public static final Item SCYTHE = registerItem("scythe",
+            new ScytheItem(ToolMaterials.NETHERITE, 5, -3.1F, (new Item.Settings().fireproof())));
+    public static final Item HAMMER = registerItem("hammer",
+            new HammerItem(ToolMaterials.NETHERITE, 3, -2.9F, (new Item.Settings().fireproof())));
+    public static final Item DUAL_BLADE = registerItem("dual_blade",
+            new DualBladeItem(ToolMaterials.NETHERITE, -1, -2.0F, (new Item.Settings().fireproof())));
+    public static final Item HALBERD = registerItem("halberd",
+            new HalberdItem(ToolMaterials.NETHERITE, 4, -3.0F, (new Item.Settings().fireproof())));
+    public static final Item KNIFE = registerItem("knife",
+            new KnifeItem(ToolMaterials.NETHERITE, 3, -2.0F, (new Item.Settings().fireproof())));
+    public static final Item GLAIVE = registerItem("glaive",
+            new GlaiveItem(ToolMaterials.NETHERITE, 3, -2.4F, (new Item.Settings().fireproof())));
+        // -----------------------
+        // BLOODSTAINED
+        // -----------------------
+        // RUINED
     public static final Item RUINED_BLOODSTAINED_SWORD = registerItem("ruined_bloodstained_sword",
             new Item(new Item.Settings().fireproof().maxCount(1).rarity(Rarity.UNCOMMON)));
     public static final Item RUINED_BLOODSTAINED_SCYTHE = registerItem("ruined_bloodstained_scythe",
@@ -57,20 +77,32 @@ public class ModItems {
             new Item(new Item.Settings().fireproof().maxCount(1).rarity(Rarity.UNCOMMON)));
     public static final Item RUINED_BLOODSTAINED_KNIFE = registerItem("ruined_bloodstained_knife",
             new Item(new Item.Settings().fireproof().maxCount(1).rarity(Rarity.UNCOMMON)));
-
-    public static final Item TRUE_BLOODSTAINED_SWORD = registerItem("true_bloodstained_sword",
-            new TrueBloodstainedSwordItem(ModToolMaterials.BLOODSTAINED, 3, -2.5F, (new Item.Settings()).fireproof().rarity(Rarity.RARE)));
+    public static final Item RUINED_BLOODSTAINED_GLAIVE = registerItem("ruined_bloodstained_glaive",
+            new Item(new Item.Settings().fireproof().maxCount(1).rarity(Rarity.UNCOMMON)));
+        // WEAPONS
+    public static final Item BLOODSTAINED_CLAYMORE = registerItem("bloodstained_claymore",
+            new ClaymoreItem(ModToolMaterials.BLOODSTAINED, 3, -2.7F, (new Item.Settings()).fireproof().rarity(Rarity.RARE)));
     public static final Item BLOODSTAINED_SCYTHE = registerItem("bloodstained_scythe",
-            new BloodstainedScythe(ModToolMaterials.BLOODSTAINED, 5, -3.1F, (new Item.Settings().fireproof().rarity(Rarity.RARE))));
+            new ScytheItem(ModToolMaterials.BLOODSTAINED, 5, -3.1F, (new Item.Settings().fireproof().rarity(Rarity.RARE))));
     public static final Item BLOODSTAINED_HAMMER = registerItem("bloodstained_hammer",
-            new BloodstainedHammer(ModToolMaterials.BLOODSTAINED, 3, -2.9F, (new Item.Settings().fireproof().rarity(Rarity.RARE))));
+            new HammerItem(ModToolMaterials.BLOODSTAINED, 3, -2.9F, (new Item.Settings().fireproof().rarity(Rarity.RARE))));
     public static final Item BLOODSTAINED_DUAL_BLADE = registerItem("bloodstained_dual_blade",
-            new BloodstainedDualBlade(ModToolMaterials.BLOODSTAINED, -1, -2.0F, (new Item.Settings().fireproof().rarity(Rarity.RARE))));
+            new DualBladeItem(ModToolMaterials.BLOODSTAINED, -1, -2.0F, (new Item.Settings().fireproof().rarity(Rarity.RARE))));
     public static final Item BLOODSTAINED_HALBERD = registerItem("bloodstained_halberd",
-            new BloodstainedHalberd(ModToolMaterials.BLOODSTAINED, 4, -3.0F, (new Item.Settings().fireproof().rarity(Rarity.RARE))));
+            new HalberdItem(ModToolMaterials.BLOODSTAINED, 4, -3.0F, (new Item.Settings().fireproof().rarity(Rarity.RARE))));
     public static final Item BLOODSTAINED_KNIFE = registerItem("bloodstained_knife",
-            new BloodstainedKnife(ModToolMaterials.BLOODSTAINED, 3, -2.0F, (new Item.Settings().fireproof().rarity(Rarity.RARE))));
-
+            new KnifeItem(ModToolMaterials.BLOODSTAINED, 3, -2.0F, (new Item.Settings().fireproof().rarity(Rarity.RARE))));
+    public static final Item BLOODSTAINED_GLAIVE = registerItem("bloodstained_glaive",
+            new GlaiveItem(ModToolMaterials.BLOODSTAINED, 3, -2.0F, (new Item.Settings().fireproof().rarity(Rarity.RARE))));
+        // BASIC
+    public static final Item BLOODSTAINED_HELMET = registerItem("bloodstained_helmet",
+        new BloodstainedArmorItem(ModArmorMaterials.BLOODSTAINED, ArmorItem.Type.HELMET, new Item.Settings().fireproof()));
+    public static final Item BLOODSTAINED_CHESTPLATE = registerItem("bloodstained_chestplate",
+            new BloodstainedArmorItem(ModArmorMaterials.BLOODSTAINED, ArmorItem.Type.CHESTPLATE, new Item.Settings().fireproof()));
+    public static final Item BLOODSTAINED_LEGGINGS = registerItem("bloodstained_leggings",
+            new BloodstainedArmorItem(ModArmorMaterials.BLOODSTAINED, ArmorItem.Type.LEGGINGS, new Item.Settings().fireproof()));
+    public static final Item BLOODSTAINED_BOOTS = registerItem("bloodstained_boots",
+            new BloodstainedArmorItem(ModArmorMaterials.BLOODSTAINED, ArmorItem.Type.BOOTS, new Item.Settings().fireproof()));
     public static final Item BLOODSTAINED_SWORD = registerItem("bloodstained_sword",
             new BloodstainedSword(ModToolMaterials.BLOODSTAINED, 3, -2.4F, (new Item.Settings()).fireproof()));
     public static final Item BLOODSTAINED_PICKAXE = registerItem("bloodstained_pickaxe",
@@ -82,9 +114,11 @@ public class ModItems {
     public static final Item BLOODSTAINED_HOE = registerItem("bloodstained_hoe",
             new HoeItem(ModToolMaterials.BLOODSTAINED, -4, -0.0F, (new Item.Settings()).fireproof()));
     public static final Item BORDER_BREAKER = registerItem("border_breaker",
-            new BreakerItem( 1,-2.8F, ModToolMaterials.BLOODSTAINED, new FabricItemSettings()));
-
-
+            new BorderBreakerItem( 1,-2.8F, ModToolMaterials.BLOODSTAINED, new FabricItemSettings()));
+        // -----------------------
+        // BLOODSTEEL
+        // -----------------------
+        // BASIC
     public static final Item BLOODSTEEL_HELMET = registerItem("bloodsteel_helmet",
             new BloodsteelArmorItem(ModArmorMaterials.BLOODSTEEL, ArmorItem.Type.HELMET, new Item.Settings().fireproof()));
     public static final Item BLOODSTEEL_CHESTPLATE = registerItem("bloodsteel_chestplate",
@@ -93,7 +127,6 @@ public class ModItems {
             new BloodsteelArmorItem(ModArmorMaterials.BLOODSTEEL, ArmorItem.Type.LEGGINGS, new Item.Settings().fireproof()));
     public static final Item BLOODSTEEL_BOOTS = registerItem("bloodsteel_boots",
             new BloodsteelArmorItem(ModArmorMaterials.BLOODSTEEL, ArmorItem.Type.BOOTS, new Item.Settings().fireproof()));
-
     public static final Item BLOODSTEEL_SWORD = registerItem("bloodsteel_sword",
             new BloodstainedSword(ModToolMaterials.BLOODSTEEL, 3, -2.6F, (new Item.Settings()).fireproof()));
     public static final Item BLOODSTEEL_PICKAXE = registerItem("bloodsteel_pickaxe",
@@ -105,24 +138,13 @@ public class ModItems {
     public static final Item BLOODSTEEL_HOE = registerItem("bloodsteel_hoe",
             new HoeItem(ModToolMaterials.BLOODSTEEL, -4, -0.0F, (new Item.Settings()).fireproof()));
     public static final Item FRONTIER_BREAKER = registerItem("frontier_breaker",
-            new BreakerItem( 1,-2.8F, ModToolMaterials.BLOODSTEEL, new FabricItemSettings()));
-
-    public static final Item STEEL_PLATE = registerItem("steel_plate", new Item(new FabricItemSettings().fireproof()));
+            new FrontierBreakerItem( 1,-2.8F, ModToolMaterials.BLOODSTEEL, new FabricItemSettings()));
 
 
-
-
-
-
-
-
-
-
-
-
+        // -----------------------
+        // WORK IN PROGRESS
+        // -----------------------
     public static final Item BLOOD_OF_THE_IMMORTAL = registerItem("blood_of_the_immortal", new Item(new FabricItemSettings().maxCount(1).rarity(Rarity.UNCOMMON)));
-    public static final Item DRAGON_HEART = registerItem("dragon_heart", new StingerItem((new FabricItemSettings().maxCount(1).rarity(Rarity.UNCOMMON))));
-    public static final Item DARK_CLOTH = registerItem("dark_cloth", new StingerItem((new FabricItemSettings())));
     public static final Item DAGRION_HOOD = registerItem("dagrion_hood",
             new DagrionArmorItem(ModArmorMaterials.DAGRION, ArmorItem.Type.HELMET, new Item.Settings().fireproof()));
     public static final Item DAGRION_VAMBRACES = registerItem("dagrion_vambraces",
@@ -138,21 +160,4 @@ public class ModItems {
 
     }
 
-    public static void registerModItems () {
-        TheWorldRift.LOGGER.info("Registering Mod Items for" + TheWorldRift.MOD_ID);
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.OPERATOR).register(fabricItemGroupEntries -> {
-
-            fabricItemGroupEntries.add(HALF_MOON);
-            fabricItemGroupEntries.add(HYPERNOVA);
-            fabricItemGroupEntries.add(SRBDV);
-            fabricItemGroupEntries.add(ANCIENT_TABLET);
-
-        });
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(fabricItemGroupEntries -> {
-
-
-        });
-    }
 }

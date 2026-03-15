@@ -15,7 +15,7 @@ public class BloodsteelSword extends SwordItem {
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         if (Math.random() < 0.15) {
-            target.addStatusEffect(new StatusEffectInstance(ModEffect.BLOODLOSS,150,0));
+            target.addStatusEffect(new StatusEffectInstance(ModEffect.BLOODLOSS,20 * 7,0));
         }
         return true;
     }
