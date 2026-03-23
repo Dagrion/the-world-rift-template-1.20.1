@@ -9,8 +9,10 @@ import net.minecraft.util.Identifier;
 
 public class ModTags {
     public static class Blocks {
-        public static final TagKey<Block> NEEDS_BLOODY_TOOL = createTag("needs_bloody_tool");
-        public static final TagKey<Block> INCORRECT_FOR_BLOODY_TOOL = createTag("incorrect_for_bloody_tool");
+        public static final TagKey<Block> NEEDS_BLOODSTAINED_TOOL = createTag("needs_bloodstained_tool");
+        public static final TagKey<Block> INCORRECT_FOR_BLOODSTAINED_TOOL = createTag("incorrect_for_bloodstained_tool");
+        public static final TagKey<Block> DUNGEON_BLOCK = createTag("dungeon_block");
+        public static final TagKey<Block> NEEDS_NETHERITE_TOOL = createTag("needs_netherite_tool");
 
         private static TagKey<Block> createTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(TheWorldRift.MOD_ID, name));

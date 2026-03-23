@@ -43,6 +43,8 @@ public class ModItems {
             new StingerItem(new Item.Settings().fireproof().maxCount(1)));
     public static final Item TEMPORARY_BLOCK_BREAKER = registerItem("temporary_block_breaker",
             new TemporaryBlockBreaker(new Item.Settings().fireproof().maxCount(1)));
+    public static final Item DUNGEON_KEY = registerItem("dungeon_key",
+            new Item(new FabricItemSettings().maxCount(1)));
         // FOODS
     public static final Item ENCHANTED_CARROT = registerItem("enchanted_carrot",
             new EnchantedCarrotItem(new Item.Settings().food(ModFoodComponents.ENCHANTED_CARROT).maxCount(1).rarity(Rarity.RARE)));
@@ -139,6 +141,29 @@ public class ModItems {
             new HoeItem(ModToolMaterials.BLOODSTEEL, -4, -0.0F, (new Item.Settings()).fireproof()));
     public static final Item FRONTIER_BREAKER = registerItem("frontier_breaker",
             new FrontierBreakerItem( 1,-2.8F, ModToolMaterials.BLOODSTEEL, new FabricItemSettings()));
+
+        // -----------------------
+        // HELPERS ITEMS
+        // -----------------------
+    public static final Item PRISMATIC_CLEAVER = registerItem("prismatic_cleaver",
+                new PrismaticCleaverItem(ToolMaterials.NETHERITE, 3, -2.7F, (new Item.Settings()).fireproof()));
+        public static final Item TRUE_PRISMATIC_CLEAVER = registerItem("true_prismatic_cleaver",
+                new TruePrismaticCleaverItem(ToolMaterials.NETHERITE, 3, -2.7F, (new Item.Settings()).fireproof()));
+    public static final Item RESONANT_CLEAVER = registerItem("resonant_cleaver",
+            new ClaymoreItem(ToolMaterials.NETHERITE, 3, -2.7F, (new Item.Settings()).fireproof()));
+
+    public static final Item LATCHING_EMPTINESS = registerItem("latching_emptiness",
+            new ScytheItem(ToolMaterials.NETHERITE, 5, -3.1F, (new Item.Settings().fireproof())));
+    public static final Item FAULTY_DEVICE_CADEUCEUS = registerItem("faulty_device_cadeuceus",
+            new ScytheItem(ToolMaterials.NETHERITE, 5, -3.1F, (new Item.Settings().fireproof())));
+
+    public static final Item TACAZH = registerItem("tacazh",
+            new KnifeItem(ToolMaterials.NETHERITE, 3, -2.0F, (new Item.Settings().fireproof())));
+    public static final Item STAR = registerItem("star",
+            new KnifeItem(ToolMaterials.NETHERITE, 3, -2.0F, (new Item.Settings().fireproof())));
+
+    public static final Item CARMINE_BLOOM = registerItem("carmine_bloom",
+            new GlaiveItem(ToolMaterials.NETHERITE, 3, -2.4F, (new Item.Settings().fireproof())));
 
 
         // -----------------------

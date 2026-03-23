@@ -6,6 +6,7 @@ import com.jamieswhiteshirt.reachentityattributes.ReachEntityAttributes;
 import dagrion.the_world_rift.component.weapons.WeaponChargeComponent;
 import dagrion.the_world_rift.effect.ModEffect;
 import dagrion.the_world_rift.item.ModItems;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttribute;
@@ -20,6 +21,8 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.hit.HitResult;
@@ -59,16 +62,24 @@ public class ScytheItem extends SwordItem {
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         if (Math.random() < 0.15 && attacker.getMainHandStack().getItem() == ModItems.BLOODSTAINED_SCYTHE) {
             target.addStatusEffect(new StatusEffectInstance(ModEffect.BLOODLOSS,20 * 5,0)); }
-        WeaponChargeComponent.IncrementSCYTHE(2);
+        if (Math.random() < 0.01 && attacker.getMainHandStack().getItem() == ModItems.FAULTY_DEVICE_CADEUCEUS) {
+            target.addStatusEffect(new StatusEffectInstance(ModEffect.ARMOR_CRUSH,20 * 5,0)); }
+        if (Math.random() < 0.15 && attacker.getMainHandStack().getItem() == ModItems.LATCHING_EMPTINESS) {
+            target.addStatusEffect(new StatusEffectInstance(ModEffect.BLACKOUT,20 * 5,0)); }
+        if (attacker instanceof PlayerEntity p) {
+            WeaponChargeComponent charge = WeaponChargeComponent.get(p);
+            if (charge != null) charge.incrementScythe(2);
+        }
         return true;
     }
 
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack stack = user.getStackInHand(hand);
         if (!world.isClient) {
-            if (WeaponChargeComponent.SCYTHE >= WeaponChargeComponent.MAX_SCYTHE) {
+            WeaponChargeComponent charge = WeaponChargeComponent.get(user);
+            if (charge != null && charge.getScythe() >= WeaponChargeComponent.MAX) {
                 Vec3d attackerPos = user.getPos();
-                WeaponChargeComponent.UseSCYTHE(100);
+                charge.useScythe(100);
 
                 double radius = 3.5;
                 Box box = new Box(
@@ -106,7 +117,8 @@ public class ScytheItem extends SwordItem {
     }
     @Override
     public int getItemBarStep(ItemStack stack) {
-        return Math.round((float) WeaponChargeComponent.SCYTHE / WeaponChargeComponent.MAX_SCYTHE * 13); // full bar = max charge
+        WeaponChargeComponent charge = WeaponChargeComponent.getForDisplay();
+        return charge != null ? Math.round((float) charge.getScythe() / WeaponChargeComponent.MAX * 13) : 0;
     }
     @Override
     public int getItemBarColor(ItemStack stack) {
@@ -116,4 +128,18 @@ public class ScytheItem extends SwordItem {
         return (red << 16) | (green << 8) | blue; // RGB mix
     }
 
+    @Override
+    public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
+        if (stack.isOf(ModItems.BLOODSTAINED_SCYTHE)) {
+            tooltip.add(Text.literal("Have a chance to inflict Blood Loss").formatted(Formatting.DARK_RED));
+        }
+        if (stack.isOf(ModItems.LATCHING_EMPTINESS)) {
+            tooltip.add(Text.literal("Made for Melody Vox").formatted(Formatting.GRAY));
+            tooltip.add(Text.literal("Have a chance to give Blackout").formatted(Formatting.GRAY));
+        }
+        if (stack.isOf(ModItems.FAULTY_DEVICE_CADEUCEUS)) {
+            tooltip.add(Text.literal("Made for Charluk").formatted(Formatting.GRAY));
+            tooltip.add(Text.literal("Have a very low chance to inflict Armor Crush").formatted(Formatting.GRAY));
+        }
+    }
 }

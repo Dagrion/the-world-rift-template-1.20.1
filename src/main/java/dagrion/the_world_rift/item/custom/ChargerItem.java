@@ -21,7 +21,8 @@ public class ChargerItem extends Item {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         user.setCurrentHand(hand); // Begin charging
-        WeaponChargeComponent.ChargeAll();
+        WeaponChargeComponent charge = WeaponChargeComponent.get(user);
+        if (charge != null) charge.chargeAll();
         return TypedActionResult.consume(user.getStackInHand(hand));
     }
 

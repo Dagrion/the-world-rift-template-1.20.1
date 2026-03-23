@@ -19,6 +19,7 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> BARREN_DELTA_2_PLACED = registerKey("barren_delta_2_placed");
     public static final RegistryKey<PlacedFeature> PETRIFIED_DELTA_1_PLACED = registerKey("petrified_delta_1_placed");
     public static final RegistryKey<PlacedFeature> PETRIFIED_DELTA_2_PLACED = registerKey("petrified_delta_2_placed");
+    public static final RegistryKey<PlacedFeature> DUNGEON_CORE_MULTIBLOCK_PLACED = registerKey("dungeon_core_multiblock_placed");
 
 
     public static void boostrap(Registerable<PlacedFeature> context){
@@ -54,6 +55,14 @@ public class ModPlacedFeatures {
                         CountPlacementModifier.of(40),
                         SquarePlacementModifier.of(),
                         HeightmapPlacementModifier.of(Heightmap.Type.WORLD_SURFACE),
+                        BiomePlacementModifier.of()
+                )));
+        context.register(DUNGEON_CORE_MULTIBLOCK_PLACED, new PlacedFeature(
+                configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.DUNGEON_CORE_MULTIBLOCK),
+                List.of(
+                        CountPlacementModifier.of(1),
+                        SquarePlacementModifier.of(),
+                        HeightmapPlacementModifier.of(Heightmap.Type.WORLD_SURFACE_WG),
                         BiomePlacementModifier.of()
                 )));
 

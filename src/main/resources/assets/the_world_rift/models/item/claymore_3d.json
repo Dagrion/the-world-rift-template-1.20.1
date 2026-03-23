@@ -530,7 +530,7 @@
 	],
 	"display": {
 		"thirdperson_righthand": {
-			"rotation": [0, 90, 40],
+			"rotation": [0, -90, 40],
 			"translation": [11.75, 10.5, 0.5],
 			"scale": [1.5, 1.5, 1.5]
 		},
@@ -540,8 +540,8 @@
 			"scale": [1.5, 1.5, 1.5]
 		},
 		"firstperson_righthand": {
-			"rotation": [60, 90, 0],
-			"translation": [5, 6.75, 5.75]
+			"rotation": [-30, -90, 0],
+			"translation": [-10.25, 6.75, 5.75]
 		},
 		"firstperson_lefthand": {
 			"rotation": [-30, 90, 0],
@@ -557,8 +557,8 @@
 			"translation": [7.75, 3.25, -8.75]
 		},
 		"fixed": {
-			"rotation": [0, 0, 90],
-			"translation": [0, 0, 7.5]
+			"rotation": [0, -180, 0],
+			"translation": [0, 0, -8]
 		},
 		"on_shelf": {
 			"rotation": [0, 0, 45],

@@ -6,6 +6,7 @@ import com.jamieswhiteshirt.reachentityattributes.ReachEntityAttributes;
 import dagrion.the_world_rift.component.weapons.WeaponChargeComponent;
 import dagrion.the_world_rift.effect.ModEffect;
 import dagrion.the_world_rift.item.ModItems;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttribute;
@@ -22,6 +23,8 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.hit.HitResult;
@@ -61,9 +64,14 @@ public class ClaymoreItem extends SwordItem {
 
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-            if (Math.random() < 0.15 && attacker.getMainHandStack().getItem() == ModItems.BLOODSTAINED_CLAYMORE) {
-                target.addStatusEffect(new StatusEffectInstance(ModEffect.BLOODLOSS, 20 * 5, 0)); }
-        WeaponChargeComponent.IncrementClaymore(2);
+        if (Math.random() < 0.15 && attacker.getMainHandStack().getItem() == ModItems.BLOODSTAINED_CLAYMORE) {
+            target.addStatusEffect(new StatusEffectInstance(ModEffect.BLOODLOSS, 20 * 5, 0)); }
+        if (Math.random() < 0.15 && attacker.getMainHandStack().getItem() == ModItems.RESONANT_CLEAVER) {
+            target.addStatusEffect(new StatusEffectInstance(ModEffect.HEAVY, 20 * 5, 0)); }
+        if (attacker instanceof PlayerEntity p) {
+            WeaponChargeComponent charge = WeaponChargeComponent.get(p);
+            if (charge != null) charge.incrementClaymore(2);
+        }
         return true;
     }
 
@@ -76,8 +84,9 @@ public class ClaymoreItem extends SwordItem {
             if (!(world instanceof ServerWorld serverWorld)) {
                 return super.use(world, user, hand);
             }
-            if (WeaponChargeComponent.CLAYMORE >= WeaponChargeComponent.MAX_CLAYMORE) {
-                WeaponChargeComponent.UseClaymore(100);
+            WeaponChargeComponent charge = WeaponChargeComponent.get(user);
+            if (charge != null && charge.getClaymore() >= WeaponChargeComponent.MAX) {
+                charge.useClaymore(100);
                 user.setVelocity(
                         lookingDirection.x * boost,
                         lookingDirection.y * boost,
@@ -158,7 +167,8 @@ public class ClaymoreItem extends SwordItem {
     }
     @Override
     public int getItemBarStep(ItemStack stack) {
-        return Math.round((float) WeaponChargeComponent.CLAYMORE / WeaponChargeComponent.MAX_CLAYMORE * 13); // full bar = max charge
+        WeaponChargeComponent charge = WeaponChargeComponent.getForDisplay();
+        return charge != null ? Math.round((float) charge.getClaymore() / WeaponChargeComponent.MAX * 13) : 0;
     }
     @Override
     public int getItemBarColor(ItemStack stack) {
@@ -166,5 +176,25 @@ public class ClaymoreItem extends SwordItem {
         int blue = (int) (36);
         int green = (int) (0);
         return (red << 16) | (green << 8) | blue; // RGB mix
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
+        if (stack.isOf(ModItems.BLOODSTAINED_CLAYMORE)) {
+            tooltip.add(Text.literal("Have a chance to inflict Blood Loss").formatted(Formatting.DARK_RED));
+        }
+        if (stack.isOf(ModItems.PRISMATIC_CLEAVER)) {
+            tooltip.add(Text.literal("Made for Sataki Lykos").formatted(Formatting.GRAY));
+            tooltip.add(Text.literal("Have a random chance to inflict any Harmful effect").formatted(Formatting.GRAY));
+        }
+        if (stack.isOf(ModItems.TRUE_PRISMATIC_CLEAVER)) {
+            tooltip.add(Text.literal("Upgraded Version of the Prismatic Clever").formatted(Formatting.GRAY));
+            tooltip.add(Text.literal("I Purely made it for fun").formatted(Formatting.GRAY));
+            tooltip.add(Text.literal("Have a random chance to inflict any effect").formatted(Formatting.GRAY));
+        }
+        if (stack.isOf(ModItems.RESONANT_CLEAVER)) {
+            tooltip.add(Text.literal("Made for Willow Roze").formatted(Formatting.GRAY));
+            tooltip.add(Text.literal("Have a chance to give Heavy").formatted(Formatting.GRAY));
+        }
     }
 }

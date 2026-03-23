@@ -15,15 +15,15 @@ import net.minecraft.world.dimension.DimensionTypes;
 import java.util.OptionalLong;
 
 public class ModDimensions {
-    public static final RegistryKey<DimensionOptions> THE_DARK_AMALGAM_KEY = RegistryKey.of(RegistryKeys.DIMENSION,
-            new Identifier(TheWorldRift.MOD_ID, "the_dark_amalgam_dimension"));
-    public static final RegistryKey<World> THE_DARK_AMALGAM_LEVEL_KEY = RegistryKey.of(RegistryKeys.WORLD,
-            new Identifier(TheWorldRift.MOD_ID, "the_dark_amalgam_dimension"));
-    public static final RegistryKey<DimensionType> THE_DARK_AMALGAM_TYPE = RegistryKey.of(RegistryKeys.DIMENSION_TYPE,
-            new Identifier(TheWorldRift.MOD_ID, "the_dark_amalgam_type"));
+    public static final RegistryKey<DimensionOptions> SRBDV_KEY = RegistryKey.of(RegistryKeys.DIMENSION,
+            new Identifier(TheWorldRift.MOD_ID, "the_scarlet_realm_behind_the_dark_veil_dimension"));
+    public static final RegistryKey<World> SRBDV_LEVEL_KEY = RegistryKey.of(RegistryKeys.WORLD,
+            new Identifier(TheWorldRift.MOD_ID, "the_scarlet_realm_behind_the_dark_veil_dimension"));
+    public static final RegistryKey<DimensionType> SRBDV_DIM_TYPE = RegistryKey.of(RegistryKeys.DIMENSION_TYPE,
+            new Identifier(TheWorldRift.MOD_ID, "the_scarlet_realm_behind_the_dark_veil_type"));
 
     public static void bootstrapType(Registerable<DimensionType> context) {
-        context.register(THE_DARK_AMALGAM_TYPE, new DimensionType(
+        context.register(SRBDV_DIM_TYPE, new DimensionType(
                 OptionalLong.of(18000), // fixedTime
                 true, // hasSkylight
                 false, // hasCeiling

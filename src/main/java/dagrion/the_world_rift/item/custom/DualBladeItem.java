@@ -3,6 +3,7 @@ package dagrion.the_world_rift.item.custom;
 import dagrion.the_world_rift.component.weapons.WeaponChargeComponent;
 import dagrion.the_world_rift.effect.ModEffect;
 import dagrion.the_world_rift.item.ModItems;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
@@ -13,6 +14,8 @@ import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.Box;
@@ -30,16 +33,20 @@ public class DualBladeItem extends SwordItem {
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         if (Math.random() < 0.15 && attacker.getMainHandStack().getItem() == ModItems.BLOODSTAINED_DUAL_BLADE) {
             target.addStatusEffect(new StatusEffectInstance(ModEffect.BLOODLOSS, 20 * 6, 0)); }
-        WeaponChargeComponent.IncrementDUALBLADE(2);
+        if (attacker instanceof PlayerEntity p) {
+            WeaponChargeComponent charge = WeaponChargeComponent.get(p);
+            if (charge != null) charge.incrementDualblade(2);
+        }
         return true;
     }
 
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack stack = user.getStackInHand(hand);
         if (!world.isClient) {
-            if (WeaponChargeComponent.DUALBLADE >= WeaponChargeComponent.MAX_DUALBLADE) {
+            WeaponChargeComponent charge = WeaponChargeComponent.get(user);
+            if (charge != null && charge.getDualblade() >= WeaponChargeComponent.MAX) {
                 Vec3d attackerPos = user.getPos();
-                WeaponChargeComponent.UseDUALBLADE(100);
+                charge.useDualblade(100);
 
                 double radius = 2.5;
                 Box box = new Box(
@@ -74,7 +81,8 @@ public class DualBladeItem extends SwordItem {
     }
     @Override
     public int getItemBarStep(ItemStack stack) {
-        return Math.round((float) WeaponChargeComponent.DUALBLADE / WeaponChargeComponent.MAX_DUALBLADE * 13); // full bar = max charge
+        WeaponChargeComponent charge = WeaponChargeComponent.getForDisplay();
+        return charge != null ? Math.round((float) charge.getDualblade() / WeaponChargeComponent.MAX * 13) : 0;
     }
     @Override
     public int getItemBarColor(ItemStack stack) {
@@ -82,5 +90,12 @@ public class DualBladeItem extends SwordItem {
         int blue = (int) (36);
         int green = (int) (0);
         return (red << 16) | (green << 8) | blue; // RGB mix
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
+        if (stack.isOf(ModItems.BLOODSTAINED_DUAL_BLADE)) {
+            tooltip.add(Text.literal("Have a chance to inflict Blood Loss").formatted(Formatting.DARK_RED));
+        }
     }
 }

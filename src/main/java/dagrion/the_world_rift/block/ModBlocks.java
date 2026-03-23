@@ -40,56 +40,73 @@ public class ModBlocks {
             )
     );
 
+    // Dungeon blocks: hardness/resistance like deepslate (3, 6)
+    private static FabricBlockSettings dungeonBlockSettings() {
+        return FabricBlockSettings.copyOf(Blocks.DEEPSLATE);
+    }
+
     public static final Block CRACKED_DUNGEON_BRICKS = registerBlock("cracked_dungeon_bricks",
-            new Block(FabricBlockSettings.create()
-                    .strength(-1.0F,6.0F)
+            new Block(dungeonBlockSettings()
                     .mapColor(MapColor.DEEPSLATE_GRAY)
                     .sounds(BlockSoundGroup.STONE)
             )
     );
     public static final Block DUNGEON_BRICKS = registerBlock("dungeon_bricks",
-            new Block(FabricBlockSettings.copyOf(Blocks.BEDROCK)
+            new Block(dungeonBlockSettings()
                     .mapColor(MapColor.DEEPSLATE_GRAY)
             )
     );
     public static final Block DUNGEON_CORE = registerBlock("dungeon_core",
-            new Block(FabricBlockSettings.copyOf(Blocks.BEDROCK)
+            new Block(dungeonBlockSettings()
                     .mapColor(MapColor.DEEPSLATE_GRAY)
             )
     );
+
+    public static final Block DUNGEON_DOOR_FRAME = registerBlock("dungeon_door_frame",
+            new dagrion.the_world_rift.block.DungeonDoorFrameBlock(dungeonBlockSettings()
+                    .mapColor(MapColor.SPRUCE_BROWN)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .nonOpaque()
+            )
+    );
+    public static final Block DUNGEON_DOOR_KEYHOLE = registerBlock("dungeon_door_keyhole",
+            new dagrion.the_world_rift.block.DungeonDoorKeyholeBlock(dungeonBlockSettings()
+                    .mapColor(MapColor.SPRUCE_BROWN)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .nonOpaque()
+            )
+    );
+
+    public static final Block DUNGEON_CORE_RECEPTOR = registerBlock("dungeon_core_receptor",
+            new dagrion.the_world_rift.block.DungeonCoreReceptorBlock(dungeonBlockSettings()
+                    .mapColor(MapColor.SPRUCE_BROWN)
+                    .sounds(BlockSoundGroup.STONE)
+            )
+    );
+    public static final Block DUNGEON_CORE_TRANSMITTER = registerBlock("dungeon_core_transmitter",
+            new dagrion.the_world_rift.block.DungeonCoreTransmitterBlock(dungeonBlockSettings()
+                    .mapColor(MapColor.SPRUCE_BROWN)
+                    .sounds(BlockSoundGroup.STONE)
+            )
+    );
+    public static final Block DUNGEON_CORE_SHELL = registerBlock("dungeon_core_shell",
+            new Block(dungeonBlockSettings()
+                    .mapColor(MapColor.STONE_GRAY)
+                    .sounds(BlockSoundGroup.STONE)
+            )
+    );
+    public static final Block DUNGEON_CORE_HEART = registerBlock("dungeon_core_heart",
+            new dagrion.the_world_rift.block.DungeonCoreHeartBlock(dungeonBlockSettings()
+                    .mapColor(MapColor.TERRACOTTA_RED)
+                    .sounds(BlockSoundGroup.STONE)
+            )
+    );
+
     public static final Block PORTAL_BLOCK = registerBlock("portal_block",
             new Block(FabricBlockSettings.copyOf(Blocks.BEDROCK)
                     .mapColor(MapColor.DEEPSLATE_GRAY)
             )
     );
-
-    public static final Block RUNED_BLACKSTONE_A = registerBlock("runed_blackstone_26", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
-    public static final Block RUNED_BLACKSTONE_B = registerBlock("runed_blackstone_25", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
-    public static final Block RUNED_BLACKSTONE_C = registerBlock("runed_blackstone_24", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
-    public static final Block RUNED_BLACKSTONE_D = registerBlock("runed_blackstone_23", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
-    public static final Block RUNED_BLACKSTONE_E = registerBlock("runed_blackstone_22", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
-    public static final Block RUNED_BLACKSTONE_F = registerBlock("runed_blackstone_21", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
-    public static final Block RUNED_BLACKSTONE_G = registerBlock("runed_blackstone_20", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
-    public static final Block RUNED_BLACKSTONE_H = registerBlock("runed_blackstone_19", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
-    public static final Block RUNED_BLACKSTONE_I = registerBlock("runed_blackstone_18", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
-    public static final Block RUNED_BLACKSTONE_J = registerBlock("runed_blackstone_17", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
-    public static final Block RUNED_BLACKSTONE_K = registerBlock("runed_blackstone_16", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
-    public static final Block RUNED_BLACKSTONE_L = registerBlock("runed_blackstone_15", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
-    public static final Block RUNED_BLACKSTONE_M = registerBlock("runed_blackstone_14", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
-    public static final Block RUNED_BLACKSTONE_N = registerBlock("runed_blackstone_13", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
-    public static final Block RUNED_BLACKSTONE_O = registerBlock("runed_blackstone_12", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
-    public static final Block RUNED_BLACKSTONE_P = registerBlock("runed_blackstone_11", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
-    public static final Block RUNED_BLACKSTONE_Q = registerBlock("runed_blackstone_10", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
-    public static final Block RUNED_BLACKSTONE_R = registerBlock("runed_blackstone_9", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
-    public static final Block RUNED_BLACKSTONE_S = registerBlock("runed_blackstone_8", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
-    public static final Block RUNED_BLACKSTONE_T = registerBlock("runed_blackstone_7", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
-    public static final Block RUNED_BLACKSTONE_U = registerBlock("runed_blackstone_6", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
-    public static final Block RUNED_BLACKSTONE_V = registerBlock("runed_blackstone_5", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
-    public static final Block RUNED_BLACKSTONE_W = registerBlock("runed_blackstone_4", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
-    public static final Block RUNED_BLACKSTONE_X = registerBlock("runed_blackstone_3", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
-    public static final Block RUNED_BLACKSTONE_Y = registerBlock("runed_blackstone_2", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
-    public static final Block RUNED_BLACKSTONE_Z = registerBlock("runed_blackstone_1", new Block(FabricBlockSettings.copyOf(Blocks.BLACKSTONE)));
-
 
     public static final Block HAZARD_BLOCK = registerBlock("hazard_block",
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)

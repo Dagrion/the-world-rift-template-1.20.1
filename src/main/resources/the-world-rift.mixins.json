@@ -12,7 +12,9 @@
 	"client": [
 		"ItemRendererAccessor",
 		"ItemRendererMixin",
-		"ModelLoaderMixin"
+		"ModelLoaderMixin",
+		"BlackoutMixin",
+		"HeavyMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

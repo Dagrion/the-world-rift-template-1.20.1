@@ -65,8 +65,10 @@ public class HammerItem extends SwordItem {
                 serverPlayer.networkHandler.sendPacket(new EntityVelocityUpdateS2CPacket(serverPlayer));
             }
 
-            target.damage(target.getDamageSources().generic(), 0.5f*attacker.fallDistance);
-            for (float i = attacker.fallDistance; i > 0; i--) {
+            target.damage(target.getDamageSources().generic(), 0.5f * attacker.fallDistance);
+            // Cap iterations to prevent lag from long falls (e.g. build limit = 320 blocks)
+            float fallDist = Math.min(attacker.fallDistance, 20);
+            for (float i = fallDist; i > 0; i--) {
                 if (i > 7) {
                     target.damage(target.getDamageSources().playerAttack((PlayerEntity) attacker), 2f);
                 } else if (i > 3) {
@@ -79,7 +81,10 @@ public class HammerItem extends SwordItem {
             knockbackNearbyEntities(serverWorld, attacker, target);
         }
         postDamageEntity(stack,target,attacker);
-        WeaponChargeComponent.IncrementHAMMER(2);
+        if (attacker instanceof PlayerEntity p) {
+            WeaponChargeComponent charge = WeaponChargeComponent.get(p);
+            if (charge != null) charge.incrementHammer(2);
+        }
         return true;
     }
 
@@ -108,9 +113,10 @@ public class HammerItem extends SwordItem {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack stack = user.getStackInHand(hand);
         if (!world.isClient) {
-            if (WeaponChargeComponent.HAMMER >= WeaponChargeComponent.MAX_HAMMER) {
+            WeaponChargeComponent charge = WeaponChargeComponent.get(user);
+            if (charge != null && charge.getHammer() >= WeaponChargeComponent.MAX) {
                 Vec3d attackerPos = user.getPos();
-                WeaponChargeComponent.UseHAMMER(100);
+                charge.useHammer(100);
 
                 double radius = 3.5;
                 Box box = new Box(
@@ -152,7 +158,8 @@ public class HammerItem extends SwordItem {
     }
     @Override
     public int getItemBarStep(ItemStack stack) {
-        return Math.round((float) WeaponChargeComponent.HAMMER / WeaponChargeComponent.MAX_HAMMER * 13); // full bar = max charge
+        WeaponChargeComponent charge = WeaponChargeComponent.getForDisplay();
+        return charge != null ? Math.round((float) charge.getHammer() / WeaponChargeComponent.MAX * 13) : 0;
     }
     @Override
     public int getItemBarColor(ItemStack stack) {

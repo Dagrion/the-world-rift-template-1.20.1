@@ -1,10 +1,11 @@
 {
-  "type": "the_world_rift:the_dark_amalgam_dimension_type",
+  "type": "the_world_rift:the_scarlet_realm_behind_the_dark_veil_dimension_type",
   "generator": {
     "type": "minecraft:noise",
-    "settings": "the_world_rift:the_dark_amalgam_dimension_noise",
+    "settings": "the_world_rift:the_scarlet_realm_behind_the_dark_veil_dimension_noise",
     "biome_source": {
       "type": "minecraft:multi_noise",
+      "preset": "minecraft:overworld",
       "biomes": [
         {
           "biome": "the_world_rift:petrified_meadow",

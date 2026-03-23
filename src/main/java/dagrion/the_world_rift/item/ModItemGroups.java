@@ -22,6 +22,7 @@ public class ModItemGroups {
 
     public static ItemGroup THE_WORLD_RIFT_DECORATION;
     public static ItemGroup THE_WORLD_RIFT_OPERATOR;
+    public static ItemGroup HELPER_ITEMS;
 
     public static void registerItemGroups() {
         TheWorldRift.LOGGER.info("Registering Item Groups for " + TheWorldRift.MOD_ID);
@@ -36,9 +37,12 @@ public class ModItemGroups {
                             entries.add(HALF_MOON);
                             entries.add(HYPERNOVA);
 
+                            entries.add(TRUE_PRISMATIC_CLEAVER);
+
                             entries.add(SRBDV);
                             entries.add(CHARGER);
                             entries.add(TEMPORARY_BLOCK_BREAKER);
+                            entries.add(DUNGEON_KEY);
 
                             entries.add(ANCIENT_TABLET);
 
@@ -52,6 +56,27 @@ public class ModItemGroups {
                         })
                         .build());
 
+        HELPER_ITEMS = Registry.register(Registries.ITEM_GROUP,
+                new Identifier(TheWorldRift.MOD_ID, "helper_items"),
+                FabricItemGroup.builder()
+                        .displayName(Text.translatable("itemgroup.the_world_rift.helper_items"))
+                        .icon(() -> new ItemStack(PRISMATIC_CLEAVER))
+                        .entries((displayContext, entries) -> {
+
+                            entries.add(PRISMATIC_CLEAVER);
+                            entries.add(RESONANT_CLEAVER);
+
+                            entries.add(LATCHING_EMPTINESS);
+                            entries.add(FAULTY_DEVICE_CADEUCEUS);
+
+                            entries.add(CARMINE_BLOOM);
+
+                            entries.add(TACAZH);
+                            entries.add(STAR);
+
+                        })
+                        .build());
+
         THE_WORLD_RIFT_DECORATION = Registry.register(Registries.ITEM_GROUP,
                 new Identifier(TheWorldRift.MOD_ID, "the_world_rift_decoration"),
                 FabricItemGroup.builder()
@@ -62,17 +87,10 @@ public class ModItemGroups {
                             entries.add(ModBlocks.ANCIENT_LIBRARY);
 
                             entries.add(ModBlocks.DUNGEON_BRICKS); entries.add(ModBlocks.CRACKED_DUNGEON_BRICKS); entries.add(ModBlocks.DUNGEON_CORE);
+                            entries.add(ModBlocks.DUNGEON_DOOR_FRAME); entries.add(ModBlocks.DUNGEON_DOOR_KEYHOLE);
                             entries.add(ModBlocks.PORTAL_BLOCK);
 
-                            entries.add(ModBlocks.RUNED_BLACKSTONE_A); entries.add(ModBlocks.RUNED_BLACKSTONE_B); entries.add(ModBlocks.RUNED_BLACKSTONE_C);
-                            entries.add(ModBlocks.RUNED_BLACKSTONE_D); entries.add(ModBlocks.RUNED_BLACKSTONE_E); entries.add(ModBlocks.RUNED_BLACKSTONE_F);
-                            entries.add(ModBlocks.RUNED_BLACKSTONE_G); entries.add(ModBlocks.RUNED_BLACKSTONE_H); entries.add(ModBlocks.RUNED_BLACKSTONE_I);
-                            entries.add(ModBlocks.RUNED_BLACKSTONE_J); entries.add(ModBlocks.RUNED_BLACKSTONE_K); entries.add(ModBlocks.RUNED_BLACKSTONE_L);
-                            entries.add(ModBlocks.RUNED_BLACKSTONE_M); entries.add(ModBlocks.RUNED_BLACKSTONE_N); entries.add(ModBlocks.RUNED_BLACKSTONE_O);
-                            entries.add(ModBlocks.RUNED_BLACKSTONE_P); entries.add(ModBlocks.RUNED_BLACKSTONE_Q); entries.add(ModBlocks.RUNED_BLACKSTONE_R);
-                            entries.add(ModBlocks.RUNED_BLACKSTONE_S); entries.add(ModBlocks.RUNED_BLACKSTONE_T); entries.add(ModBlocks.RUNED_BLACKSTONE_U);
-                            entries.add(ModBlocks.RUNED_BLACKSTONE_V); entries.add(ModBlocks.RUNED_BLACKSTONE_W); entries.add(ModBlocks.RUNED_BLACKSTONE_X);
-                            entries.add(ModBlocks.RUNED_BLACKSTONE_Y); entries.add(ModBlocks.RUNED_BLACKSTONE_Z);
+                            entries.add(ModBlocks.DUNGEON_CORE_RECEPTOR); entries.add(ModBlocks.DUNGEON_CORE_TRANSMITTER); entries.add(ModBlocks.DUNGEON_CORE_SHELL); entries.add(ModBlocks.DUNGEON_CORE_HEART);
                         })
                         .build());
 

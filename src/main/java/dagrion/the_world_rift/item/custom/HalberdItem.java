@@ -6,6 +6,7 @@ import com.jamieswhiteshirt.reachentityattributes.ReachEntityAttributes;
 import dagrion.the_world_rift.component.weapons.WeaponChargeComponent;
 import dagrion.the_world_rift.effect.ModEffect;
 import dagrion.the_world_rift.item.ModItems;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttribute;
@@ -18,6 +19,8 @@ import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
@@ -63,7 +66,10 @@ public class HalberdItem extends SwordItem {
         // Your existing blood effect
         if (Math.random() < 0.15 && attacker.getMainHandStack().getItem() == ModItems.BLOODSTAINED_HALBERD) {
             target.addStatusEffect(new StatusEffectInstance(ModEffect.BLOODLOSS, 20 * 5, 0)); }
-        WeaponChargeComponent.IncrementHALEBARD(2);
+        if (attacker instanceof PlayerEntity p) {
+            WeaponChargeComponent charge = WeaponChargeComponent.get(p);
+            if (charge != null) charge.incrementHalebard(2);
+        }
         return super.postHit(stack, target, attacker);
     }
 
@@ -72,9 +78,9 @@ public class HalberdItem extends SwordItem {
         ItemStack stack = user.getStackInHand(hand);
 
         if (!world.isClient) {
-            if (WeaponChargeComponent.HALEBARD >= WeaponChargeComponent.MAX_HALEBARD) {
-
-                WeaponChargeComponent.UseHALEBARD(100);
+            WeaponChargeComponent charge = WeaponChargeComponent.get(user);
+            if (charge != null && charge.getHalebard() >= WeaponChargeComponent.MAX) {
+                charge.useHalebard(100);
 
                 double radius = 6.0;
 
@@ -109,7 +115,8 @@ public class HalberdItem extends SwordItem {
     }
     @Override
     public int getItemBarStep(ItemStack stack) {
-        return Math.round((float) WeaponChargeComponent.HALEBARD / WeaponChargeComponent.MAX_HALEBARD * 13); // full bar = max charge
+        WeaponChargeComponent charge = WeaponChargeComponent.getForDisplay();
+        return charge != null ? Math.round((float) charge.getHalebard() / WeaponChargeComponent.MAX * 13) : 0;
     }
     @Override
     public int getItemBarColor(ItemStack stack) {
@@ -117,6 +124,13 @@ public class HalberdItem extends SwordItem {
         int blue = (int) (36);
         int green = (int) (0);
         return (red << 16) | (green << 8) | blue; // RGB mix
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
+        if (stack.isOf(ModItems.BLOODSTAINED_HALBERD)) {
+            tooltip.add(Text.literal("Have a chance to inflict Blood Loss").formatted(Formatting.DARK_RED));
+        }
     }
 }
 

@@ -1,0 +1,29 @@
+package dagrion.the_world_rift.block;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.state.StateManager;
+import net.minecraft.state.property.DirectionProperty;
+import net.minecraft.state.property.Properties;
+import net.minecraft.util.math.Direction;
+
+public class DungeonCoreReceptorBlock extends Block {
+    public static final DirectionProperty FACING = Properties.FACING;
+
+    public DungeonCoreReceptorBlock(Settings settings) {
+        super(settings);
+        setDefaultState(getDefaultState().with(FACING, Direction.UP));
+    }
+
+    @Override
+    protected void appendProperties(StateManager.Builder<Block, net.minecraft.block.BlockState> builder) {
+        builder.add(FACING);
+    }
+
+    @Override
+    public BlockState getPlacementState(ItemPlacementContext ctx) {
+        // Top texture faces outward (the direction we're placing into)
+        return getDefaultState().with(FACING, ctx.getSide());
+    }
+}

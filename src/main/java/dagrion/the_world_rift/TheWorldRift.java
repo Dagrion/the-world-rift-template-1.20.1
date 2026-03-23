@@ -1,5 +1,6 @@
 package dagrion.the_world_rift;
 
+import dagrion.the_world_rift.block.DungeonDoorKeyholeBlock;
 import dagrion.the_world_rift.block.ModBlocks;
 import dagrion.the_world_rift.effect.ModEffect;
 import dagrion.the_world_rift.item.ModItemGroups;
@@ -7,7 +8,9 @@ import dagrion.the_world_rift.item.ModItems;
 import dagrion.the_world_rift.item.custom.HalfMoon;
 import dagrion.the_world_rift.item.custom.Hypernova;
 import dagrion.the_world_rift.item.custom.TemporaryBlockBreaker;
+import dagrion.the_world_rift.block.entity.ModBlockEntities;
 import dagrion.the_world_rift.util.HammerUsageEvent;
+import dagrion.the_world_rift.world.ModFeatures;
 import dagrion.the_world_rift.world.vegetation.tree.ModTrunkPlacer;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;
@@ -27,12 +30,15 @@ public class TheWorldRift implements ModInitializer {
 	public void onInitialize() {
 		ModItemGroups.registerItemGroups();
 		ModBlocks.registerModBlocks();
+		ModBlockEntities.register();
+		ModFeatures.register();
 		ModEffect.registerEffects();
 		ModTrunkPlacer.register();
 
 		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
 
 		TemporaryBlockBreaker.registerTickEvent();
+		DungeonDoorKeyholeBlock.registerTickEvent();
 
 		CustomPortalBuilder.beginPortal()
 				.frameBlock(ModBlocks.PORTAL_BLOCK)

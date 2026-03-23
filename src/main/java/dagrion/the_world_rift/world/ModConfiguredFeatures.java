@@ -19,6 +19,7 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> BARREN_DELTA_2 = registerKey("barren_delta_2");
     public static final RegistryKey<ConfiguredFeature<?, ?>> PETRIFIED_DELTA_1 = registerKey("petrified_delta_1");
     public static final RegistryKey<ConfiguredFeature<?, ?>> PETRIFIED_DELTA_2 = registerKey("petrified_delta_2");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> DUNGEON_CORE_MULTIBLOCK = registerKey("dungeon_core_multiblock");
 
 
     public static void boostrap(Registerable<ConfiguredFeature<?, ?>> context){
@@ -56,6 +57,8 @@ public class ModConfiguredFeatures {
                         UniformIntProvider.create(0, 8),
                         UniformIntProvider.create(3, 14)
                 )));
+        context.register(DUNGEON_CORE_MULTIBLOCK,
+                new ConfiguredFeature<>(ModFeatures.DUNGEON_CORE_MULTIBLOCK, DefaultFeatureConfig.INSTANCE));
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {
