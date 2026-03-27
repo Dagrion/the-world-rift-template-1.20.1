@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "the_world_rift:block/dungeon_core_transmitter_side",
+    "east": "the_world_rift:block/dungeon_core_transmitter_side",
+    "north": "the_world_rift:block/dungeon_core_transmitter_side",
+    "particle": "the_world_rift:block/dungeon_core_transmitter_side",
+    "south": "the_world_rift:block/dungeon_core_transmitter_side",
+    "up": "the_world_rift:block/dungeon_core_transmitter_top",
+    "west": "the_world_rift:block/dungeon_core_transmitter_side"
+  }
+}

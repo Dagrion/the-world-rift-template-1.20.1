@@ -53,17 +53,22 @@ public class ModBlocks {
     );
     public static final Block DUNGEON_BRICKS = registerBlock("dungeon_bricks",
             new Block(dungeonBlockSettings()
+                    .resistance(3600000.0F)
                     .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .sounds(BlockSoundGroup.STONE)
             )
     );
     public static final Block DUNGEON_CORE = registerBlock("dungeon_core",
             new Block(dungeonBlockSettings()
+                    .resistance(3600000.0F)
                     .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .sounds(BlockSoundGroup.STONE)
             )
     );
 
     public static final Block DUNGEON_DOOR_FRAME = registerBlock("dungeon_door_frame",
             new dagrion.the_world_rift.block.DungeonDoorFrameBlock(dungeonBlockSettings()
+                    .resistance(3600000.0F)
                     .mapColor(MapColor.SPRUCE_BROWN)
                     .sounds(BlockSoundGroup.WOOD)
                     .nonOpaque()
@@ -71,6 +76,7 @@ public class ModBlocks {
     );
     public static final Block DUNGEON_DOOR_KEYHOLE = registerBlock("dungeon_door_keyhole",
             new dagrion.the_world_rift.block.DungeonDoorKeyholeBlock(dungeonBlockSettings()
+                    .resistance(3600000.0F)
                     .mapColor(MapColor.SPRUCE_BROWN)
                     .sounds(BlockSoundGroup.WOOD)
                     .nonOpaque()
@@ -79,24 +85,28 @@ public class ModBlocks {
 
     public static final Block DUNGEON_CORE_RECEPTOR = registerBlock("dungeon_core_receptor",
             new dagrion.the_world_rift.block.DungeonCoreReceptorBlock(dungeonBlockSettings()
+                    .resistance(3600000.0F)
                     .mapColor(MapColor.SPRUCE_BROWN)
                     .sounds(BlockSoundGroup.STONE)
             )
     );
     public static final Block DUNGEON_CORE_TRANSMITTER = registerBlock("dungeon_core_transmitter",
             new dagrion.the_world_rift.block.DungeonCoreTransmitterBlock(dungeonBlockSettings()
+                    .resistance(3600000.0F)
                     .mapColor(MapColor.SPRUCE_BROWN)
                     .sounds(BlockSoundGroup.STONE)
             )
     );
     public static final Block DUNGEON_CORE_SHELL = registerBlock("dungeon_core_shell",
             new Block(dungeonBlockSettings()
+                    .resistance(3600000.0F)
                     .mapColor(MapColor.STONE_GRAY)
                     .sounds(BlockSoundGroup.STONE)
             )
     );
     public static final Block DUNGEON_CORE_HEART = registerBlock("dungeon_core_heart",
             new dagrion.the_world_rift.block.DungeonCoreHeartBlock(dungeonBlockSettings()
+                    .resistance(3600000.0F)
                     .mapColor(MapColor.TERRACOTTA_RED)
                     .sounds(BlockSoundGroup.STONE)
             )

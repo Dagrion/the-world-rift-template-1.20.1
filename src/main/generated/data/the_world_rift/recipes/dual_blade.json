@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " NN",
+    " S ",
+    "NN "
+  ],
+  "result": {
+    "item": "the_world_rift:dual_blade"
+  },
+  "show_notification": true
+}

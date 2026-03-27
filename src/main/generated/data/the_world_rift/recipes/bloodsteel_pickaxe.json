@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "the_world_rift:bloodsteel_ingot"
+  },
+  "base": {
+    "item": "the_world_rift:bloodstained_pickaxe"
+  },
+  "result": {
+    "item": "the_world_rift:bloodsteel_pickaxe"
+  },
+  "template": {
+    "item": "the_world_rift:hardened_blood_crystal"
+  }
+}

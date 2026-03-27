@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "NN ",
+    "NSN",
+    " S "
+  ],
+  "result": {
+    "item": "the_world_rift:hammer"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "N": {
+      "item": "the_world_rift:netherite_nugget"
+    }
+  },
+  "pattern": [
+    " N",
+    "N "
+  ],
+  "result": {
+    "item": "the_world_rift:stinger"
+  },
+  "show_notification": true
+}

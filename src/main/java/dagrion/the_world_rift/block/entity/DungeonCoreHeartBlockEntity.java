@@ -1,6 +1,7 @@
 package dagrion.the_world_rift.block.entity;
 
 import dagrion.the_world_rift.block.ModBlocks;
+import dagrion.the_world_rift.util.DungeonProtectionManager;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.state.property.Properties;
@@ -54,6 +55,9 @@ public class DungeonCoreHeartBlockEntity extends BlockEntity {
                     damageEntitiesInRay(serverWorld, info.pos, receptorPos);
                 }
             }
+        }
+        if (!activeReceptors.isEmpty()) {
+            DungeonProtectionManager.addProtectedFromActiveRays(serverWorld, activeReceptors);
         }
     }
 

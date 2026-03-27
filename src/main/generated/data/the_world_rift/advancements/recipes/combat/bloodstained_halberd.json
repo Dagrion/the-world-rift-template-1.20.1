@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bloodstained_halberd": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "the_world_rift:bloodstained_halberd"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:bloodstained_halberd"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_bloodstained_halberd",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:bloodstained_halberd"
+    ]
+  },
+  "sends_telemetry_event": false
+}

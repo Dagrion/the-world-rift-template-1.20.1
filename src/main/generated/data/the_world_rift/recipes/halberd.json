@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "NNN",
+    "NS ",
+    " S "
+  ],
+  "result": {
+    "item": "the_world_rift:halberd"
+  },
+  "show_notification": true
+}

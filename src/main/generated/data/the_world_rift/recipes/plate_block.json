@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "S": {
+      "item": "the_world_rift:steel_block"
+    }
+  },
+  "pattern": [
+    " S ",
+    "SOS",
+    " S "
+  ],
+  "result": {
+    "item": "the_world_rift:plate_block"
+  },
+  "show_notification": true
+}

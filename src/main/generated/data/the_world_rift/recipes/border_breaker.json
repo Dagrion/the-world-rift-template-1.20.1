@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "the_world_rift:bloodstained_ingot"
+    },
+    "S": {
+      "item": "the_world_rift:nether_star_shard"
+    },
+    "V": {
+      "item": "the_world_rift:blood_vial"
+    }
+  },
+  "pattern": [
+    "B B",
+    "SVS",
+    " B "
+  ],
+  "result": {
+    "item": "the_world_rift:border_breaker"
+  },
+  "show_notification": true
+}

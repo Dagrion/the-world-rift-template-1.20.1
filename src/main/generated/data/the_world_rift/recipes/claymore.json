@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "  N",
+    "NN ",
+    "SN "
+  ],
+  "result": {
+    "item": "the_world_rift:claymore"
+  },
+  "show_notification": true
+}

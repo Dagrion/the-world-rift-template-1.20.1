@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "the_world_rift:bloodstained_ingot"
+    },
+    "R": {
+      "item": "the_world_rift:ruined_bloodstained_halberd"
+    },
+    "S": {
+      "item": "the_world_rift:nether_star_shard"
+    },
+    "V": {
+      "item": "the_world_rift:blood_vial"
+    }
+  },
+  "pattern": [
+    " VB",
+    "SBV",
+    "RS "
+  ],
+  "result": {
+    "item": "the_world_rift:bloodstained_halberd"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " NN",
+    "NN ",
+    "S  "
+  ],
+  "result": {
+    "item": "the_world_rift:glaive"
+  },
+  "show_notification": true
+}

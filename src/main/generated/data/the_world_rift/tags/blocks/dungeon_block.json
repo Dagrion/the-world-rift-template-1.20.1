@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "the_world_rift:cracked_dungeon_bricks",
+    "the_world_rift:dungeon_bricks",
+    "the_world_rift:dungeon_core",
+    "the_world_rift:dungeon_door_frame",
+    "the_world_rift:dungeon_door_keyhole",
+    "the_world_rift:dungeon_core_receptor",
+    "the_world_rift:dungeon_core_transmitter",
+    "the_world_rift:dungeon_core_heart",
+    "the_world_rift:dungeon_core_shell"
+  ]
+}

@@ -9,11 +9,13 @@ import dagrion.the_world_rift.item.custom.HalfMoon;
 import dagrion.the_world_rift.item.custom.Hypernova;
 import dagrion.the_world_rift.item.custom.TemporaryBlockBreaker;
 import dagrion.the_world_rift.block.entity.ModBlockEntities;
+import dagrion.the_world_rift.util.DungeonProtectionManager;
 import dagrion.the_world_rift.util.HammerUsageEvent;
 import dagrion.the_world_rift.world.ModFeatures;
 import dagrion.the_world_rift.world.vegetation.tree.ModTrunkPlacer;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
 import net.minecraft.item.ItemStack;
@@ -35,7 +37,12 @@ public class TheWorldRift implements ModInitializer {
 		ModEffect.registerEffects();
 		ModTrunkPlacer.register();
 
+		ServerTickEvents.START_SERVER_TICK.register(server ->
+				server.getWorlds().forEach(DungeonProtectionManager::beginTick));
+
 		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
+		PlayerBlockBreakEvents.BEFORE.register((world, player, pos, state, blockEntity) ->
+				player.getAbilities().creativeMode || !DungeonProtectionManager.isProtected(world, pos));
 
 		TemporaryBlockBreaker.registerTickEvent();
 		DungeonDoorKeyholeBlock.registerTickEvent();

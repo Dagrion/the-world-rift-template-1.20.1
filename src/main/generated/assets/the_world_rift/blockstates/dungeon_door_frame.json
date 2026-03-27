@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "open=false": {
+      "model": "the_world_rift:block/dungeon_door_frame"
+    },
+    "open=true": {
+      "model": "the_world_rift:block/dungeon_door_frame_translucent"
+    }
+  }
+}

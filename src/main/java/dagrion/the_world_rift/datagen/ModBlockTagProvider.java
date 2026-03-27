@@ -44,7 +44,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         ;
 
         getOrCreateTagBuilder(ModTags.Blocks.DUNGEON_BLOCK)
+                .add(ModBlocks.CRACKED_DUNGEON_BRICKS)
                 .add(ModBlocks.DUNGEON_BRICKS)
+                .add(ModBlocks.DUNGEON_CORE)
                 .add(ModBlocks.DUNGEON_DOOR_FRAME)
                 .add(ModBlocks.DUNGEON_DOOR_KEYHOLE)
                 .add(ModBlocks.DUNGEON_CORE_RECEPTOR)

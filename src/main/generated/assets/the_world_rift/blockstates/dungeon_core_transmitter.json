@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "the_world_rift:block/dungeon_core_transmitter",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "the_world_rift:block/dungeon_core_transmitter",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "the_world_rift:block/dungeon_core_transmitter",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "the_world_rift:block/dungeon_core_transmitter",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "the_world_rift:block/dungeon_core_transmitter"
+    },
+    "facing=west": {
+      "model": "the_world_rift:block/dungeon_core_transmitter",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

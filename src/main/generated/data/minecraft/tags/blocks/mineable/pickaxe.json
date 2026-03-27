@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "the_world_rift:bloodstained_block",
+    "the_world_rift:bloodsteel_block",
+    "the_world_rift:enchanted_diamond_ore",
+    "the_world_rift:steel_block",
+    "the_world_rift:hazard_block",
+    "the_world_rift:plate_block",
+    "the_world_rift:dungeon_bricks",
+    "the_world_rift:dungeon_door_frame",
+    "the_world_rift:dungeon_door_keyhole",
+    "the_world_rift:dungeon_core_receptor",
+    "the_world_rift:dungeon_core_transmitter",
+    "the_world_rift:dungeon_core_heart",
+    "the_world_rift:dungeon_core_shell"
+  ]
+}
