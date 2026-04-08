@@ -62,10 +62,6 @@ public class ScytheItem extends SwordItem {
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         if (Math.random() < 0.15 && attacker.getMainHandStack().getItem() == ModItems.BLOODSTAINED_SCYTHE) {
             target.addStatusEffect(new StatusEffectInstance(ModEffect.BLOODLOSS,20 * 5,0)); }
-        if (Math.random() < 0.01 && attacker.getMainHandStack().getItem() == ModItems.FAULTY_DEVICE_CADEUCEUS) {
-            target.addStatusEffect(new StatusEffectInstance(ModEffect.ARMOR_CRUSH,20 * 5,0)); }
-        if (Math.random() < 0.15 && attacker.getMainHandStack().getItem() == ModItems.LATCHING_EMPTINESS) {
-            target.addStatusEffect(new StatusEffectInstance(ModEffect.BLACKOUT,20 * 5,0)); }
         if (attacker instanceof PlayerEntity p) {
             WeaponChargeComponent charge = WeaponChargeComponent.get(p);
             if (charge != null) charge.incrementScythe(2);
@@ -132,14 +128,6 @@ public class ScytheItem extends SwordItem {
     public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
         if (stack.isOf(ModItems.BLOODSTAINED_SCYTHE)) {
             tooltip.add(Text.literal("Have a chance to inflict Blood Loss").formatted(Formatting.DARK_RED));
-        }
-        if (stack.isOf(ModItems.LATCHING_EMPTINESS)) {
-            tooltip.add(Text.literal("Made for Melody Vox").formatted(Formatting.GRAY));
-            tooltip.add(Text.literal("Have a chance to give Blackout").formatted(Formatting.GRAY));
-        }
-        if (stack.isOf(ModItems.FAULTY_DEVICE_CADEUCEUS)) {
-            tooltip.add(Text.literal("Made for Charluk").formatted(Formatting.GRAY));
-            tooltip.add(Text.literal("Have a very low chance to inflict Armor Crush").formatted(Formatting.GRAY));
         }
     }
 }

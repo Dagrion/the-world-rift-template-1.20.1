@@ -36,18 +36,6 @@ public class ModEffect {
                     .addAttributeModifier(EntityAttributes.GENERIC_ARMOR_TOUGHNESS,
                             "648D7064-6A60-4F59-8ABE-C2C23A6DD7A9",-1.0F, EntityAttributeModifier.Operation.MULTIPLY_TOTAL));
 
-    public static final StatusEffect BLACKOUT = registerStatusEffect("blackout",
-            new BlackoutEffect(StatusEffectCategory.HARMFUL, 0x000000));
-    public static final StatusEffect HEAVY = registerStatusEffect("heavy",
-            new HeavyEffect(StatusEffectCategory.HARMFUL, 0x424242));
-    public static final StatusEffect JUMPY = registerStatusEffect("jumpy",
-            new JumpyEffect(StatusEffectCategory.HARMFUL, 0x7FFF00));
-    public static final StatusEffect TOTAL_MASTER = registerStatusEffect("total_master",
-            new TotalMasterEffect(StatusEffectCategory.BENEFICIAL, 0x4A4A9A));
-    public static final StatusEffect OXIDIZED = registerStatusEffect("oxidized",
-            new OxidizedEffect(StatusEffectCategory.HARMFUL, 0x5B9A6E));
-
-
     private static StatusEffect registerStatusEffect(String name, StatusEffect statusEffect) {
         return Registry.register(Registries.STATUS_EFFECT, new Identifier(TheWorldRift.MOD_ID, name), statusEffect); }
     public static void registerEffects() {

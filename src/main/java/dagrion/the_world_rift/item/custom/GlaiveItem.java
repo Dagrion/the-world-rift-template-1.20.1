@@ -150,8 +150,5 @@ public class GlaiveItem extends SwordItem {
         if (stack.isOf(ModItems.BLOODSTAINED_GLAIVE)) {
             tooltip.add(Text.literal("Have a chance to inflict Blood Loss").formatted(Formatting.DARK_RED));
         }
-        if (stack.isOf(ModItems.CARMINE_BLOOM)) {
-            tooltip.add(Text.literal("Made for Morislug").formatted(Formatting.GRAY));
-        }
     }
 }

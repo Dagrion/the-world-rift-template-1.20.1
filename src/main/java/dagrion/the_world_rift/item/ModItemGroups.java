@@ -18,11 +18,9 @@ import static dagrion.the_world_rift.item.ModItems.*;
 public class ModItemGroups {
 
     public static ItemGroup THE_BLOOD_ALCHEMIST;
-    public static ItemGroup THE_RUINS_ITEMS;
 
     public static ItemGroup THE_WORLD_RIFT_DECORATION;
     public static ItemGroup THE_WORLD_RIFT_OPERATOR;
-    public static ItemGroup HELPER_ITEMS;
 
     public static void registerItemGroups() {
         TheWorldRift.LOGGER.info("Registering Item Groups for " + TheWorldRift.MOD_ID);
@@ -31,49 +29,16 @@ public class ModItemGroups {
                 new Identifier(TheWorldRift.MOD_ID, "the_world_rift_operator_items"),
                 FabricItemGroup.builder()
                         .displayName(Text.translatable("itemgroup.the_world_rift.the_world_rift_operator_items"))
-                        .icon(() -> new ItemStack(ModItems.DRAGON_HEART))
+                        .icon(() -> new ItemStack(HALF_MOON))
                         .entries((displayContext, entries) -> {
 
                             entries.add(HALF_MOON);
                             entries.add(HYPERNOVA);
 
-                            entries.add(TRUE_PRISMATIC_CLEAVER);
-
                             entries.add(SRBDV);
                             entries.add(CHARGER);
                             entries.add(TEMPORARY_BLOCK_BREAKER);
                             entries.add(DUNGEON_KEY);
-
-                            entries.add(ANCIENT_TABLET);
-
-
-                            entries.add(ModItems.BLOOD_OF_THE_IMMORTAL);
-
-                            entries.add(ModItems.DAGRION_HOOD);
-                            entries.add(ModItems.DAGRION_VAMBRACES);
-                            entries.add(ModItems.DAGRION_COAT);
-                            entries.add(ModItems.DAGRION_GREAVES);
-                        })
-                        .build());
-
-        HELPER_ITEMS = Registry.register(Registries.ITEM_GROUP,
-                new Identifier(TheWorldRift.MOD_ID, "helper_items"),
-                FabricItemGroup.builder()
-                        .displayName(Text.translatable("itemgroup.the_world_rift.helper_items"))
-                        .icon(() -> new ItemStack(PRISMATIC_CLEAVER))
-                        .entries((displayContext, entries) -> {
-
-                            entries.add(PRISMATIC_CLEAVER);
-                            entries.add(RESONANT_CLEAVER);
-
-                            entries.add(LATCHING_EMPTINESS);
-                            entries.add(FAULTY_DEVICE_CADEUCEUS);
-
-                            entries.add(CARMINE_BLOOM);
-
-                            entries.add(TACAZH);
-                            entries.add(STAR);
-
                         })
                         .build());
 
@@ -81,12 +46,12 @@ public class ModItemGroups {
                 new Identifier(TheWorldRift.MOD_ID, "the_world_rift_decoration"),
                 FabricItemGroup.builder()
                         .displayName(Text.translatable("itemgroup.the_world_rift.the_world_rift_decoration"))
-                        .icon(() -> new ItemStack(ModBlocks.BLOODSTAINED_BLOCK))
+                        .icon(() -> new ItemStack(ModBlocks.DUNGEON_BRICKS))
                         .entries((displayContext, entries) -> {
 
                             entries.add(ModBlocks.ANCIENT_LIBRARY);
 
-                            entries.add(ModBlocks.DUNGEON_BRICKS); entries.add(ModBlocks.CRACKED_DUNGEON_BRICKS); entries.add(ModBlocks.DUNGEON_CORE);
+                            entries.add(ModBlocks.DUNGEON_BRICKS); entries.add(ModBlocks.CRACKED_DUNGEON_BRICKS);
                             entries.add(ModBlocks.DUNGEON_DOOR_FRAME); entries.add(ModBlocks.DUNGEON_DOOR_KEYHOLE);
                             entries.add(ModBlocks.PORTAL_BLOCK);
 
@@ -102,7 +67,6 @@ public class ModItemGroups {
                         .entries((displayContext, entries) -> {
 
                             entries.add(ModItems.NETHERITE_NUGGET);     entries.add(ModItems.STINGER);
-                            entries.add(ModItems.DRAGON_HEART);         entries.add(ModItems.DARK_CLOTH);
                             entries.add(ModItems.NETHER_STAR_SHARD);    entries.add(ModItems.NETHER_STAR_POWDER);
                             entries.add(ModItems.EMPTY_VIAL);           entries.add(ModItems.BLOOD_VIAL);
                             entries.add(ModItems.BLOOD_CRYSTAL);        entries.add(ModItems.HARDENED_BLOOD_CRYSTAL);
@@ -134,27 +98,6 @@ public class ModItemGroups {
                             entries.add(ModItems.FRONTIER_BREAKER);
                         })
                         .build());
-
-        THE_RUINS_ITEMS = Registry.register(Registries.ITEM_GROUP,
-                new Identifier(TheWorldRift.MOD_ID, "the_ruins_items"),
-                FabricItemGroup.builder()
-                        .displayName(Text.translatable("itemgroup.the_world_rift.the_ruins_items"))
-                        .icon(() -> new ItemStack(ModItems.STEEL_PLATE))
-                        .entries((displayContext, entries) -> {
-
-                            entries.add(ModItems.STEEL_PLATE);
-                            entries.add(ModBlocks.STEEL_BLOCK); entries.add(ModBlocks.HAZARD_BLOCK);
-                            entries.add(ModBlocks.PLATE_BLOCK);
-                        })
-                        .build());
-
-
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.OPERATOR).register(fabricItemGroupEntries -> {
-
-             fabricItemGroupEntries.add(YEET);
-
-        });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(fabricItemGroupEntries -> {
             fabricItemGroupEntries.add(CLAYMORE);

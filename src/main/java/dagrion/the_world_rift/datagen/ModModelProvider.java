@@ -29,11 +29,6 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BLOODSTEEL_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ENCHANTED_DIAMOND_ORE);
 
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STEEL_BLOCK);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.HAZARD_BLOCK);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PLATE_BLOCK);
-
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DUNGEON_CORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PORTAL_BLOCK);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CRACKED_DUNGEON_BRICKS);
@@ -178,15 +173,11 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.HALF_MOON, Models.HANDHELD);
         itemModelGenerator.register(ModItems.HYPERNOVA, Models.GENERATED);
 
-        itemModelGenerator.register(ModItems.ANCIENT_TABLET, Models.GENERATED);
         itemModelGenerator.register(ModItems.SRBDV, Models.GENERATED);
         itemModelGenerator.register(ModItems.CHARGER, Models.GENERATED);
-        itemModelGenerator.register(ModItems.YEET, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.DUNGEON_KEY, Models.GENERATED);
 
-        itemModelGenerator.register(ModItems.DRAGON_HEART, Models.GENERATED);
-        itemModelGenerator.register(ModItems.DARK_CLOTH, Models.GENERATED);
         itemModelGenerator.register(ModItems.NETHER_STAR_SHARD, Models.GENERATED);
         itemModelGenerator.register(ModItems.NETHER_STAR_POWDER, Models.GENERATED);
         itemModelGenerator.register(ModItems.NETHERITE_NUGGET, Models.GENERATED);
@@ -196,7 +187,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.BLOOD_VIAL, Models.GENERATED);
         itemModelGenerator.register(ModItems.BLOOD_CRYSTAL, Models.GENERATED);
         itemModelGenerator.register(ModItems.HARDENED_BLOOD_CRYSTAL, Models.GENERATED);
-        itemModelGenerator.register(ModItems.STEEL_PLATE, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.STINGER, Models.HANDHELD);
 
@@ -247,27 +237,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.BLOODSTEEL_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.BLOODSTEEL_HOE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.FRONTIER_BREAKER, Models.HANDHELD);
-
-        itemModelGenerator.register(ModItems.PRISMATIC_CLEAVER, Models.GENERATED);
-                itemModelGenerator.register(ModItems.TRUE_PRISMATIC_CLEAVER, Models.GENERATED);
-        itemModelGenerator.register(ModItems.RESONANT_CLEAVER, Models.GENERATED);
-        itemModelGenerator.register(ModItems.LATCHING_EMPTINESS, Models.GENERATED);
-        itemModelGenerator.register(ModItems.FAULTY_DEVICE_CADEUCEUS, Models.GENERATED);
-        itemModelGenerator.register(ModItems.CARMINE_BLOOM, Models.GENERATED);
-        itemModelGenerator.register(ModItems.TACAZH, Models.GENERATED);
-        itemModelGenerator.register(ModItems.STAR, Models.GENERATED);
-
-
-
-        itemModelGenerator.register(ModItems.BLOOD_OF_THE_IMMORTAL, Models.GENERATED);
-        itemModelGenerator.register(ModItems.DAGRION_HOOD, Models.GENERATED);
-        itemModelGenerator.register(ModItems.DAGRION_VAMBRACES, Models.GENERATED);
-        itemModelGenerator.register(ModItems.DAGRION_COAT, Models.GENERATED);
-        itemModelGenerator.register(ModItems.DAGRION_GREAVES, Models.GENERATED);
-
-
-
-
 
     }
 }

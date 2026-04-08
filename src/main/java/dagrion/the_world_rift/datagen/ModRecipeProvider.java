@@ -4,7 +4,6 @@ import dagrion.the_world_rift.block.ModBlocks;
 import dagrion.the_world_rift.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
@@ -70,33 +69,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('C', ModItems.HARDENED_BLOOD_CRYSTAL)
                 .criterion(hasItem(ModItems.HARDENED_BLOOD_CRYSTAL), conditionsFromItem(ModItems.HARDENED_BLOOD_CRYSTAL))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.HARDENED_BLOOD_CRYSTAL)));
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.STEEL_BLOCK, 1)
-                .pattern("SS")
-                .pattern("SS")
-                .input('S', ModItems.STEEL_PLATE)
-                .criterion(hasItem(ModItems.STEEL_PLATE), conditionsFromItem(ModItems.STEEL_PLATE))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.STEEL_BLOCK)));
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.STEEL_PLATE, 4)
-                .input(ModBlocks.STEEL_BLOCK)
-                .criterion(hasItem(ModBlocks.STEEL_BLOCK), conditionsFromItem(ModBlocks.STEEL_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModItems.STEEL_PLATE)));
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.HAZARD_BLOCK, 5)
-                .pattern("SYS")
-                .pattern("YSB")
-                .pattern("SBS")
-                .input('Y', Items.YELLOW_DYE)
-                .input('B', Items.BLACK_DYE)
-                .input('S', ModBlocks.STEEL_BLOCK)
-                .criterion(hasItem(ModBlocks.STEEL_BLOCK), conditionsFromItem(ModBlocks.STEEL_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.HAZARD_BLOCK)));
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PLATE_BLOCK, 1)
-                .pattern(" S ")
-                .pattern("SOS")
-                .pattern(" S ")
-                .input('O', Blocks.OBSIDIAN)
-                .input('S', ModBlocks.STEEL_BLOCK)
-                .criterion(hasItem(ModItems.STEEL_PLATE), conditionsFromItem(ModItems.STEEL_PLATE))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.PLATE_BLOCK)));
         // TOOLS
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.STINGER, 1)
                 .pattern(" N")

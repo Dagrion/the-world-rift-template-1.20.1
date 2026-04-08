@@ -66,8 +66,6 @@ public class ClaymoreItem extends SwordItem {
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         if (Math.random() < 0.15 && attacker.getMainHandStack().getItem() == ModItems.BLOODSTAINED_CLAYMORE) {
             target.addStatusEffect(new StatusEffectInstance(ModEffect.BLOODLOSS, 20 * 5, 0)); }
-        if (Math.random() < 0.15 && attacker.getMainHandStack().getItem() == ModItems.RESONANT_CLEAVER) {
-            target.addStatusEffect(new StatusEffectInstance(ModEffect.HEAVY, 20 * 5, 0)); }
         if (attacker instanceof PlayerEntity p) {
             WeaponChargeComponent charge = WeaponChargeComponent.get(p);
             if (charge != null) charge.incrementClaymore(2);
@@ -182,19 +180,6 @@ public class ClaymoreItem extends SwordItem {
     public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
         if (stack.isOf(ModItems.BLOODSTAINED_CLAYMORE)) {
             tooltip.add(Text.literal("Have a chance to inflict Blood Loss").formatted(Formatting.DARK_RED));
-        }
-        if (stack.isOf(ModItems.PRISMATIC_CLEAVER)) {
-            tooltip.add(Text.literal("Made for Sataki Lykos").formatted(Formatting.GRAY));
-            tooltip.add(Text.literal("Have a random chance to inflict any Harmful effect").formatted(Formatting.GRAY));
-        }
-        if (stack.isOf(ModItems.TRUE_PRISMATIC_CLEAVER)) {
-            tooltip.add(Text.literal("Upgraded Version of the Prismatic Clever").formatted(Formatting.GRAY));
-            tooltip.add(Text.literal("I Purely made it for fun").formatted(Formatting.GRAY));
-            tooltip.add(Text.literal("Have a random chance to inflict any effect").formatted(Formatting.GRAY));
-        }
-        if (stack.isOf(ModItems.RESONANT_CLEAVER)) {
-            tooltip.add(Text.literal("Made for Willow Roze").formatted(Formatting.GRAY));
-            tooltip.add(Text.literal("Have a chance to give Heavy").formatted(Formatting.GRAY));
         }
     }
 }

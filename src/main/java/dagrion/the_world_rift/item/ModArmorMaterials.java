@@ -13,9 +13,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
     BLOODSTAINED("bloodstained", 37, new int[] { 3, 8, 6, 3 }, 22,
             SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3f, 0.1f, () -> Ingredient.ofItems(ModItems.BLOOD_CRYSTAL)),
     BLOODSTEEL("bloodsteel", 40, new int[] { 4, 8, 6, 4 }, 22,
-    SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3f, 0.15f, () -> Ingredient.ofItems(ModItems.HARDENED_BLOOD_CRYSTAL)),
-    DAGRION("dagrion", 42, new int[] { 4, 9, 7, 5 }, 25,
-            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.5f, 0.0f, () -> Ingredient.ofItems(ModItems.DARK_CLOTH));
+    SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3f, 0.15f, () -> Ingredient.ofItems(ModItems.HARDENED_BLOOD_CRYSTAL));
 
     private final String name;
     private final int durabilityMultiplier;

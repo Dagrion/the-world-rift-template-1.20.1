@@ -7,7 +7,6 @@
 		"AbstractBlockHardnessMixin",
 		"PlayerEntityBlockBreakingSpeedMixin",
 		"ServerPlayerInteractionManagerMixin",
-		"BlackstoneMixin",
 		"EnchanteddiamondoreMixin",
 		"EnchantedcarrotMixin",
 		"TrunkPlacerTypeInvoker"
@@ -15,9 +14,7 @@
 	"client": [
 		"ItemRendererAccessor",
 		"ItemRendererMixin",
-		"ModelLoaderMixin",
-		"BlackoutMixin",
-		"HeavyMixin"
+		"ModelLoaderMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

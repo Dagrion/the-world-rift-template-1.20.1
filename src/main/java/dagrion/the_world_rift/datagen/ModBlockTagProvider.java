@@ -21,8 +21,6 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.BLOODSTAINED_BLOCK)
                 .add(ModBlocks.BLOODSTEEL_BLOCK)
                 .add(ModBlocks.ENCHANTED_DIAMOND_ORE)
-                .add(ModBlocks.STEEL_BLOCK)          .add(ModBlocks.HAZARD_BLOCK)
-                .add(ModBlocks.PLATE_BLOCK)
 
                 .add(ModBlocks.DUNGEON_BRICKS)
                 .add(ModBlocks.DUNGEON_DOOR_FRAME)      .add(ModBlocks.DUNGEON_DOOR_KEYHOLE)
@@ -33,20 +31,16 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.ENCHANTED_DIAMOND_ORE)
-                .add(ModBlocks.STEEL_BLOCK)
-                .add(ModBlocks.HAZARD_BLOCK)
         ;
 
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.BLOODSTAINED_BLOCK)
                 .add(ModBlocks.BLOODSTEEL_BLOCK)
-                .add(ModBlocks.PLATE_BLOCK)
         ;
 
         getOrCreateTagBuilder(ModTags.Blocks.DUNGEON_BLOCK)
                 .add(ModBlocks.CRACKED_DUNGEON_BRICKS)
                 .add(ModBlocks.DUNGEON_BRICKS)
-                .add(ModBlocks.DUNGEON_CORE)
                 .add(ModBlocks.DUNGEON_DOOR_FRAME)
                 .add(ModBlocks.DUNGEON_DOOR_KEYHOLE)
                 .add(ModBlocks.DUNGEON_CORE_RECEPTOR)
@@ -58,7 +52,6 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(ModTags.Blocks.NEEDS_NETHERITE_TOOL)
                 .add(ModBlocks.CRACKED_DUNGEON_BRICKS)
                 .add(ModBlocks.DUNGEON_BRICKS)
-                .add(ModBlocks.DUNGEON_CORE)
                 .add(ModBlocks.DUNGEON_DOOR_FRAME)
                 .add(ModBlocks.DUNGEON_DOOR_KEYHOLE)
                 .add(ModBlocks.DUNGEON_CORE_RECEPTOR)

@@ -19,15 +19,11 @@ public class ModItems {
     public static final Item HYPERNOVA = registerItem("hypernova",
             new Hypernova(new FabricItemSettings().maxCount(1).fireproof().rarity(Rarity.EPIC)));
         // DEBUG & FUNNY ITEMS
-    public static final Item ANCIENT_TABLET = registerItem("ancient_tablet", new Item(new FabricItemSettings().maxCount(1)));
     public static final Item SRBDV = registerItem("scarlet_realm_behind_the_dark_veil", new SRBDVItem(new FabricItemSettings().maxCount(1)));
     public static final Item CHARGER = registerItem("charger", new ChargerItem(new FabricItemSettings().maxCount(1)));
-    public static final Item YEET = registerItem("yeet", new YeetItem(new FabricItemSettings().maxCount(1)));
         // -----------------------
         // BASIC ITEMS
         // -----------------------
-    public static final Item DRAGON_HEART = registerItem("dragon_heart", new StingerItem((new FabricItemSettings().maxCount(1).rarity(Rarity.UNCOMMON))));
-    public static final Item DARK_CLOTH = registerItem("dark_cloth", new StingerItem((new FabricItemSettings())));
     public static final Item NETHER_STAR_SHARD = registerItem("nether_star_shard", new NetherStarItem(new FabricItemSettings().rarity(Rarity.UNCOMMON)));
     public static final Item NETHER_STAR_POWDER = registerItem("nether_star_powder", new NetherStarItem(new FabricItemSettings().rarity(Rarity.UNCOMMON)));
     public static final Item NETHERITE_NUGGET = registerItem("netherite_nugget", new Item(new FabricItemSettings().fireproof()));
@@ -37,7 +33,6 @@ public class ModItems {
     public static final Item BLOOD_VIAL = registerItem("blood_vial", new Item(new FabricItemSettings().maxCount(1)));
     public static final Item BLOOD_CRYSTAL = registerItem("blood_crystal", new Item(new FabricItemSettings()));
     public static final Item HARDENED_BLOOD_CRYSTAL = registerItem("hardened_blood_crystal", new Item(new FabricItemSettings()));
-    public static final Item STEEL_PLATE = registerItem("steel_plate", new Item(new FabricItemSettings().fireproof()));
         // TOOLS
     public static final Item STINGER = registerItem("stinger",
             new StingerItem(new Item.Settings().fireproof().maxCount(1)));
@@ -141,44 +136,6 @@ public class ModItems {
             new HoeItem(ModToolMaterials.BLOODSTEEL, -4, -0.0F, (new Item.Settings()).fireproof()));
     public static final Item FRONTIER_BREAKER = registerItem("frontier_breaker",
             new FrontierBreakerItem( 1,-2.8F, ModToolMaterials.BLOODSTEEL, new FabricItemSettings()));
-
-        // -----------------------
-        // HELPERS ITEMS
-        // -----------------------
-    public static final Item PRISMATIC_CLEAVER = registerItem("prismatic_cleaver",
-                new PrismaticCleaverItem(ToolMaterials.NETHERITE, 3, -2.7F, (new Item.Settings()).fireproof()));
-        public static final Item TRUE_PRISMATIC_CLEAVER = registerItem("true_prismatic_cleaver",
-                new TruePrismaticCleaverItem(ToolMaterials.NETHERITE, 3, -2.7F, (new Item.Settings()).fireproof()));
-    public static final Item RESONANT_CLEAVER = registerItem("resonant_cleaver",
-            new ClaymoreItem(ToolMaterials.NETHERITE, 3, -2.7F, (new Item.Settings()).fireproof()));
-
-    public static final Item LATCHING_EMPTINESS = registerItem("latching_emptiness",
-            new ScytheItem(ToolMaterials.NETHERITE, 5, -3.1F, (new Item.Settings().fireproof())));
-    public static final Item FAULTY_DEVICE_CADEUCEUS = registerItem("faulty_device_cadeuceus",
-            new ScytheItem(ToolMaterials.NETHERITE, 5, -3.1F, (new Item.Settings().fireproof())));
-
-    public static final Item TACAZH = registerItem("tacazh",
-            new KnifeItem(ToolMaterials.NETHERITE, 3, -2.0F, (new Item.Settings().fireproof())));
-    public static final Item STAR = registerItem("star",
-            new KnifeItem(ToolMaterials.NETHERITE, 3, -2.0F, (new Item.Settings().fireproof())));
-
-    public static final Item CARMINE_BLOOM = registerItem("carmine_bloom",
-            new GlaiveItem(ToolMaterials.NETHERITE, 3, -2.4F, (new Item.Settings().fireproof())));
-
-
-        // -----------------------
-        // WORK IN PROGRESS
-        // -----------------------
-    public static final Item BLOOD_OF_THE_IMMORTAL = registerItem("blood_of_the_immortal", new Item(new FabricItemSettings().maxCount(1).rarity(Rarity.UNCOMMON)));
-    public static final Item DAGRION_HOOD = registerItem("dagrion_hood",
-            new DagrionArmorItem(ModArmorMaterials.DAGRION, ArmorItem.Type.HELMET, new Item.Settings().fireproof()));
-    public static final Item DAGRION_VAMBRACES = registerItem("dagrion_vambraces",
-            new DagrionArmorItem(ModArmorMaterials.DAGRION, ArmorItem.Type.CHESTPLATE, new Item.Settings().fireproof()));
-    public static final Item DAGRION_COAT = registerItem("dagrion_coat",
-            new DagrionArmorItem(ModArmorMaterials.DAGRION, ArmorItem.Type.LEGGINGS, new Item.Settings().fireproof()));
-    public static final Item DAGRION_GREAVES = registerItem("dagrion_greaves",
-            new DagrionArmorItem(ModArmorMaterials.DAGRION, ArmorItem.Type.BOOTS, new Item.Settings().fireproof()));
-
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(TheWorldRift.MOD_ID, name), item);

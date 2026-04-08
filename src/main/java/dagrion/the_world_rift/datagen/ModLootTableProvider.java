@@ -34,16 +34,12 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
     public void generate() {
         addDrop(ModBlocks.BLOODSTAINED_BLOCK);
         addDrop(ModBlocks.BLOODSTEEL_BLOCK);
-        addDrop(ModBlocks.STEEL_BLOCK);
-        addDrop(ModBlocks.HAZARD_BLOCK);
-        addDrop(ModBlocks.PLATE_BLOCK);
 
         addDrop(ModBlocks.ENCHANTED_DIAMOND_ORE, oreDrops(Blocks.DIAMOND_ORE, Items.DIAMOND));
 
         // Dungeon blocks: only drop loot when mined with netherite pickaxe
         addDungeonBlockDrop(ModBlocks.CRACKED_DUNGEON_BRICKS);
         addDungeonBlockDrop(ModBlocks.DUNGEON_BRICKS);
-        addDungeonBlockDrop(ModBlocks.DUNGEON_CORE);
         addDungeonBlockDrop(ModBlocks.DUNGEON_DOOR_FRAME);
         addDungeonBlockDrop(ModBlocks.DUNGEON_DOOR_KEYHOLE);
         addDungeonBlockDrop(ModBlocks.DUNGEON_CORE_RECEPTOR);

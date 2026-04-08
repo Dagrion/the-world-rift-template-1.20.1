@@ -6,7 +6,6 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.MapColor;
-import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -52,13 +51,6 @@ public class ModBlocks {
             )
     );
     public static final Block DUNGEON_BRICKS = registerBlock("dungeon_bricks",
-            new Block(dungeonBlockSettings()
-                    .resistance(3600000.0F)
-                    .mapColor(MapColor.DEEPSLATE_GRAY)
-                    .sounds(BlockSoundGroup.STONE)
-            )
-    );
-    public static final Block DUNGEON_CORE = registerBlock("dungeon_core",
             new Block(dungeonBlockSettings()
                     .resistance(3600000.0F)
                     .mapColor(MapColor.DEEPSLATE_GRAY)
@@ -117,28 +109,6 @@ public class ModBlocks {
                     .mapColor(MapColor.DEEPSLATE_GRAY)
             )
     );
-
-    public static final Block HAZARD_BLOCK = registerBlock("hazard_block",
-            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)
-                    .strength(5.0F,12000.0F)
-                    .sounds(BlockSoundGroup.NETHERITE)
-                    .mapColor(MapColor.YELLOW)
-            )
-    );
-    public static final Block STEEL_BLOCK = registerBlock("steel_block",
-            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)
-                    .strength(5.0F,12000.0F)
-                    .sounds(BlockSoundGroup.NETHERITE)
-            )
-    );
-    public static final Block PLATE_BLOCK = registerBlock("plate_block",
-            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)
-                    .strength(50.0F,12000.0F)
-                    .pistonBehavior(PistonBehavior.BLOCK)
-                    .sounds(BlockSoundGroup.NETHERITE)
-            )
-    );
-
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

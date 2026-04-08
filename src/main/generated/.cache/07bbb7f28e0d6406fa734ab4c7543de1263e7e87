@@ -1,6 +1,6 @@
-// 1.20.1	2026-03-27T00:36:45.2612152	The World Rift/Tags for minecraft:block
-a7449ad0af795a7b32195ed5794a6087f4e5652e data\the_world_rift\tags\blocks\needs_netherite_tool.json
-4e2ae4c0dfff89307c27ae3c52cb9dd75a6d897e data\the_world_rift\tags\blocks\dungeon_block.json
-bdc8fb92935b212e25c9a64caf0d632c7bb8cb79 data\minecraft\tags\blocks\needs_diamond_tool.json
-c565fd6599bd481de05b229f9bf85181900f46d5 data\minecraft\tags\blocks\mineable\pickaxe.json
-05c34fc3602f680ec93915c61025396dd2a9c16d data\minecraft\tags\blocks\needs_iron_tool.json
+// 1.20.1	2026-04-08T19:31:14.6039447	The World Rift/Tags for minecraft:block
+2913d32e2af21f92f10ff0762681eae66c407146 data\the_world_rift\tags\blocks\dungeon_block.json
+7b3d4a7e1260cb1458e56da0385158c587e9ab69 data\the_world_rift\tags\blocks\needs_netherite_tool.json
+493aa7556338c945ad1034c364c85c463319bf6e data\minecraft\tags\blocks\mineable\pickaxe.json
+028bd19c5df918ebb03cdeb6c761e3ef59e360f6 data\minecraft\tags\blocks\needs_diamond_tool.json
+7dd87806ab13a9e88e05083a393f1224d1848dbf data\minecraft\tags\blocks\needs_iron_tool.json

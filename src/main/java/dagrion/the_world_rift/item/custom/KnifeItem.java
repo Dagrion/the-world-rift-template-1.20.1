@@ -99,10 +99,6 @@ public class KnifeItem extends SwordItem {
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         if (Math.random() < 0.15 && attacker.getMainHandStack().getItem() == ModItems.BLOODSTAINED_KNIFE) {
             target.addStatusEffect(new StatusEffectInstance(ModEffect.BLOODLOSS, 20 * 3, 1)); }
-        if (Math.random() < 0.15 && attacker.getMainHandStack().getItem() == ModItems.STAR) {
-            target.addStatusEffect(new StatusEffectInstance(ModEffect.JUMPY, 20 * 3, 0)); }
-        if (Math.random() < 0.15 && attacker.getMainHandStack().getItem() == ModItems.TACAZH) {
-            target.addStatusEffect(new StatusEffectInstance(ModEffect.OXIDIZED, 20 * 3, 0)); }
         if (attacker instanceof PlayerEntity p) {
             WeaponChargeComponent charge = WeaponChargeComponent.get(p);
             if (charge != null) charge.incrementKnife(2);
@@ -118,28 +114,18 @@ public class KnifeItem extends SwordItem {
             if (charge != null && charge.getKnife() >= WeaponChargeComponent.MAX) {
                 charge.useKnife(100);
 
-                if (stack.isOf(ModItems.TACAZH)) {
-                    user.addStatusEffect(new StatusEffectInstance(
-                            ModEffect.TOTAL_MASTER,
-                            20 * 30,
-                            0,
-                            false,
-                            false
-                    ));
-                } else {
-                    user.addStatusEffect(new StatusEffectInstance(
-                            ModEffect.INVISIBILITY_KNIFE,
-                            20 * 600,
-                            0,
-                            false,
-                            false
-                    ));
-                    world.playSound(null, user.getX(), user.getY(), user.getZ(),
-                            SoundEvents.BLOCK_BEACON_ACTIVATE, SoundCategory.PLAYERS, 1.0f, 1.0f);
-                    ((ServerWorld) world).spawnParticles(ParticleTypes.END_ROD,
-                            user.getX(), user.getY() + 1.0, user.getZ(),
-                            1000, 0.5, 1.0, 0.5, 0.0);
-                }
+                user.addStatusEffect(new StatusEffectInstance(
+                        ModEffect.INVISIBILITY_KNIFE,
+                        20 * 600,
+                        0,
+                        false,
+                        false
+                ));
+                world.playSound(null, user.getX(), user.getY(), user.getZ(),
+                        SoundEvents.BLOCK_BEACON_ACTIVATE, SoundCategory.PLAYERS, 1.0f, 1.0f);
+                ((ServerWorld) world).spawnParticles(ParticleTypes.END_ROD,
+                        user.getX(), user.getY() + 1.0, user.getZ(),
+                        1000, 0.5, 1.0, 0.5, 0.0);
             }
         }
         return TypedActionResult.consume(stack);
@@ -168,14 +154,6 @@ public class KnifeItem extends SwordItem {
     public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
         if (stack.isOf(ModItems.BLOODSTAINED_KNIFE)) {
             tooltip.add(Text.literal("Have a chance to inflict sever Blood Loss").formatted(Formatting.DARK_RED));
-        }
-        if (stack.isOf(ModItems.TACAZH)) {
-            tooltip.add(Text.literal("Made for Total Turtle").formatted(Formatting.GRAY));
-            tooltip.add(Text.literal("Have a chance to inflict Oxidized").formatted(Formatting.GRAY));
-        }
-        if (stack.isOf(ModItems.STAR)) {
-            tooltip.add(Text.literal("Made for The Minecraft Dino").formatted(Formatting.GRAY));
-            tooltip.add(Text.literal("Have a chance to inflict Jumpy").formatted(Formatting.GRAY));
         }
     }
 
